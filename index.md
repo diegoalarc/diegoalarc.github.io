@@ -39,7 +39,7 @@ img: ":home-heading.jpg"
 
 ## 😄 *Hi, I'm Diego Alarcón.*
 
-🔭 I am a *__[Chilean](https://en.wikipedia.org/wiki/Chile)__* passionate about *__coding__* and the possibilities that this can generate for all of us in our future. I am also a *__[surveying engineer](http://www.geomensura.usach.cl/)__* and I am currently in Germany studying the *__[EAGLE Master](http://eagle-science.org/)__*.
+🔭 I am a *__[Chilean](https://en.wikipedia.org/wiki/Chile)__* passionate about *__coding__* and the possibilities that this can generate for all of us in our future. I am also a *__[surveying engineer](http://www.geomensura.usach.cl/)__* and I am currently working in Germany after finished the *__[EAGLE Master](http://eagle-science.org/)__*.
 
 🌱 Currently I can say that I handle the following *__languages/tools__* a little more than *__basic__*:
 
@@ -55,12 +55,11 @@ I am also learning to work with *__[Linux](https://www.linux.org/)__* and other 
 
 ## *My Repositories*
 I hope you visit my *__[Repositories](https://github.com/diegoalarc?tab=repositories)__* and give me your opinion. I'll stay tuned to your comments.
-:v::v:
 
 ## 📫 *Do you want to know more about me?*
 I invite you to visit my *__[LinkedIn](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/)__* and to contact me!!
 
-I am also participating in the *__Spanish__* :es: community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
+I am also participating in the *__Spanish__* community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
 
 ### __I hope you like my *page* and we can share more!!__
 ### *__Greetings!!__*
