@@ -37,32 +37,32 @@ img: ":home-heading.jpg"
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
-## 😄 *Hi, I'm Diego Alarcón.*
+## *Hi, I'm Diego Alarcón 😄.*
 
-🔭 I am a *__[Chilean](https://en.wikipedia.org/wiki/Chile)__* passionate about *__coding__* and the possibilities that this can generate for all of us in our future. I am also a *__[surveying engineer](http://www.geomensura.usach.cl/)__* and I am currently working in Germany after finished the *__[EAGLE Master](http://eagle-science.org/)__*.
+I am a *__[Chilean](https://en.wikipedia.org/wiki/Chile)__* passionate about *__coding__* and __Remote Sensing__* with the possibilities that this can generate for all of us in our future. I am also a *__[surveying engineer](http://www.geomensura.usach.cl/)__* and I am currently working in Germany after finished the *__[EAGLE Master](http://eagle-science.org/)__*.
 
-🌱 Currently I can say that I handle the following *__languages/tools__* a little more than *__basic__*:
+Currently I can say that I handle the following *__languages/tools__* a little more than *__basic__* 🌱:
 
 - __[Google Earth Engine](https://courses.spatialthoughts.com/end-to-end-gee.html)__
 - __[Python](https://courses.spatialthoughts.com/python-foundation.html#what-next)__
 - __[R](https://ourcodingclub.github.io/tutorials/intro-to-r/)__
 
-#### 😄 *I am constantly learning since science and coding do not stop!!*
+I'm a fan of *__[Free Software](https://en.wikipedia.org/wiki/Free_software)__*, but I'm not against *__[Commercial software](https://en.wikipedia.org/wiki/Commercial_software)__*.
 
-:computer: I'm a fan of *__[Free Software](https://en.wikipedia.org/wiki/Free_software)__*, but I'm not against *__[Commercial software](https://en.wikipedia.org/wiki/Commercial_software)__*.
-
-I am also learning to work with *__[Linux](https://www.linux.org/)__* and other free software such as *__[QGis](https://qgis.org/de/site/)__* and *__[LibreOffice](https://es.libreoffice.org/)__* among others.
+I am constantly learning to work with *__[Linux](https://www.linux.org/)__* and other free software such as *__[QGis](https://qgis.org/de/site/)__* and *__[LibreOffice](https://es.libreoffice.org/)__* among others.
 
 ## *My Repositories*
-I hope you visit my *__[Repositories](https://github.com/diegoalarc?tab=repositories)__* and give me your opinion. I'll stay tuned to your comments.
+If you would like to explore my projects in more detail, I invite you to visit  my *__[Repositories](https://github.com/diegoalarc?tab=repositories)__* and give me your opinion. I'll stay tuned to your comments.
 
-## 📫 *Do you want to know more about me?*
-I invite you to visit my *__[LinkedIn](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/)__* and to contact me!!
+## More about me
 
 I am also participating in the *__Spanish__* community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
 
-### __I hope you like my *page* and we can share more!!__
-### *__Greetings!!__*
+I have created one of the few geodesy packages for R.
+
+I am currently mentoring independently young people in Chile, in order to empower talent.
+
+I hope you enjoy my short page and find enough information about me.
 
 <!--
 **diegoalarc/diegoalarc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

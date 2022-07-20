@@ -42,4 +42,6 @@ MSc in Remote Sensing Universität Würzburg. GIS expert with extensive knowledg
 I also have experience in project management with AGILE (Scrum) methodology.
 Always looking for where I can apply my management skills and my desire to grow a team.
 
+# Curriculum Vitae
+
 If you wish you can have a look at my updated CV you can download it by clicking [here](assets/img/about/CV_Diego_Alarcon_EN.pdf).
