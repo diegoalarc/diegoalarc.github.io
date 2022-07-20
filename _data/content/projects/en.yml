@@ -5,228 +5,156 @@
 page_data:
   main:
     header: "Projects"
-    info: "Your Project page description."
+    info: "Here you can find some of my most interesting projects."
     text_color: "white"
     # if you don't want to use background image, comment it. back_color will be activated.
-    img: ":projects-heading.jpg"
+    img: ":Diego_projects.jpg"
     back_color: "lightblue"
 
   category:
-    - title: "Example"
-      type: id_example
-      color: "gray"
-    - title: "Picture"
-      type: id_picture
+    - title: "R Package"
+      type: id_package
+      color: "blue"
+    - title: "Master degree"
+      type: id_master
       color: "#62b462"
-    - title: "Quote"
-      type: id_quote
-      color: "#2FD0ED"
 
   list:
     # example
-    - type: id_example
-      project_name: "Example Project"
-      project_excerpt: "Examples"
-      img: ":project1_thumb.jpg"
-      img_title: "img title1"
-      date: "2021-03-13"
+    - type: id_package
+      project_name: "GeodesiCL"
+      project_excerpt: "A little journey into Geometric Geodesy."
+      img: ":geodesicl.jpg"
+      img_title: "GeodesiCL"
+      date: "2021-03-29"
+      url: "https://github.com/diegoalarc/GeodesiCL"
       post: |
-        # Examples
+        # <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
 
-        This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
+        ---
+        <img align="right" src="https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/logo.png" width="170" height="190" />
 
-        ### Headings (centered)
-        {:data-align="center"}
+        ## To begin with
+        This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to __[Geometric Geodesy](http://www.mygeodesy.id.au/documents/Geometric%20Geodesy%20A(2013).pdf)__ applying the necessary basic formulas.
 
-        # Heading 1
-
-        ## Heading 2
-
-        ### Heading 3
-
-        #### Heading 4
-
-        ##### Heading 5
-
-        ###### Heading 6
+        This was a project created between [Diego Alarcón](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/) and [Karla Riquelme](https://www.linkedin.com/in/karlariquelmecarrillo/) seeing the need to introduce the new generation of professionals in the learning of software language and in turn present free software.
 
         ***
+        ## Installation
+        #### Install system dependencies
+        Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system:
 
-        ### Paragraphs
+        * Windows: use the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/).
+        * Ubuntu: `sudo apt install gdal-bin libgdal-dev`
+        * MacOS: `brew install gdal --HEAD` or `brew install gdal`
 
-        #### Paragraph
+        For more information on GDAL installation [Click here!](https://medium.com/@egiron/how-to-install-gdal-and-qgis-on-macos-catalina-ca690dca4f91)
 
-        **William Shakespeare**, Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
+        We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
 
-        #### Texts
+        ### First option
 
-        Quoted text `Hello world`
+        After we already have the `system dependencies`, to use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/). Next, you need to install the <a href="https://www.r-project.org/nosvn/pandoc/devtools.html">`devtools`</a> package in order to start with the installation of the `GeodesiCL` package, then just copy and paste the following command into the [RStudio](https://rstudio.com/) console:
 
-        Bold text **Hello world**
+        ```r
+        install.packages("devtools")
+        devtools::install_github("diegoalarc/GeodesiCL")
+        ```
+        ### Second option
 
-        Italic text _Hello world_
+        If you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), you could just copy the following command:
 
-        kbd text <kbd>Hello world</kbd>
-
-        #### Blockquote
-
-        > **William Shakespeare**, Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
-
-        ### Link
-
-        This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme), a simple theme built for [Jekyll](https://jekyllrb.com/).
-
-        ### Picture
-
-        ![such a lovely place](:projects-heading.jpg)
-
-        ### Picture (centered)
-
-        ![such a lovely place](:project1_thumb.jpg){:data-align="center"}
-
-        ### Lists
-
-        - Apple
-        - Banana
-        - Orange
-
-        1. Fruits
-            1. Apples
-                - Granny Smith
-                - Mutsu
-            1. Bananas
-                - Cavendish
-                - Red
-        1. Vegetables
-
-        ***
-
-        ### Tables
-
-        #### Small Table (centered)
-
-        | Fruits(not aligned) | Alignment (centered) | num (right align) |
-        | ------------------- | :------------------: | ----------------: |
-        | Apple               |       centered       |              9999 |
-        | Banana              |  centered long text  |               999 |
-        | Orange              |       centered       |                99 |
-        | Lemon               |       centered       |                 9 |
-        {:data-align="center"}
-
-        #### Wide Table (centered)
-
-        scroll enabled when page is narrow
-
-        | Fruits | num (left align) | num (right align) | num  | num  | num  |
-        | ------ | :--------------- | ----------------: | ---- | ---- | ---- |
-        | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 |
-        | Banana | 111              |               111 | 222  | 333  | 444  |
-        | Orange | 11               |                11 | 22   | 33   | 44   |
-        | Lemon  | 1                |                 1 | 2    | 3    | 4    |
-        {:data-align="center"}
-
-        #### Wider Table
-
-        scroll enabled when page is narrow
-
-        | Fruits | num (left align) | num (right align) | num  | num  | num  | num  | num  | num  |
-        | ------ | :--------------- | ----------------: | ---- | ---- | ---- | ---- | ---- | ---- |
-        | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 | 5555 | 6666 | 7777 |
-        | Banana | 111              |               111 | 222  | 333  | 444  | 555  | 666  | 777  |
-        | Orange | 11               |                11 | 22   | 33   | 44   | 55   | 66   | 77   |
-        | Lemon  | 1                |                 1 | 2    | 3    | 4    | 5    | 6    | 7    |
-
-        ### Code
-
-        #### Quote
-
-        ```python
-        for i in range(5, 10):
-          print(i)
+        ```r
+        install.packages("GeodesiCL")
         ```
 
-    # picture
-    - type: id_picture
-      project_name: "Example Project"
-      project_excerpt: "Picture"
-      img: ":project2_thumb.jpg"
-      img_title: "img title2"
-      date: "2021-04-23"
+    # Master
+    - type: id_master
+      project_name: "Innovation laboratory EAGLE"
+      project_excerpt: "The innovation laboratory provides the opportunity to conduct a specified research project."
+      img: ":EAGLE_logo.png"
+      img_title: "Eagle Msc."
+      date: "2021-04-13"
+      url: "https://github.com/diegoalarc/Innovation_laboratory_EAGLE"
       post: |
-        # Title
-        This is project content.
+        # [Innovation laboratory EAGLE](http://eagle-science.org/project/tmt1-innovation-laboratory/)
+        The innovation laboratory provides the opportunity to conduct a specified research project on a chosen research topic and explore the potential, challenges and limits of Earth Observation and geoanalysis in a practical approach during the 3rd term.
+        The Innovation Laboratory allows you to analyze one particular topic in your field of interest in depth. It allows to address own research in the field of the study program and offers the basis of practical attained knowledge. It is similar to an internship but allows to do it at the university (esp. our department).
 
-        ![Image](:project2_thumb.jpg)
+        ---
 
-    # quote
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "William Shakespeare"
-      #img: ":project1_thumb.jpg"
-      #img_title: "img title3"
-      date: "2021-05-27"
+        ## Content
+        The content of the innovation laboratory can be decided by each student individually and either a research topic is offered by a lecturer or the student is proposing an own topic. Research topics need to be discussed with and proposed to one EAGLE lecturer who will also be in charge of supervising and grading the students work. Topics of the innovation laboratory can cover all aspects of the EAGLE study program with a strong focus on applied Earth Observation and geoanalysis or its innovative potential for remote sensing sciences. It may comprise topics such as linking spectrometer field studies to remotely sensed data or the exploration of UAV based imagery, as well as space borne earth observation analysis such as time-series derivation for a variety of environmental studies i.e. resource mapping or spatial predictions and statistics of variables.
+
+        ---
+
+        ## Topic:
+        ### Machine Learning process for yield prediction for the "Carmen Rosa" farm located in Chile.
+
+        Project carried out with the help of the company Carmen Rosa, who has provided data, both for its weather station and its annual production, in order to carry out an analysis and possible production optimization considering:
+
+        - Temperature
+        - Evapotranspiration
+        - Humidity
+        - Fields area
+        - Grade day
+        - Annual production
+        - KMZ (converted to Shapefile) with the precise location of the crops
+
+        Image of Carmen Rosa Farm:
+        ![Carmen Rosa farm location](https://github.com/diegoalarc/Innovation_laboratory_EAGLE/blob/main/Plots/Carmen_Rosa_Farm.png?raw=true "Carmen Rosa farm location")
+
+        #### For better precision, check the location by downloading the following kmz:
+        - [Kmz of Carmen Rosa Farm](https://github.com/diegoalarc/Innovation_laboratory_EAGLE/raw/main/Original_data/CARMEN_ROSA_farm.kmz)
+
+    - type: id_master
+      project_name: "MB1 and MB2 Master EAGLE courses"
+      project_excerpt: "Codes for the approval of the MB1 and MB2 Master EAGLE courses at the Julius-Maximilians-Universität Würzburg, Germany."
+      img: ":EAGLE_logo.png"
+      img_title: "Eagle Msc."
+      date: "2021-04-13"
+      url: "https://github.com/diegoalarc/Test__MB1_and_MB2"
       post: |
-        Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Albert Einstein"
-      img: ":project2_thumb.jpg"
-      img_title: "img title4"
-      date: "2021-06-08"
+        ## [MB1](http://eagle-science.org/project/digital-image-analysis-and-gis/) course: *Map creation*
+
+        Corresponds to the project for the [MB1 course Digital Image Analysis and GIS](http://eagle-science.org/project/digital-image-analysis-and-gis/).
+
+        Through the script [Project_QGIS_Script.R](https://github.com/diegoalarc/Test__MB1_and_MB2/blob/master/Project_QGIS_Script.R) was intended to work with mosaics at the country level and cut entire regions with memory efficiency. Within this, you can find a higher rating with reference to the previous code for images and mosaics, and a direct way to save plotted graphics for each type of water body. The products of this script. Using the [OTB toolbox](https://www.orfeo-toolbox.org/) by [QGIS](https://www.qgis.org/en/site/) it was used for change detection making an iteration of the different Tiff image created by the R Script. It was possible to made a unique Tiff where was differenced by its Digital Number for each unique year which represent the state of the art of Permanet and Seasonal water to generate a final map that shows the decrease in the body of water of the Aculeo lagoon between 2010 and 2018. It is necessary to add that by means of the histogram visualization of the digital pixel values of the new TIFF created with change detection, the ranges of each year were obtained and classified with different colors for an easier visual representation for the users.
+
+        In parallel [LandSat 8](https://www.usgs.gov/land-resources/nli/landsat/landsat-8) satellite images were used with which the Normalized Difference Water Index was calculated using the McFeeters Method, 1996. This is based on the substitution of the SWIR band by the visible green band, highlighting the water masses. In this case, the relation of analysis of multispectral bands will be:
+
+        ![equation](http://www.sciweavers.org/tex2img.php?eq=NDWI%3D%5Cfrac%7B%28GREEN-NIR%29%7D%7B%28GREEN%2BNIR%29%7D%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+
+        With the above, a Time Series analysis was generated between 2015 and 2019 with a temporal resolution of approximately 15 day to be able to observe the behavior of the body of water using data from another satellite and at the same time obtain the vacuum between 2018 and 2019. It could be observed that after the lagoon dried up it was not observed again that it reappeared.
+
+        Because [LandSat 8](https://www.usgs.gov/land-resources/nli/landsat/landsat-8) images cannot show continuity on non-cloudy dates. An analysis of Radar [SLC](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/product-types-processing-levels/level-1) images of the [Sentinel 1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1) satellite was also performed in the last year until the lake disappears. This occurs from April 2017 to April 2018 approximately. The images were processed using the free software [SNAP](https://step.esa.int/main/toolboxes/snap/) and then a quick analysis was made using [Project_Radar_Script.R](https://github.com/diegoalarc/Test__MB1_and_MB2/blob/master/Project_Radar_Script.R) in R.
+
+        It should be noted that all the information acquired through [LandSat 8](https://www.usgs.gov/land-resources/nli/landsat/landsat-8) and [Sentinel 1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1), has small temporary empty spaces, which do not affect the observation of the drought of the Aculeo lagoon.
+
+        ---
+
+        ## [MB2](http://eagle-science.org/project/programming-and-geostatistical-analysis/) course: *Project_Script.R*
+
+        Corresponds to the project for the [MB2 course Introduction to Programming and Geostatistics](http://eagle-science.org/project/programming-and-geostatistical-analysis/).
+
+        Through this script an easy and fast way is proposed to observe the decrease over time of the water level of the Acualeo Lagoon in Chile. It is also possible to modify this code to observe other gaps in the world, using the data provided by [Global SDG database](https://www.sdg661.app/data-products/data-downloads) and a a preset georeferenced area (which can be changed by a Shapefile).
+
+        [Link to download the water bodies of Chile by Global SDG database.](https://storage.googleapis.com/global-surface-water-stats/zips/Chile_all.zip)
+
+        One of the most important characteristics of this script is that it is generic, therefore it can be used for any type of body of water in the world while its extent is known. For this, within the code between lines 121 and 153 is the option to download a shapefile that makes up the cadastre of lakes in Chile obtained from the official page of the [General direction of waters](https://dga.mop.gob.cl/Paginas/default.aspx) in Chile. Which can be used to facilitate the understanding of how to use a database such as a shapefile in this script.
+
+        [Link to download the cadastre of lakes in Chile.](http://www.dga.cl/estudiospublicaciones/mapoteca/Inventarios/catastro_de_lagos.zip)
+
+
+    - ttype: id_master
+      project_name: "Spatial modeling and prediction (SMP) Master EAGLE course"
+      project_excerpt: "Code and poster for the approval of the SMP Master EAGLE course at the Julius-Maximilians-Universität Würzburg, Germany."
+      img: ":EAGLE_logo.png"
+      img_title: "Eagle Msc."
+      date: "2020-10-26"
+      url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
       post: |
-        Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Mae West"
-      img: ":project1_thumb.jpg"
-      img_title: "img title5"
-      date: "2021-08-20"
-      post: |
-        You only live once, but if you do it right, once is enough.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Mahatma Gandhi "
-      img: ":project2_thumb.jpg"
-      img_title: "img title6"
-      date: "2021-12-20"
-      post: |
-        Be the change that you wish to see in the world.
+        This is the course project "Spatial Modeling and Prediction"
+
+        ![Scientific poster of "Projection of post-moult area utilization by Humboldt
+        Penguins in south-central Chile"](https://github.com/diegoalarc/Spatial_Modeling_and_Prediction/blob/master/Products/Poster_Humboldt_Penguins_DiegoAlarcon.png?raw=true)
