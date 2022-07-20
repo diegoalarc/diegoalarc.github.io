@@ -44,4 +44,4 @@ Always looking for where I can apply my management skills and my desire to grow 
 
 # Curriculum Vitae
 
-If you wish you can have a look at my updated CV you can download it by clicking [here](assets/img/about/CV_Diego_Alarcon_EN.pdf).
+If you wish you can have a look at my updated CV you can download it by clicking [here](https://github.com/diegoalarc/diegoalarc.github.io/blob/main/assets/img/about/CV_Diego_Alarcon_EN.pdf).
