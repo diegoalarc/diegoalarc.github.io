@@ -36,7 +36,12 @@ img: ":Diego_complete.jpg"
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
-{%- include util/auto-content-generator.liquid -%}
-{{ website_info_text_first }}
+# About me
 
-{{ website_info_text_second }}
+MSc in Remote Sensing Universität Würzburg. GIS expert with extensive knowledge of software management and programming languages such as R, Python, and javascript (GEE).
+I also have experience in project management with AGILE (Scrum) methodology.
+Always looking for where I can apply my management skills and my desire to grow a team.
+
+If you wish you can have a look at my updated CV and you can download it by clicking [here](assets/img/about/CV_Diego_Alarcon_EN.pdf).
+
+<embed src="https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/CV_Diego_Alarcon_EN.pdf" type="application/pdf">
