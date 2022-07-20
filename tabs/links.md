@@ -44,49 +44,106 @@ page_data:
 
   # To change order of the Categories, simply change order. (you don't need to change list order.)
   category:
-    - title: "JekyII / Liquid"
-      type: id_jekyiiliquid
-      color: "gray"
-    - title: "Web Design"
-      type: id_webdesign
-      color: "#F4A273"
-    - title: "Programming"
-      type: id_programming
+    - title: "Coding clubs"
+      type: id_codingclub
+      color: "#3366cc"
+    - title: "Academic information"
+      type: id_research
+      color: "#55ffee"
+    - title: "Learning coding"
+      type: id_coding
       color: "#62b462"
+    - title: "Other websites"
+      type: id_other
+      color: "#50568a"
 
   list:
     -
-    # programming
-    - type: id_programming
-      title: "Stack OverFlow"
+    # Coding clubs
+    - type: id_codingclub
+      title: "Wageningen University"
+      url: "https://geoscripting-wur.github.io/"
+      info: "Geoscripting course at Wageningen University."
+    - type: id_codingclub
+      title: "Edinburgh Coding Club"
+      url: "https://ourcodingclub.github.io/"
+      info: "Coding club at Edinburgh University."
+    - type: id_codingclub
+      title: "Spatial Thoughts"
+      url: "https://spatialthoughts.com/"
+      info: "A learning platform for modern geospatial technologies."
+    - type: id_codingclub
+      title: "Statistics Globe"
+      url: "https://statisticsglobe.com/"
+      info: "List of R and Python programming tutorials."
+    - type: id_codingclub
+      title: "GeoLatinas"
+      url: "https://geolatinas.weebly.com/"
+      info: "Embrace and inspire Latinas to pursue and thrive in careers in Geoscience and Planetary Science."
+
+    # Academic information
+    - type: id_research
+      title: "Scholar google"
+      url: "https://scholar.google.com/"
+      info: "Search the world's information, including webpages, images, videos and more."
+    - type: id_research
+      title: "	Researchgate"
+      url: "https://www.researchgate.net/"
+      info: "Discover scientific knowledge and stay connected to the world of science."
+    - type: id_research
+      title: "Web of Science"
+      url: "https://access.clarivate.com/login?app=wos&alternative=true&shibShireURL=https:%2F%2Fwww.webofknowledge.com%2F%3Fauth%3DShibboleth&shibReturnURL=https:%2F%2Fwww.webofknowledge.com%2F%3FauthCode%3Dnull%26app%3Dwos%26locale%3Den-US&referrer=app%3Dwos%26authCode%3Dnull%26locale%3Den-US&roaming=true"
+      info: "Is a paid-access platform that provides (typically via the internet) access to multiple databases that provide reference and citation data from academic journals, conference proceedings, and other documents in various academic disciplines. "
+    - type: id_research
+      title: "Sci-hub"
+      url: "https://sci-hub.se/"
+      info: "knowledge to everyone."
+
+    # Learning coding
+    - type: id_coding
+      title: "python-de-cero-a-experto"
+      url: "https://council.cl/cursos/python-de-cero-a-experto/"
+      info: "Curso de Python en español."
+    - type: id_coding
+      title: "mineduc.cl-phyton"
+      url: "https://sitios.mineduc.cl/lenguajesdigitales/phyton.html"
+      info: "Curso Mineduc de Python en español."
+    - type: id_coding
+      title: "R-bloggers"
+      url: "https://www.r-bloggers.com/"
+      info: "R news and tutorial contributed by hundreds of R bloggers."
+    - type: id_coding
+      title: "Udemy"
+      url: "https://www.udemy.com/"
+      info: "Is a for-profit massive open online course (MOOC) provider aimed at professional adults and students."
+
+
+    # Other websites  
+    - type: id_other
+      title: "Cartógrafo.cl"
+      url: "https://cartografo.cl/"
+      info: "Un espacio académico-cartográfico, con muchas ganas de insertarse en la tecnología y las comunicaciones digitales."
+    - type: id_other
+      title: "EAGLE Msc"
+      url: "http://eagle-science.org/"
+      info: "Master applied EArth Observation and Geoanalysis of the Living Environment."
+    - type: id_other
+      title: "Stackoverflow"
       url: "https://stackoverflow.com/"
-      info: "Stack Overflow is a question and answer website for professional and enthusiastic programmers."
+      info: "Empowering the world to develop technology through collective knowledge."
+    - type: id_other
+      title: "AniMove"
+      url: "https://animove.org/"
+      info: "AniMove courses are focused on the use of remote sensing and animal movement for conservation based on open source software entirely."
+    - type: id_other
+      title: "SNAP ESA"
+      url: "https://step.esa.int/main/download/snap-download/"
+      info: "Here you can download the latest installers for SNAP and the Sentinel Toolboxes."
+---
 
-    # jekyiiliquid
-    - type: id_jekyiiliquid
-      title: "Jekyll"
-      url: "https://jekyllrb.com/"
-      info: "Transform your plain text into static websites and blogs."
-    - type: id_jekyiiliquid
-      title: "Jekyll Cheat Sheet"
-      url: "https://cloudcannon.com/community/jekyll-cheat-sheet/"
-      info: "There are so many Jekyll variables and filters to remember and it can be tricky to keep it all in your head. This cheat sheet serves as a quick reference of everything Jekyll can do."
-    - type: id_jekyiiliquid
-      title: "Liquid for Designers"
-      url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
-      info: "Liquid for Designers wiki on GitHub"
-    - type: id_jekyiiliquid
-      title: "Liquid for Programmers"
-      url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers"
-      info: "Liquid for Programmers wiki on GitHub"
-    - type: id_jekyiiliquid
-      title: "Liquid Reference"
-      url: "https://shopify.dev/api/liquid/"
-      info: "Liquid is a template language created by Shopify and written in Ruby. It is now available as an open source project on GitHub"
+###### *__Disclaimer__*
 
-    # webdesign
-    - type: id_webdesign
-      title: "W3Schools"
-      url: "https://www.w3schools.com/"
-      info: "W3Schools offers free online tutorials, references and exercises in all the major languages of the web. Covering popular subjects like HTML, CSS, JavaScript, Python, SQL, Java, and many more."
+###### - Not all tools link and / or commented on will be discussed on my web and/or the Slack channel. I only want to disseminate and deliver free information (found on the internet) to the world of Geosciences.
+###### - In no case do I support piracy or anything related to it. From the above I can say that I do not agree with [Sci-hub](https://sci-hub.se/) and its way of bringing science closer, free for all. I only recommend it as an example :wink:.
+###### - These are only recommendations for free access, which does not imply that the paid software is not of very high quality.
 ---

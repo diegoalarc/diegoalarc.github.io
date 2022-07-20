@@ -53,37 +53,16 @@ img: ":home-heading.jpg"
 
 I am also learning to work with *__[Linux](https://www.linux.org/)__* and other free software such as *__[QGis](https://qgis.org/de/site/)__* and *__[LibreOffice](https://es.libreoffice.org/)__* among others.
 
-## :neckbeard: *My Repositories*
+## *My Repositories*
 I hope you visit my *__[Repositories](https://github.com/diegoalarc?tab=repositories)__* and give me your opinion. I'll stay tuned to your comments.
 :v::v:
 
 ## 📫 *Do you want to know more about me?*
 I invite you to visit my *__[LinkedIn](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/)__* and to contact me!!
 
-## :trollface: *Some recommendations*
-:construction: This is always under construction :construction:
-
-| *Coding clubs:* | *Academic information:* | *Learning coding:* |
-|----|----|----|
-| [Wageningen University](https://geoscripting-wur.github.io/) |[Scholar google](https://scholar.google.com/) | [python-de-cero-a-experto](https://council.cl/cursos/python-de-cero-a-experto/) |
-| [Edinburgh Coding Club](https://ourcodingclub.github.io/) | [Researchgate](https://www.researchgate.net/) | [mineduc.cl-phyton](https://sitios.mineduc.cl/lenguajesdigitales/phyton.html) |
-| [Spatial Thoughts](https://spatialthoughts.com/) | [Web of Science](https://login.webofknowledge.com/error/Error?Error=IPError&PathInfo=%2F&RouterURL=https%3A%2F%2Fwww.webofknowledge.com%2F&Domain=.webofknowledge.com&Src=IP&Alias=Wrc=IP&Alias=W) | [R-bloggers](https://www.r-bloggers.com/) |
-| [Statistics Globe](https://statisticsglobe.com/) | [Sci-hub](https://sci-hub.se/) | [Udemy](https://www.udemy.com/) |
-| [GeoLatinas](https://geolatinas.weebly.com/) | |
-
-| *Other websites:* |
-|----|
-| [cartografo.cl](https://cartografo.cl/) |
-| [EAGLE Msc](http://eagle-science.org/) |
-| [Stackoverflow](https://stackoverflow.com/) |
-| [AniMove](https://animove.org/) |
-| [cartografia.cl](http://sitio.cartografia.cl/) |
-| [pythonchile.cl](https://pythonchile.cl/) |
-| [SNAP ESA](https://step.esa.int/main/download/snap-download/) |
-
 I am also participating in the *__Spanish__* :es: community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
 
-### __I hope you like my *GitHub* and we can share more!!__
+### __I hope you like my *page* and we can share more!!__
 ### *__Greetings!!__*
 
 <!--

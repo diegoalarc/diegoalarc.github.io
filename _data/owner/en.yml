@@ -5,7 +5,7 @@
 brand: "Diego Alarcón "
 
 # text below the brand name
-brand_sub_text: "$site_sample"
+brand_sub_text: "Msc. Remote Sensing"
 
 # used for seo meta post author (if it's not defined in post)
 name: "Diego Alarcón"
@@ -48,10 +48,10 @@ meta_common_description: "Your meta description."
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  github: "diegoalarc"
-  email: "diego.alarcondiaz@gmail.com"
-  linkedin: "diegoalarcondiaz"
-  twitter: "DiegoAlarcnDaz2"
+  - github: "diegoalarc"
+  - email: "diego.alarcondiaz@gmail.com"
+  - linkedin: "diegoalarcondiaz"
+  - twitter: "DiegoAlarcnDaz2"
 # to add more, check the _data/const/contact.yml file
 #  - your_new_contact: ""
 
