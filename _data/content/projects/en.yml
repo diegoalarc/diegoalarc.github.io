@@ -145,7 +145,6 @@ page_data:
 
         [Link to download the cadastre of lakes in Chile.](http://www.dga.cl/estudiospublicaciones/mapoteca/Inventarios/catastro_de_lagos.zip)
 
-
     - ttype: id_master
       project_name: "Spatial modeling and prediction (SMP) Master EAGLE course"
       project_excerpt: "Code and poster for the approval of the SMP Master EAGLE course at the Julius-Maximilians-Universität Würzburg, Germany."
@@ -154,7 +153,7 @@ page_data:
       date: "2020-10-26"
       url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
       post: |
-        This is the course project "Spatial Modeling and Prediction"
+        ## This is the course project "Spatial Modeling and Prediction"
 
         ![Scientific poster of "Projection of post-moult area utilization by Humboldt
         Penguins in south-central Chile"](https://github.com/diegoalarc/Spatial_Modeling_and_Prediction/blob/master/Products/Poster_Humboldt_Penguins_DiegoAlarcon.png?raw=true)
