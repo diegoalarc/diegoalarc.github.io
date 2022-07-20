@@ -40,7 +40,7 @@ lng_pair: id_links
 page_data:
   main:
     header: "Links"
-    info: "Your Links page description."
+    info: "Here are a number of links that I find interesting."
 
   # To change order of the Categories, simply change order. (you don't need to change list order.)
   category:
@@ -94,10 +94,7 @@ page_data:
       title: "Web of Science"
       url: "https://access.clarivate.com/login?app=wos&alternative=true&shibShireURL=https:%2F%2Fwww.webofknowledge.com%2F%3Fauth%3DShibboleth&shibReturnURL=https:%2F%2Fwww.webofknowledge.com%2F%3FauthCode%3Dnull%26app%3Dwos%26locale%3Den-US&referrer=app%3Dwos%26authCode%3Dnull%26locale%3Den-US&roaming=true"
       info: "Is a paid-access platform that provides (typically via the internet) access to multiple databases that provide reference and citation data from academic journals, conference proceedings, and other documents in various academic disciplines. "
-    - type: id_research
-      title: "Sci-hub"
-      url: "https://sci-hub.se/"
-      info: "knowledge to everyone."
+      
 
     # Learning coding
     - type: id_coding
