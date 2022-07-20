@@ -37,9 +37,9 @@ img: ":home-heading.jpg"
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
-## *Hi, I'm Diego Alarcón 😄.*
+## *Hi, there 🌎!.*
 
-I am a *__[Chilean](https://en.wikipedia.org/wiki/Chile)__* passionate about *__coding__* and __Remote Sensing__* with the possibilities that this can generate for all of us in our future. I am also a *__[surveying engineer](http://www.geomensura.usach.cl/)__* and I am currently working in Germany after finished the *__[EAGLE Master](http://eagle-science.org/)__*.
+I am a *__[Chilean](https://en.wikipedia.org/wiki/Chile)__* passionate about *__coding__* and *__Remote Sensing__* with the possibilities that this together can generate for all of us in our future 🛰️. I am also a *__[surveying engineer](http://www.geomensura.usach.cl/)__* and I am currently working in Germany after finished the *__[EAGLE Master](http://eagle-science.org/)__*.
 
 Currently I can say that I handle the following *__languages/tools__* a little more than *__basic__* 🌱:
 
@@ -55,27 +55,8 @@ I am constantly learning to work with *__[Linux](https://www.linux.org/)__* and 
 If you would like to explore my projects in more detail, I invite you to visit  my *__[Repositories](https://github.com/diegoalarc?tab=repositories)__* and give me your opinion. I'll stay tuned to your comments.
 
 ## More about me
-
 I am also participating in the *__Spanish__* community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
-
-I have created one of the few geodesy packages for R.
-
+I have created one of the few geodesy packages for R, called *__[GeodesiCL](https://github.com/diegoalarc/GeodesiCL)__*.
 I am currently mentoring independently young people in Chile, in order to empower talent.
-
 I hope you enjoy my short page and find enough information about me.
-
-<!--
-**diegoalarc/diegoalarc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
 ---
