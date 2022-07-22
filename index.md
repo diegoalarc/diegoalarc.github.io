@@ -41,7 +41,7 @@ img: ":home-heading.jpg"
 
 My name is Diego Alarcón. I am a __[Surveying Engineer](http://www.geomensura.usach.cl/)__ by training, a Remote Sensing 🛰️ explorer from __[EAGLE Master](http://eagle-science.org/)__ and a Data Scientist out of curiosity. I come from Chile, a place quite far away for many and very diverse for others.
 
-Thanks to the Master I have been able to learn many new skills that have complemented my knowledge. Within what I could highlight is my handling (not so basic) of:
+Thanks to the Master I have been able to learn many new skills that have complemented my knowledge. Within what I could highlight that I manage (intermediate level) of:
 
 - __[Google Earth Engine](https://courses.spatialthoughts.com/end-to-end-gee.html)__
 - __[Python](https://courses.spatialthoughts.com/python-foundation.html#what-next)__

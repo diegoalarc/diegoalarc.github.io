@@ -68,24 +68,7 @@ I have created one of the few geodesy packages for R, called *__[GeodesiCL](http
 I am currently mentoring independently young people in Chile, in order to empower talent.
 I hope you enjoy my short page and find enough information about me.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="640" height="574" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
 ---
 I hope you enjoy it!
