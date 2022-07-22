@@ -23,9 +23,11 @@ img: ":Diego_complete.jpg"
 
 # optional
 # if you enabled image_viewer_posts you don't need to enable this. This is only if image_viewer_posts = false
-#image_viewer_on: true
+image_viewer_on: true
+
 # if you enabled image_lazy_loader_posts you don't need to enable this. This is only if image_lazy_loader_posts = false
-#image_lazy_loader_on: true
+image_lazy_loader_on: true
+
 # exclude from on site search
 #on_site_search_exclude: true
 # exclude from search engines
@@ -69,4 +71,4 @@ I am currently __mentoring independently__ young people in Chile, in order to __
 
 I hope you enjoy my short page and find enough information about me.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
