@@ -52,7 +52,7 @@ If you wish you can have a look at my updated CV you can download it by clicking
 
 I am a person with a passion for learning and exploring. So much so that in 2016 I changed my life and went on a trip to South America, visiting several countries and stopping in Colombia, where everything changed for me. 
 
-![](/assets/img/about/assets/img/about/colombia_2016_1.jpg)
+![Colombia](/assets/img/about/assets/img/about/colombia_2016_1.jpg "Viajando por Colombia")
 ![](/assets/img/about/assets/img/about/colombia_2016_2.jpg)
 ![](/assets/img/about/assets/img/about/colombia_2016_3.jpg)
 ![](/assets/img/about/assets/img/about/colombia_2016_4.jpg)
