@@ -46,20 +46,32 @@ If you wish you can have a look at my updated CV you can download it by clicking
 
 # ok ok! let's stop with the boring part.
 
-## More about me
+# More about me
 
-I am a person with a passion for learning and exploring. So much so that in 2016 I changed my life and went on a trip to South America, visiting several countries and stopping in Colombia, where everything changed for me. Then I concentrated all my efforts z I came to Germany to study a Master in an area that I am passionate about, Remote Sensing, where I discovered another passion which is programming.
+I am a person with a passion for learning and exploring. So much so that in 2016 I changed my life and went on a trip to South America, visiting several countries and stopping in Colombia, where everything changed for me. 
 
-Currently I am working in Germany in a big company, where I am still learning new skills and always looking for a place to expand my career.
+![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_1.jpg)
+![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_2.jpg)
+![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_3.jpg)
+![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_4.jpg)
+
+Then I concentrated all my efforts and I came to Germany to study a Master in an area that I am passionate about, Remote Sensing, where I discovered another passion which is programming.
+
+![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/codig.jpg)
+
+Currently I am working in Germany in a company for the Geospatial area, where I am still learning new skills and always looking for a place to expand my career.
 
 I am also participating in the *__Spanish__* community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
+
 I have created one of the few geodesy packages for R, called *__[GeodesiCL](https://github.com/diegoalarc/GeodesiCL)__*.
 
 I am currently mentoring independently young people in Chile, in order to empower talent.
 I hope you enjoy my short page and find enough information about me.
 
-<!-- BEGIN WISTIA CALL TO ACTION HTML -->
-<!-- Generated from https://formkeep.com/forms/4efe36a74204/designer/edit on July 22, 2022 11:28 using version 2.03.21 -->
+# Would you like to contact me?
+
+Leave me a quick message...
+
 <div style='-webkit-box-sizing: border-box; -moz-box-sizing: border-box; margin: 0; font-family: WistiaOpenSans, Helvetica, Arial, sans-serif;'>
   <div>
     <section>
@@ -103,5 +115,3 @@ I hope you enjoy my short page and find enough information about me.
     </section>
   </div>
 </div>
-<!-- Generated from https://formkeep.com/forms/4efe36a74204/designer/edit on July 22, 2022 11:28 using version 2.03.21 -->
-<!-- END WISTIA CALL TO ACTION HTML -->
