@@ -136,10 +136,3 @@ page_data:
       url: "https://step.esa.int/main/download/snap-download/"
       info: "Here you can download the latest installers for SNAP and the Sentinel Toolboxes."
 ---
-
-###### *__Disclaimer__*
-
-###### - Not all tools link and / or commented on will be discussed on my web and/or the Slack channel. I only want to disseminate and deliver free information (found on the internet) to the world of Geosciences.
-###### - In no case do I support piracy or anything related to it. From the above I can say that I do not agree with [Sci-hub](https://sci-hub.se/) and its way of bringing science closer, free for all. I only recommend it as an example :wink:.
-###### - These are only recommendations for free access, which does not imply that the paid software is not of very high quality.
----
