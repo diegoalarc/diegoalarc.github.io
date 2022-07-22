@@ -71,4 +71,4 @@ I am currently __mentoring independently__ young people in Chile, in order to __
 
 I hope you enjoy my short page and find enough information about me.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="400" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
