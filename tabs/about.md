@@ -61,14 +61,12 @@ Then I concentrated all my efforts and I came to Germany to study a Master in an
 
 Currently I am working in Germany in a company for the Geospatial area, where I am still learning new skills and always looking for a place to expand my career.
 
-I am also participating in the *__Spanish__* community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
+I am also participating in the __Spanish__ community on __[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__.
 
-I have created one of the few geodesy packages for R, called *__[GeodesiCL](https://github.com/diegoalarc/GeodesiCL)__*.
+I have created one of the few geodesy packages for R, called __[GeodesiCL](https://github.com/diegoalarc/GeodesiCL)__.
 
-I am currently mentoring independently young people in Chile, in order to empower talent.
+I am currently __mentoring independently__ young people in Chile, in order to __empower talent__.
+
 I hope you enjoy my short page and find enough information about me.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-
----
-I hope you enjoy it!
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBEQ_4Bt53v8hGvIZLVpXRJYQc4J31xlKXTpi-LUEgVv9ZcA/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
