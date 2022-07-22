@@ -58,13 +58,33 @@ I have created one of the few geodesy packages for R, called *__[GeodesiCL](http
 I am currently mentoring independently young people in Chile, in order to empower talent.
 I hope you enjoy my short page and find enough information about me.
 
-
+<!-- BEGIN WISTIA CALL TO ACTION HTML -->
+<!-- Generated from https://formkeep.com/forms/4efe36a74204/designer/edit on July 22, 2022 11:28 using version 2.03.21 -->
 <div style='-webkit-box-sizing: border-box; -moz-box-sizing: border-box; margin: 0; font-family: WistiaOpenSans, Helvetica, Arial, sans-serif;'>
   <div>
     <section>
       <div style="width:100%">
       <form class="" target="_self" enctype="multipart/form-data" action="https://formkeep.com/f/4efe36a74204" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
         <fieldset style="border: 0px">
+          <div style="line-height: normal;"> 
+            <span>  
+              <label title="required" for="Name"> </label>
+              <input type="text" name="Name" id="Name" required="required" placeholder="Name (required)" autofocus="autofocus" style="font-family: WistiaOpenSans, Helvetica, Arial, sans-serif; line-height: 36px; font-size: 24px;  width: 60%; " />
+            </span>
+          </div>
+          <div style="line-height: normal;"> 
+            <span>  
+              <label title="required" for="Email"> </label>
+              <input type="text" name="Email" id="Email" required="required" placeholder="Email (required)" style="font-family: WistiaOpenSans, Helvetica, Arial, sans-serif; line-height: 36px; font-size: 24px;  width: 60%; " />
+            </span>
+          </div>
+          <div style="padding-top: 20px; line-height: normal;"> 
+            <span>  
+              <label title="required" for="Message..."> </label>
+              <textarea name="Message..." id="Message..." required="required" placeholder="Message... (required)" rows="3" style="font-family: WistiaOpenSans, Helvetica, Arial, sans-serif; width: 60%; font-size: 24px;">
+</textarea>
+            </span>
+          </div>
           <div style="opacity:0;position:absolute;top:0;left:-5000px;height:0;width:0">
             <label for="subscribe_4efe36a74204_39589"></label>
             <input name="subscribe_4efe36a74204_39589" value="" tabindex="-1" autocomplete="off"
@@ -74,7 +94,7 @@ I hope you enjoy my short page and find enough information about me.
           <!-- UNCOMMENT THIS IF YOU WANT EXTRA VALUES: <input type="hidden" name="hidden_wista_campaign_extra_info" id="hidden_wista_campaign_extra_info" value="CHANGE_THIS_TO_ANYTHING_YOU_WANT" /> -->
           <div>
             <div>
-              <input type="submit" value="Submit" style="margin-top: 30px; background-color: #1e64f0; color: rgb(255, 255, 255); font-family: WistiaOpenSans, Helvetica, Arial, sans-serif; border-radius: 5px; font-weight: 600; border-style: none; padding: 10px; font-size: 24px;" data-disable-with="Submit" />
+              <input type="submit" value="Send" style="margin-top: 30px; background-color: #1e64f0; color: rgb(255, 255, 255); font-family: WistiaOpenSans, Helvetica, Arial, sans-serif; border-radius: 5px; font-weight: 600; border-style: none; padding: 10px; font-size: 24px;" data-disable-with="Send" />
             </div>
           </div>
         </fieldset>
@@ -83,3 +103,5 @@ I hope you enjoy my short page and find enough information about me.
     </section>
   </div>
 </div>
+<!-- Generated from https://formkeep.com/forms/4efe36a74204/designer/edit on July 22, 2022 11:28 using version 2.03.21 -->
+<!-- END WISTIA CALL TO ACTION HTML -->
