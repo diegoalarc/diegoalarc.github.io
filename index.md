@@ -37,7 +37,7 @@ img: ":home-heading.jpg"
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
-## *Hi, there 🌎!.*
+## *Hi there 🌎!*
 
 My name is Diego Alarcón. I am a __[Surveying Engineer](http://www.geomensura.usach.cl/)__ by training, a Remote Sensing 🛰️ explorer from __[EAGLE Master](http://eagle-science.org/)__ and a Data Scientist out of curiosity. I come from Chile, a place quite far away for many and very diverse for others.
 
