@@ -59,7 +59,7 @@ I am a person with a passion for learning and exploring. So much so that in 2016
 
 Then I concentrated all my efforts and I came to Germany to study a Master in an area that I am passionate about, Remote Sensing, where I discovered another passion which is programming.
 
-![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/codig.jpg)
+![Programing](/assets/img/about/codig.jpg)
 
 Currently I am working in Germany in a company for the Geospatial area, where I am still learning new skills and always looking for a place to expand my career.
 
