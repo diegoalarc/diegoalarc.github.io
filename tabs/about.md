@@ -37,11 +37,47 @@ img: ":Diego_complete.jpg"
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
 # About me
-
 MSc in Remote Sensing Universität Würzburg. GIS expert with extensive knowledge of software management and programming languages such as R, Python, and javascript (GEE).
 I also have experience in project management with AGILE (Scrum) methodology.
 Always looking for where I can apply my management skills and my desire to grow a team.
 
 # Curriculum Vitae
-
 If you wish you can have a look at my updated CV you can download it by clicking [here](https://github.com/diegoalarc/diegoalarc.github.io/blob/main/assets/img/about/CV_Diego_Alarcon_EN.pdf).
+
+# ok ok! let's stop with the boring part.
+
+## More about me
+
+I am a person with a passion for learning and exploring. So much so that in 2016 I changed my life and went on a trip to South America, visiting several countries and stopping in Colombia, where everything changed for me. Then I concentrated all my efforts z I came to Germany to study a Master in an area that I am passionate about, Remote Sensing, where I discovered another passion which is programming.
+
+Currently I am working in Germany in a big company, where I am still learning new skills and always looking for a place to expand my career.
+
+I am also participating in the *__Spanish__* community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
+I have created one of the few geodesy packages for R, called *__[GeodesiCL](https://github.com/diegoalarc/GeodesiCL)__*.
+
+I am currently mentoring independently young people in Chile, in order to empower talent.
+I hope you enjoy my short page and find enough information about me.
+
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>

@@ -39,24 +39,15 @@ img: ":home-heading.jpg"
 
 ## *Hi, there 🌎!.*
 
-I am a *__[Chilean](https://en.wikipedia.org/wiki/Chile)__* passionate about *__coding__* and *__Remote Sensing__* with the possibilities that this together can generate for all of us in our future 🛰️. I am also a *__[surveying engineer](http://www.geomensura.usach.cl/)__* and I am currently working in Germany after finished the *__[EAGLE Master](http://eagle-science.org/)__*.
+My name is Diego Alarcón. I am a __[Surveying Engineer](http://www.geomensura.usach.cl/)__ by training, a Remote Sensing 🛰️ explorer from __[EAGLE Master](http://eagle-science.org/)__ and a Data Scientist out of curiosity. I come from Chile, a place quite far away for many and very diverse for others.
 
-Currently I can say that I handle the following *__languages/tools__* a little more than *__basic__* 🌱:
+Thanks to the Master I have been able to learn many new skills that have complemented my knowledge. Within what I could highlight is my handling (not so basic) of:
 
 - __[Google Earth Engine](https://courses.spatialthoughts.com/end-to-end-gee.html)__
 - __[Python](https://courses.spatialthoughts.com/python-foundation.html#what-next)__
 - __[R](https://ourcodingclub.github.io/tutorials/intro-to-r/)__
 
-I'm a fan of *__[Free Software](https://en.wikipedia.org/wiki/Free_software)__*, but I'm not against *__[Commercial software](https://en.wikipedia.org/wiki/Commercial_software)__*.
+I consider myself a person who is always in the process of learning and teaching, in a constant flow of knowledge and enjoyment of life.
 
-I am constantly learning to work with *__[Linux](https://www.linux.org/)__* and other free software such as *__[QGis](https://qgis.org/de/site/)__* and *__[LibreOffice](https://es.libreoffice.org/)__* among others.
-
-## *My Repositories*
+## *My GitHub Repos*
 If you would like to explore my projects in more detail, I invite you to visit  my *__[Repositories](https://github.com/diegoalarc?tab=repositories)__* and give me your opinion. I'll stay tuned to your comments.
-
-## More about me
-I am also participating in the *__Spanish__* community on *__[Slack Latincoding](https://join.slack.com/t/latincoding/shared_invite/zt-nnhgkb43-1ccg6DgMnyJU28zMHs~CJw)__*.
-I have created one of the few geodesy packages for R, called *__[GeodesiCL](https://github.com/diegoalarc/GeodesiCL)__*.
-I am currently mentoring independently young people in Chile, in order to empower talent.
-I hope you enjoy my short page and find enough information about me.
----
