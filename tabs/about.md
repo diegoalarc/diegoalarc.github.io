@@ -58,26 +58,28 @@ I have created one of the few geodesy packages for R, called *__[GeodesiCL](http
 I am currently mentoring independently young people in Chile, in order to empower talent.
 I hope you enjoy my short page and find enough information about me.
 
-<div class="container">
-  <form action="action_page.php">
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<div style='-webkit-box-sizing: border-box; -moz-box-sizing: border-box; margin: 0; font-family: WistiaOpenSans, Helvetica, Arial, sans-serif;'>
+  <div>
+    <section>
+      <div style="width:100%">
+      <form class="" target="_self" enctype="multipart/form-data" action="https://formkeep.com/f/4efe36a74204" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+        <fieldset style="border: 0px">
+          <div style="opacity:0;position:absolute;top:0;left:-5000px;height:0;width:0">
+            <label for="subscribe_4efe36a74204_39589"></label>
+            <input name="subscribe_4efe36a74204_39589" value="" tabindex="-1" autocomplete="off"
+                   type="email" id="email_subscribe_4efe36a74204_39589" placeholder="Your email here">
+          </div>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-
-  </form>
+          <!-- UNCOMMENT THIS IF YOU WANT EXTRA VALUES: <input type="hidden" name="hidden_wista_campaign_extra_info" id="hidden_wista_campaign_extra_info" value="CHANGE_THIS_TO_ANYTHING_YOU_WANT" /> -->
+          <div>
+            <div>
+              <input type="submit" value="Submit" style="margin-top: 30px; background-color: #1e64f0; color: rgb(255, 255, 255); font-family: WistiaOpenSans, Helvetica, Arial, sans-serif; border-radius: 5px; font-weight: 600; border-style: none; padding: 10px; font-size: 24px;" data-disable-with="Submit" />
+            </div>
+          </div>
+        </fieldset>
+</form>
+      </div>
+    </section>
+  </div>
 </div>
