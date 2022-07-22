@@ -52,10 +52,10 @@ If you wish you can have a look at my updated CV you can download it by clicking
 
 I am a person with a passion for learning and exploring. So much so that in 2016 I changed my life and went on a trip to South America, visiting several countries and stopping in Colombia, where everything changed for me. 
 
-![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_1.jpg?raw=true)
-![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_2.jpg?raw=true)
-![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_3.jpg?raw=true)
-![](https://github.com/diegoalarc/diegoalarc.github.io/tree/main/assets/img/about/assets/img/about/colombia_2016_4.jpg?raw=true)
+![](/assets/img/about/assets/img/about/colombia_2016_1.jpg)
+![](/assets/img/about/assets/img/about/colombia_2016_2.jpg)
+![](/assets/img/about/assets/img/about/colombia_2016_3.jpg)
+![](/assets/img/about/assets/img/about/colombia_2016_4.jpg)
 
 Then I concentrated all my efforts and I came to Germany to study a Master in an area that I am passionate about, Remote Sensing, where I discovered another passion which is programming.
 
