@@ -294,10 +294,10 @@ meta:
 google:
   analytics:
     # disable this feature entirely for development or production env.
-    #ignore: development
+    ignore: development
   site_verification:
     # disable this feature entirely for development or production env.
-    #ignore: development
+    ignore: development
 
 ###########################################################
 #                Cookie consent
@@ -327,7 +327,7 @@ cookie_consent:
       value: "granted"
       wait_for_update: 500
       # same as domain in _config.yml file
-      cookie_domain: ""
+      cookie_domain: "diegoalarc.github.io"
       no_check_box: true
     analytics:
       group: [analytics_storage]
