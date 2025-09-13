@@ -97,7 +97,7 @@
             border: 2px solid transparent;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: flex-start;
             padding: 1rem;
         }
         .project-card:hover {
@@ -127,7 +127,8 @@
             padding: 5px 0;
             position: absolute;
             z-index: 1;
-            bottom: 125%; /* Position the tooltip above the text */
+            bottom: 125%;
+            /* Position the tooltip above the text */
             left: 50%;
             margin-left: -100px;
             opacity: 0;
@@ -215,7 +216,6 @@
 
     <nav class="floating-nav floating-nav-mobile md:floating-nav">
         <ul class="flex flex-col gap-2 p-2 rounded-lg shadow-lg" style="background-color: var(--bg-color-darker);">
-      
             <li>
                 <a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
@@ -253,10 +253,10 @@
         <header class="mb-10 text-center sm:text-left">
             <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start">
                 <div class="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
-                    <img src="images/your-photo.jpg" alt="Foto de perfil de Diego Alarcón" class="w-full h-full object-cover">
+                    <img src="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/images/foto_diego.jpg" alt="Foto de perfil de Diego Alarcón" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col items-center sm:items-start">
-                  <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
+                    <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
                     <p class="text-lg text-gray-400">Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.</p>
                     <div class="flex space-x-4 mt-2">
                         <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
@@ -322,8 +322,7 @@
         const content = {
             es: {
                 aboutMeTitle: "Acerca de mí",
-                aboutMeText: `Mi sólida formación en Geociencias, combinada con una especialización en Sistemas de Información Geográfica (SIG) y Sensores Remotos, me convierte en un profesional versátil y altamente cualificado. Mi pasión por la programación, con un enfoque en <strong>Python</strong>, me permite diseñar soluciones innovadoras y automatizar tareas para resolver desafíos complejos.
-En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, aplico mi experiencia con APIs y Python para analizar datos, optimizar procesos internos y brindar un soporte técnico excepcional. Mi compromiso con la excelencia me ha posicionado como un <strong>SME (Subject Matter Expert)</strong>, colaborando estrechamente con los equipos de datos y procesamiento para asegurar la satisfacción del cliente. Me considero un profesional proactivo y resolutivo, siempre en busca de nuevas oportunidades para combinar mis conocimientos técnicos con mi experiencia en Geociencias. Si está buscando a un individuo motivado con un fuerte enfoque en la innovación, lo invito a conectar.`,
+                aboutMeText: `Mi sólida formación en Geociencias, combinada con una especialización en Sistemas de Información Geográfica (SIG) y Sensores Remotos, me convierte en un profesional versátil y altamente cualificado. Mi pasión por la programación, con un enfoque en <strong>Python</strong>, me permite diseñar soluciones innovadoras y automatizar tareas para resolver desafíos complejos. En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, aplico mi experiencia con APIs y Python para analizar datos, optimizar procesos internos y brindar un soporte técnico excepcional. Mi compromiso con la excelencia me ha posicionado como un <strong>SME (Subject Matter Expert)</strong>, colaborando estrechamente con los equipos de datos y procesamiento para asegurar la satisfacción del cliente. Me considero un profesional proactivo y resolutivo, siempre en busca de nuevas oportunidades para combinar mis conocimientos técnicos con mi experiencia en Geociencias. Si está buscando a un individuo motivado con un fuerte enfoque en la innovación, lo invito a conectar.`,
                 experienceTitle: "Experiencia Profesional",
                 experience: [
                     {
@@ -404,7 +403,7 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                         bullets: [
                             "Digitalicé mapas para apoyar la <strong>formalización legal y catastral</strong>.",
                             "Optimicé los flujos de trabajo en <strong>ArcGIS</strong> y las conexiones de bases de datos.",
-                            "Automatización de la generación de informes con <strong>Excel VBA</strong>."
+                            "Automatié la generación de informes con <strong>Excel VBA</strong>."
                         ]
                     },
                     {
@@ -656,12 +655,12 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                         dates: "2006 - 2011",
                         location: "Santiago, Chile",
                         bullets: [
-                            "<strong>Focus:</strong> Geodesy, topographic data collection, and 3D modeling techniques.",
+                            "<strong>Focus:</strong> Geodesy, topographical data collection, and 3D modeling techniques.",
                             "<strong>Thesis:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
                         ]
                     }
                 ],
-                certificationsTitle: "Licenses & Certifications",
+                certificationsTitle: "Certifications",
                 certifications: [
                     {
                         title: "Docker Essentials for Python Developers",
@@ -710,17 +709,17 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                 projects: [
                     {
                         title: "GeodesiCL",
-                        description: "A little journey into Geometric Geodesy.",
+                        description: "A small journey into Geometric Geodesy.",
                         url: "https://github.com/diegoalarc/GeodesiCL"
                     },
                     {
                         title: "Innovation laboratory EAGLE",
-                        description: "The innovation laboratory offers the opportunity to carry out a research project.",
+                        description: "The innovation lab offers the opportunity to carry out a research project.",
                         url: "https://github.com/diegoalarc/Innovation_laboratory_EAGLE"
                     },
                     {
                         title: "MB1 and MB2 Master EAGLE courses",
-                        description: "Codes for the approval of master's courses.",
+                        description: "Code for passing the master's courses.",
                         url: "https://github.com/diegoalarc/Test__MB1_and_MB2"
                     },
                     {
@@ -735,8 +734,7 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
             },
             de: {
                 aboutMeTitle: "Über mich",
-                aboutMeText: `Meine fundierte Ausbildung in Geowissenschaften, kombiniert mit einer Spezialisierung in Geographischen Informationssystemen (GIS) und Fernerkundung, macht mich zu einem vielseitigen und hochqualifizierten Fachmann. Meine Leidenschaft für die Programmierung, mit einem Schwerpunkt auf <strong>Python</strong>, ermöglicht es mir, innovative Lösungen zu entwickeln und Aufgaben zu automatisieren, um komplexe Herausforderungen zu lösen. In meiner aktuellen Rolle als technischer Support-Ingenieur bei <strong>UP42</strong> wende ich meine Erfahrung mit APIs und Python an, um Daten zu analysieren, interne Prozesse zu optimieren und einen außergewöhnlichen technischen Support zu bieten. Mein Engagement für Exzellenz hat mich als <strong>SME (Subject Matter Expert)</strong>, wobei ich eng mit den Daten- und Verarbeitungsteams zusammenarbeite, um die Kundenzufriedenheit sicherzustellen. Ich sehe mich als proaktiven und lösungsorientierten Fachmann, der stets nach neuen Möglichkeiten sucht, um sein technisches Wissen mit seiner Erfahrung in den Geowissenschaften zu verbinden. Wenn Sie eine motivierte Person mit einem starken Fokus auf Innovation, lade ich Sie ein, Kontakt...
-`,
+                aboutMeText: `Mein fundierter Hintergrund in den Geowissenschaften, kombiniert mit einer Spezialisierung auf Geografische Informationssysteme (GIS) und Fernerkundung, macht mich zu einem vielseitigen und hochqualifizierten Fachmann. Meine Leidenschaft für die Programmierung, mit einem Schwerpunkt auf <strong>Python</strong>, ermöglicht es mir, innovative Lösungen zu entwerfen und Aufgaben zur Lösung komplexer Herausforderungen zu automatisieren. In meiner aktuellen Rolle als technischer Support-Ingenieur bei <strong>UP42</strong> wende ich meine Erfahrung mit APIs und Python an, um Daten zu analysieren, interne Prozesse zu optimieren und außergewöhnlichen technischen Support zu bieten. Mein Engagement für Exzellenz hat mich als <strong>SME (Subject Matter Expert)</strong> positioniert, indem ich eng mit den Daten- und Verarbeitungsteams zusammenarbeite, um die Kundenzufriedenheit sicherzustellen. Ich betrachte mich als proaktiven und lösungsorientierten Fachmann, der ständig nach neuen Möglichkeiten sucht, sein technisches Wissen mit seiner Erfahrung in den Geowissenschaften zu verbinden. Wenn Sie nach einer motivierten Person mit einem starken Fokus auf Innovation suchen, lade ich Sie ein, sich zu vernetzen.`,
                 experienceTitle: "Berufserfahrung",
                 experience: [
                     {
@@ -744,28 +742,28 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                         company: "UP42",
                         url: "https://up42.com/",
                         location: "Remote, Deutschland",
-                        dates: "Okt 2021 - Heute",
+                        dates: "Okt 2021 - Gegenwart",
                         bullets: [
-                            "Erreichte eine <strong>Kundenzufriedenheit von 99%</strong> durch die Lösung technischer Probleme für Geodaten-APIs und Datenverarbeitungsdienste.",
-                            "Verwaltung der <strong>Zendesk</strong>-Plattform, Optimierung von Arbeitsabläufen und Reduzierung der Reaktionszeiten.",
-                            "Bereitstellung von fachkundiger Unterstützung für <strong>Erdbeobachtungsdaten</strong> und Verarbeitungsabläufe.",
-                            "Verbesserung der Self-Service-Dokumentation, was zu einer <strong>Reduzierung eingehender Supportanfragen um 15% führte</strong>.",
-                            "Koordination der internen Kommunikation, um einen reibungslosen Start neuer Funktionen zu gewährleisten."
+                            "Erhaltung einer <strong>99%igen Kundenzufriedenheit</strong> durch die Lösung technischer Probleme für geo-räumliche APIs und Datenverarbeitungsdienste.",
+                            "Verwaltung der <strong>Zendesk</strong>-Plattform, Optimierung der Arbeitsabläufe und Verkürzung der Antwortzeiten.",
+                            "Bereitstellung von Expertenunterstützung für <strong>Erdbeobachtungsdatensätze</strong> und Verarbeitungsabläufe.",
+                            "Verbesserung der Self-Service-Dokumentation, was zu einer <strong>Reduzierung der eingehenden Support-Anfragen um 15%</strong> führte.",
+                            "Koordination der internen Kommunikation, um eine reibungslose Implementierung neuer Funktionen zu gewährleisten."
                         ]
                     },
                     {
-                        title: "Master-Student in Fernerkundung, EAGLE",
+                        title: "Masterstudent in Fernerkundung, EAGLE",
                         company: "Universität Würzburg",
                         url: "https://www.uni-wuerzburg.de/startseite/",
                         location: "Deutschland",
                         dates: "Sep 2019 - Dez 2021",
                         bullets: [
-                            "Spezialisierung in <strong>GIS, Fernerkundung und Raumanalyse</strong> mit QGIS, ArcGIS, Python und R.",
-                            "Durchführung einer Forschungsarbeit zur Vorhersage des Traubenertrags in Chile."
+                            "Spezialisierung auf <strong>GIS, Fernerkundung und räumliche Analyse</strong> mit QGIS, ArcGIS, Python und R.",
+                            "Durchführung von Forschungen zur Vorhersage des Traubenertrags in Chile."
                         ]
                     },
                     {
-                        title: "Senior GIS Analyst",
+                        title: "Senior GIS-Analyst",
                         company: "Aguas Andinas",
                         url: "https://www.aguasandinas.cl/",
                         location: "Santiago, CL",
@@ -776,58 +774,58 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                         ]
                     },
                     {
-                        title: "Survey Engineer",
+                        title: "Vermessungsingenieur",
                         company: "Digimapas Chile Aerofotogrametría Ltda",
                         url: "https://www.digimapas.cl/",
                         location: "Santiago, CL",
                         dates: "Jul 2018 - Sep 2018",
                         bullets: [
-                            "Durchführung von Feldvermessungen mit <strong>Tachymetern und GPS</strong> für Bau- und Ingenieurprojekte.",
+                            "Durchführung von Feldvermessungen mit <strong>Totalstationen und GPS</strong> für zivile und Ingenieurprojekte.",
                             "Verarbeitung von <strong>LIDAR</strong>-Daten zur Erstellung hochpräziser Geländemodelle."
                         ]
                     },
                     {
-                        title: "Senior Project Engineer",
+                        title: "Senior Projektingenieur",
                         company: "Aconcagua Solutions",
                         url: "https://www.aconcaguasolutions.com/",
                         location: "Santiago, CL",
                         dates: "Okt 2016 - Mai 2017",
                         bullets: [
-                            "Entwicklung von Excel-Makros und Visual-Basic-Projekten zur <strong>Datenautomatisierung</strong>.",
-                            "Durchführung von <strong>Web-Scraping</strong> zur Erfassung relevanter Informationen."
+                            "Entwicklung von Excel-Makros und Visual Basic-Projekten zur <strong>Datenautomatisierung</strong>.",
+                            "Durchführung von <strong>Web Scraping</strong> zur Sammlung relevanter Informationen."
                         ]
                     },
                     {
-                        title: "Field Analyst II",
+                        title: "Feldanalyst II",
                         company: "Here Maps",
                         url: "https://www.here.com/",
                         location: "Santiago, CL",
                         dates: "Sep 2013 - Feb 2016",
                         bullets: [
                             "Leitung von <strong>GIS-Projekten</strong>, einschließlich der Kartierung von Points of Interest und der Validierung des Straßennetzes.",
-                            "Vertretung des <strong>Datenbankingenieurwesens</strong> in der Kommunikation mit globalen Teams."
+                            "Vertretung der <strong>Datenbanktechnik</strong> für die Kommunikation mit globalen Teams."
                         ]
                     },
                     {
-                        title: "Project Engineer",
-                        company: "Municipality of Providencia",
+                        title: "Projektingenieur",
+                        company: "Gemeinde Providencia",
                         url: "https://providencia.cl/",
                         location: "Santiago, CL",
                         dates: "Apr 2012 - Feb 2013",
                         bullets: [
-                            "Digitalisierung von Karten zur Unterstützung der <strong>rechtlichen und Kataster-Formalisierung</strong>.",
+                            "Digitalisierung von Karten zur Unterstützung der <strong>rechtlichen und katastralen Formalisierung</strong>.",
                             "Optimierung von <strong>ArcGIS</strong>-Arbeitsabläufen und Datenbankverbindungen.",
                             "Automatisierung der Berichterstellung mit <strong>Excel VBA</strong>."
                         ]
                     },
                     {
-                        title: "Project Engineer",
+                        title: "Projektingenieur",
                         company: "Interra Chile",
                         url: "http://www.interralatam.com/",
                         location: "Santiago, CL",
                         dates: "Jan 2012 - Mär 2012",
                         bullets: [
-                            "Klassifizierung von Geländedaten und Interpretation von Ortho-Bildern für digitale Modelle.",
+                            "Klassifizierung von Geländedaten und Interpretation von Orthobildern für digitale Modelle.",
                             "Beitrag zur Erstellung von <strong>hochauflösenden Geländemodellen</strong>."
                         ]
                     }
@@ -842,7 +840,7 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                         location: "Würzburg, Deutschland",
                         bullets: [
                             "<strong>Schwerpunkt:</strong> Fernerkundung, maschinelles Lernen und GIS-Anwendungen.",
-                            "<strong>Thesis:</strong> \"Exploring Remote Sensing and Machine Learning to Predict Grape Yields in Chile\"."
+                            "<strong>Masterarbeit:</strong> \"Exploring Remote Sensing and Machine Learning to Predict Grape Yields in Chile\"."
                         ]
                     },
                     {
@@ -857,14 +855,14 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                         ]
                     },
                     {
-                        title: "B.Sc. in Vermessungswesen",
+                        title: "B.Sc. in Vermessungstechnik",
                         institution: "Universidad de Santiago de Chile",
                         url: "https://www.usach.cl/",
                         dates: "2006 - 2011",
                         location: "Santiago, Chile",
                         bullets: [
                             "<strong>Schwerpunkt:</strong> Geodäsie, topografische Datenerfassung und 3D-Modellierungstechniken.",
-                            "<strong>Thesis:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
+                            "<strong>Bachelorarbeit:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
                         ]
                     }
                 ],
@@ -932,7 +930,7 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
                     },
                     {
                         title: "Spatial modeling and prediction (SMP)",
-                        description: "Code und Poster für die Genehmigung des SMP-Kurses.",
+                        description: "Code und Poster für die Zulassung zum SMP-Kurs.",
                         url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
                     }
                 ],
@@ -942,13 +940,98 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
             }
         };
 
-        const languageSwitcher = document.getElementById('language-switcher');
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
         let timerInterval;
         let seconds = 0;
-        let firebaseApp, firestore, auth;
+        let initialPageLoadTime = Date.now();
+
+        function updateTimer() {
+            seconds++;
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            const timerDisplay = document.getElementById('timer');
+            if (timerDisplay) {
+                timerDisplay.textContent = `${content[currentLanguage].timerText}${minutes}m ${remainingSeconds}s`;
+            }
+        }
+
+        function renderExperience(experienceData) {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = '';
+            experienceData.forEach(item => {
+                const itemHtml = `
+                    <div class="timeline-item">
+                        <h3 class="font-semibold text-lg">${item.title}</h3>
+                        <p class="text-sm text-gray-400">${item.company} | ${item.dates}</p>
+                        <p class="text-xs text-gray-500">${item.location}</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            ${item.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                container.innerHTML += itemHtml;
+            });
+        }
+
+        function renderEducation(educationData) {
+            const container = document.getElementById('education-container');
+            container.innerHTML = '';
+            educationData.forEach(item => {
+                const itemHtml = `
+                    <div class="p-4 border border-gray-600 rounded-lg">
+                        <h3 class="font-semibold text-lg">${item.title}</h3>
+                        <p class="text-sm text-gray-400">${item.institution} | ${item.dates}</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            ${item.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                container.innerHTML += itemHtml;
+            });
+        }
+
+        function renderCertifications(certificationsData) {
+            const container = document.getElementById('certifications-container');
+            container.innerHTML = '';
+            certificationsData.forEach(item => {
+                const itemHtml = `
+                    <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg">${item.title}</h3>
+                        <p class="text-sm text-gray-400">${item.issuer}</p>
+                        <p class="text-xs text-gray-500 mt-1">${item.dates}</p>
+                        ${item.credentialId ? `<p class="text-xs text-gray-400 mt-2"><strong>Certification ID:</strong> ${item.credentialId}</p>` : ''}
+                    </div>
+                `;
+                container.innerHTML += itemHtml;
+            });
+        }
+
+        function renderProjects(projectsData) {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '';
+            projectsData.forEach(item => {
+                const itemHtml = `
+                    <a href="${item.url}" target="_blank" class="project-card flex flex-col justify-start text-white hover:text-teal-400 transition-colors duration-300">
+                        <h3 class="font-semibold text-lg">${item.title}</h3>
+                        <p class="text-sm text-gray-400 mt-1">${item.description}</p>
+                    </a>
+                `;
+                container.innerHTML += itemHtml;
+            });
+        }
+
+        let currentLanguage = 'es';
 
         function setLanguage(lang) {
-            document.documentElement.lang = lang;
+            currentLanguage = lang;
             document.getElementById('about-me-title').textContent = content[lang].aboutMeTitle;
             document.getElementById('about-me-text').innerHTML = content[lang].aboutMeText;
             document.getElementById('experience-title').textContent = content[lang].experienceTitle;
@@ -957,148 +1040,71 @@ En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, ap
             document.getElementById('projects-title').textContent = content[lang].projectsTitle;
             document.getElementById('footer-text-1').innerHTML = content[lang].footerText1;
 
-            const tooltipElements = document.querySelectorAll('.floating-nav a');
-            tooltipElements.forEach(el => {
-                el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`));
-            });
+            document.getElementById('language-switcher').value = lang;
 
-            // Update dynamically loaded content
-            loadExperience(lang);
-            loadEducation(lang);
-            loadCertifications(lang);
-            loadProjects(lang);
-        }
-
-        function loadExperience(lang) {
-            const container = document.getElementById('experience-container');
-            container.innerHTML = '';
-            content[lang].experience.forEach(exp => {
-                const item = document.createElement('div');
-                item.className = 'timeline-item';
-                let bulletsHtml = exp.bullets.map(bullet => `<li>${bullet}</li>`).join('');
-                item.innerHTML = `
-                    <h3 class="font-semibold text-lg highlight-text">${exp.title}</h3>
-                    <p class="text-sm font-medium text-gray-400">${exp.company} - ${exp.location}</p>
-                    <p class="text-xs text-gray-500">${exp.dates}</p>
-                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
-                        ${bulletsHtml}
-                    </ul>
-                `;
-                container.appendChild(item);
-            });
-        }
-
-        function loadEducation(lang) {
-            const container = document.getElementById('education-container');
-            container.innerHTML = '';
-            content[lang].education.forEach(edu => {
-                const item = document.createElement('div');
-                item.className = 'p-6 rounded-lg shadow-md';
-                item.style.backgroundColor = 'var(--card-color-dark)';
-                let bulletsHtml = edu.bullets.map(bullet => `<li>${bullet}</li>`).join('');
-                item.innerHTML = `
-                    <h3 class="font-semibold text-lg highlight-text">${edu.title}</h3>
-                    <p class="text-sm font-medium text-gray-400">${edu.institution} - ${edu.location}</p>
-                    <p class="text-xs text-gray-500">${edu.dates}</p>
-                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
-                        ${bulletsHtml}
-                    </ul>
-                `;
-                container.appendChild(item);
-            });
-        }
-
-        function loadCertifications(lang) {
-            const container = document.getElementById('certifications-container');
-            container.innerHTML = '';
-            content[lang].certifications.forEach(cert => {
-                const item = document.createElement('div');
-                item.className = 'p-6 rounded-lg shadow-md';
-                item.style.backgroundColor = 'var(--card-color-dark)';
-                item.innerHTML = `
-                    <h3 class="font-semibold text-lg highlight-text">${cert.title}</h3>
-                    <p class="text-sm font-medium text-gray-400">${cert.issuer}</p>
-                    <p class="text-xs text-gray-500">${cert.dates}</p>
-                    ${cert.credentialId ? `<p class="text-xs text-gray-500 mt-1"><strong>Credential ID:</strong> ${cert.credentialId}</p>` : ''}
-                `;
-                container.appendChild(item);
-            });
-        }
-
-        function loadProjects(lang) {
-            const container = document.getElementById('projects-container');
-            container.innerHTML = '';
-            content[lang].projects.forEach(proj => {
-                const card = document.createElement('div');
-                card.className = 'project-card';
-                card.innerHTML = `
-                    <a href="${proj.url}" target="_blank" class="project-link block w-full h-full p-4">
-                        <h3 class="text-white">${proj.title}</h3>
-                        <span class="tooltiptext">${proj.description}</span>
-                    </a>
-                `;
-                container.appendChild(card);
-            });
-        }
-        
-        function updateTimer() {
-            seconds++;
-            const hours = Math.floor(seconds / 3600);
-            const minutes = Math.floor((seconds % 3600) / 60);
-            const remainingSeconds = seconds % 60;
-
-            const format = (val) => val < 10 ? `0${val}` : val;
-
-            const timerText = `${format(hours)}:${format(minutes)}:${format(remainingSeconds)}`;
-            document.getElementById('timer').textContent = `${content[document.documentElement.lang].timerText} ${timerText}`;
-        }
-
-        // Firebase Analytics and Firestore
-        const firebaseConfig = {
-            apiKey: "...",
-            authDomain: "...",
-            projectId: "...",
-            storageBucket: "...",
-            messagingSenderId: "...",
-            appId: "...",
-            measurementId: "..."
-        };
-
-        function initFirebaseAndAnalytics() {
-            try {
-                if (typeof firebase !== 'undefined') {
-                    firebaseApp = initializeApp(firebaseConfig);
-                    firestore = getFirestore(firebaseApp);
-                    auth = getAuth(firebaseApp);
-                    logUserVisit();
-                } else {
-                    console.warn("Firebase SDK not loaded.");
+            document.querySelectorAll('.floating-nav a').forEach(link => {
+                const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
+                if (tooltipText) {
+                    link.setAttribute('data-tooltip', tooltipText);
                 }
+            });
+
+            renderExperience(content[lang].experience);
+            renderEducation(content[lang].education);
+            renderCertifications(content[lang].certifications);
+            renderProjects(content[lang].projects);
+        }
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        let userDocRef;
+        let userId;
+        let lastVisitTimestamp = 0;
+
+        async function initFirebaseAndAnalytics() {
+            try {
+                const user = await signInAnonymously(auth);
+                userId = user.user.uid;
+                userDocRef = doc(db, 'analytics', 'portfolio-data');
+
+                onSnapshot(userDocRef, (doc) => {
+                    if (doc.exists()) {
+                        const data = doc.data();
+                        const totalVisits = data.totalVisits || 0;
+                        document.getElementById('analytics-data').textContent = `${content[currentLanguage].analyticsText}${totalVisits}`;
+                    }
+                });
+
+                logUserVisit();
             } catch (error) {
-                console.error("Error initializing Firebase:", error);
+                console.error("Firebase initialization failed:", error);
             }
         }
 
         async function logUserVisit() {
             try {
-                // Autenticación anónima para obtener un ID de usuario único
-                let userCredential = await signInAnonymously(auth);
-                const userId = userCredential.user.uid;
-                const userDocRef = doc(firestore, "analytics", "portfolio-visits");
-
-                // Usar onSnapshot para escuchar en tiempo real
-                onSnapshot(userDocRef, (docSnap) => {
-                    const data = docSnap.exists() ? docSnap.data() : { visits: {} };
-                    const visits = data.visits || {};
-                    let totalViews = 0;
-                    for (const key in visits) {
-                        totalViews += visits[key].count;
-                    }
-                    totalViews = totalViews || 0;
-                    document.getElementById('analytics-data').textContent = `${content[document.documentElement.lang].analyticsText}${totalViews} | User ID: ${userId}`;
-                });
+                const docSnap = await getDoc(userDocRef);
+                const data = docSnap.exists() ? docSnap.data() : {};
+                const now = Date.now();
                 
-                // Actualizar el conteo de visitas para este usuario
+                // Only log a new visit if the last one was more than 30 minutes ago
+                if (now - lastVisitTimestamp > 30 * 60 * 1000) {
+                    await setDoc(userDocRef, {
+                        totalVisits: (data.totalVisits || 0) + 1,
+                        lastVisit: new Date(),
+                        visits: {
+                            [userId]: {
+                                count: (data.visits && data.visits[userId] && data.visits[userId].count) ? data.visits[userId].count + 1 : 1,
+                                timestamp: new Date()
+                            }
+                        }
+                    }, { merge: true });
+                    lastVisitTimestamp = now;
+                }
+
+                // Or just log the visit
                 await setDoc(userDocRef, {
                     visits: {
                         [userId]: {
