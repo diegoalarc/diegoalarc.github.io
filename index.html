@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Diego Alarcón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bg-color-dark: #1a202c;
+            --bg-color-darker: #2d3748;
+            --text-color-dark: #E2E8F0;
+            --highlight-color-dark: #4FD1C5;
+            --card-color-dark: #4A5568;
+
+            --bg-color-light: #F7FAFC;
+            --bg-color-lighter: #EDF2F7;
+            --text-color-light: #2D3748;
+            --highlight-color-light: #2C5282;
+            --card-color-light: #CBD5E0;
+
+            --bg-color-current: #1a202c;
+            --bg-color-current-lighter: #2d3748;
+            --text-color-current: #E2E8F0;
+            --highlight-color-current: #4FD1C5;
+            --card-color-current: #4A5568;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.5s ease;
+        }
+        body.theme-dark {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+            background-image: linear-gradient(to right, var(--bg-color-dark), var(--bg-color-darker), var(--bg-color-dark));
+        }
+        body.theme-light {
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            background-image: linear-gradient(to right, var(--bg-color-light), var(--bg-color-lighter), var(--bg-color-light));
+        }
+        body.theme-current {
+            background-color: var(--bg-color-current);
+            color: var(--text-color-current);
+            background-image: linear-gradient(to right, var(--bg-color-current), var(--bg-color-current-lighter), var(--bg-color-current));
+        }
+        body, .container-bg, .project-card, .floating-nav ul {
+            transition: all 0.5s ease;
+        }
+        .container-bg {
+            background-color: var(--bg-color-current-lighter);
+        }
+        .highlight-text {
+            color: var(--highlight-color-current);
+        }
+        .timeline-container {
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--highlight-color-current);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 2rem;
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            border-radius: 8px;
+            padding: 1rem;
+            cursor: pointer;
+        }
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(79, 209, 197, 0.1);
+        }
+        @keyframes walking-dot {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.7; }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 1.5rem;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--highlight-color-current);
+            border: 2px solid var(--bg-color-current-lighter);
+            animation: walking-dot 2s infinite ease-in-out;
+            transition: transform 0.2s ease-in-out;
+        }
+        .timeline-item:nth-child(2)::before { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3)::before { animation-delay: 0.4s; }
+        .timeline-item:nth-child(4)::before { animation-delay: 0.6s; }
+        .timeline-item:nth-child(5)::before { animation-delay: 0.8s; }
+        .timeline-item:nth-child(6)::before { animation-delay: 1s; }
+        .timeline-item:nth-child(7)::before { animation-delay: 1.2s; }
+        .timeline-item:nth-child(8)::before { animation-delay: 1.4s; }
+        .timeline-item:hover::before {
+            transform: scale(1.2);
+            animation-play-state: paused;
+        }
+        .project-card {
+            height: 150px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: var(--card-color-current);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 15px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--highlight-color-current);
+        }
+        .project-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .project-card p {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        .project-link {
+            position: relative;
+            display: inline-block;
+        }
+        .project-link .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .project-link:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (min-width: 640px) {
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1024px) {
+            .project-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        .floating-nav {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 50;
+            transition: transform 0.3s ease-in-out;
+        }
+        .floating-nav:hover {
+            transform: translateY(-50%) translateX(-5px);
+        }
+        .floating-nav-mobile {
+            right: 1rem;
+        }
+        @media (min-width: 768px) {
+            .floating-nav {
+                right: auto;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            .floating-nav:hover {
+                transform: translateY(-50%) translateX(5px);
+            }
+        }
+        .floating-nav a {
+            position: relative;
+        }
+        .floating-nav a::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            padding: 0.25rem 0.5rem;
+            background-color: #4A5568;
+            color: white;
+            border-radius: 0.25rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+            margin-right: 0.5rem;
+        }
+        @media (min-width: 768px) {
+            .floating-nav a::after {
+                left: 100%;
+                right: auto;
+                margin-left: 0.5rem;
+                margin-right: 0;
+            }
+        }
+        .floating-nav a:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 lg:p-12 theme-dark">
+
+    <div class="fixed top-4 right-4 z-50 flex flex-col items-end gap-2">
+        <select id="language-switcher" class="p-2 rounded-md bg-gray-700 text-white cursor-pointer">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+        </select>
+    </div>
+
+    <nav class="floating-nav floating-nav-mobile md:floating-nav">
+        <ul class="flex flex-col gap-2 p-2 rounded-lg shadow-lg" style="background-color: var(--bg-color-current-lighter);">
+      
+            <li>
+                <a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#education" data-tooltip-es="Educación" data-tooltip-en="Education" data-tooltip-de="Ausbildung" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M14 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2z"></path><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="10" x2="12" y2="10"></line></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#projects" data-tooltip-es="Proyectos Destacados" data-tooltip-en="Featured Projects" data-tooltip-de="Ausgewählte Projekte" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 17V5c0-1.1.9-2 2-2h12.5L20 5.5v13.5c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2z"></path><path d="M8 8h8"></path><path d="M8 12h8"></path><path d="M8 16h8"></path></svg>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="max-w-4xl mx-auto container-bg rounded-xl shadow-2xl p-6 sm:p-8 lg:p-10">
+        <header class="mb-10 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
+                    <img src="images/your-photo.jpg" alt="Foto de perfil de Diego Alarcón" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col items-center sm:items-start">
+                  <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
+                    <p class="text-lg text-gray-400">Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.</p>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                        <a href="https://diegoalarc.github.io/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.94 13.94 0 0 0-3 0c-2.73-1.83-3.91-1.2-3.91-1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/diego-alarcon-diaz-13b772271/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="mb-10" id="about-me">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="about-me-title"></h2>
+            <p class="text-gray-300 leading-relaxed" id="about-me-text"></p>
+        </section>
+
+        <section class="mb-10" id="experience">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-6 border-b-2 border-teal-400 pb-2" id="experience-title"></h2>
+            <div class="timeline-container text-gray-300" id="experience-container"></div>
+        </section>
+
+        <section class="mb-10" id="education">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="education-title"></h2>
+            <div class="space-y-6 text-gray-300" id="education-container"></div>
+        </section>
+
+        <section class="mb-10" id="certifications">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="certifications-title"></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="certifications-container"></div>
+        </section>
+
+        <section class="mb-10" id="projects">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-6 border-b-2 border-teal-400 pb-2" id="projects-title"></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container"></div>
+        </section>
+
+        <footer class="text-center mt-12 pt-6 border-t border-gray-600 text-gray-500 text-sm">
+            <p id="footer-text-1"></p>
+            <div id="timer" class="mt-4 text-sm font-semibold text-gray-400"></div>
+            <div id="analytics-data" class="mt-2 text-sm text-gray-500"></div>
+            <div class="mt-2">
+                <a href="mailto:diego.alarcondiaz@gmail.com" class="hover:text-white transition-colors duration-300">diego.alarcondiaz@gmail.com</a>
+                <span class="mx-2">|</span>
+                <a href="https://diegoalarc.github.io/" target="_blank" class="hover:text-white transition-colors duration-300">diegoalarc.github.io</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Establecer el nivel de registro de depuración para Firestore
+        setLogLevel('debug');
+        const content = {
+            es: {
+                aboutMeTitle: "Acerca de mí",
+                aboutMeText: `Mi sólida formación en Geociencias, combinada con una especialización en Sistemas de Información Geográfica (SIG) y Sensores Remotos, me convierte en un profesional versátil y altamente cualificado. Mi pasión por la programación, con un enfoque en <strong>Python</strong>, me permite diseñar soluciones innovadoras y automatizar tareas para resolver desafíos complejos.
+En mi rol actual como Ingeniero de Soporte Técnico en <strong>UP42</strong>, aplico mi experiencia con APIs y Python para analizar datos, optimizar procesos internos y brindar un soporte técnico excepcional. Mi compromiso con la excelencia me ha posicionado como un <strong>SME (Subject Matter Expert)</strong>, colaborando estrechamente con los equipos de datos y procesamiento para asegurar la satisfacción del cliente. Me considero un profesional proactivo y resolutivo, siempre en busca de nuevas oportunidades para combinar mis conocimientos técnicos con mi experiencia en Geociencias. Si está buscando a un individuo motivado con un fuerte enfoque en la innovación, lo invito a conectar.`,
+                experienceTitle: "Experiencia Profesional",
+                experience: [
+                    {
+                        title: "Technical Support Engineer",
+                        company: "UP42",
+                        url: "https://up42.com/",
+                        location: "Remoto, Alemania",
+                        dates: "Oct 2021 - Presente",
+                        bullets: [
+                            "Mantuve un <strong>99% de satisfacción del cliente</strong> resolviendo problemas técnicos para APIs geoespaciales y servicios de procesamiento de datos.",
+                            "Administré la plataforma <strong>Zendesk</strong>, optimizando los flujos de trabajo y reduciendo los tiempos de respuesta.",
+                            "Proporcioné soporte experto en <strong>datos de Observación de la Tierra</strong> y flujos de trabajo de procesamiento.",
+                            "Mejoré la documentación de auto-servicio, <strong>reduciendo las solicitudes de soporte entrantes en un 15%</strong>.",
+                            "Coordiné las comunicaciones internas para garantizar implementaciones de funciones sin problemas."
+                        ]
+                    },
+                    {
+                        title: "Master Student in Remote Sensing, EAGLE",
+                        company: "University of Würzburg",
+                        url: "https://www.uni-wuerzburg.de/startseite/",
+                        location: "Alemania",
+                        dates: "Sep 2019 - Dic 2021",
+                        bullets: [
+                            "Especialización en <strong>GIS, sensores remotos, y análisis espacial</strong> con QGIS, ArcGIS, Python y R.",
+                            "Realicé una investigación sobre la predicción del rendimiento de uva en Chile."
+                        ]
+                    },
+                    {
+                        title: "Senior GIS Analyst",
+                        company: "Aguas Andinas",
+                        url: "https://www.aguasandinas.cl/",
+                        location: "Santiago, CL",
+                        dates: "Nov 2018 - Sep 2019",
+                        bullets: [
+                            "Gestioné la base de datos GIS, implementé <strong>nuevas redes de agua y alcantarillado</strong> y actualicé la red geodésica.",
+                            "Automatización de flujos de trabajo con <strong>Python</strong> para mejorar la eficiencia."
+                        ]
+                    },
+                    {
+                        title: "Survey Engineer",
+                        company: "Digimapas Chile Aerofotogrametría Ltda",
+                        url: "https://www.digimapas.cl/",
+                        location: "Santiago, CL",
+                        dates: "Jul 2018 - Sep 2018",
+                        bullets: [
+                            "Realicé estudios de campo con <strong>estaciones totales y GPS</strong> para proyectos civiles y de ingeniería.",
+                            "Procesé datos <strong>LIDAR</strong> para la creación de modelos de terreno de alta precisión."
+                        ]
+                    },
+                    {
+                        title: "Senior Project Engineer",
+                        company: "Aconcagua Solutions",
+                        url: "https://www.aconcaguasolutions.com/",
+                        location: "Santiago, CL",
+                        dates: "Oct 2016 - May 2017",
+                        bullets: [
+                            "Desarrollé macros en Excel y proyectos en Visual Basic para la <strong>automatización de datos</strong>.",
+                            "Realicé <strong>web scraping</strong> para la recolección de información relevante."
+                        ]
+                    },
+                    {
+                        title: "Field Analyst II",
+                        company: "Here Maps",
+                        url: "https://www.here.com/",
+                        location: "Santiago, CL",
+                        dates: "Sep 2013 - Feb 2016",
+                        bullets: [
+                            "Lideré proyectos de <strong>GIS</strong>, incluyendo el mapeo de puntos de interés y la validación de la red vial.",
+                            "Actué como representante de <strong>Ingeniería de Bases de Datos</strong> para la comunicación con equipos globales."
+                        ]
+                    },
+                    {
+                        title: "Project Engineer",
+                        company: "Municipality of Providencia",
+                        url: "https://providencia.cl/",
+                        location: "Santiago, CL",
+                        dates: "Abr 2012 - Feb 2013",
+                        bullets: [
+                            "Digitalicé mapas para apoyar la <strong>formalización legal y catastral</strong>.",
+                            "Optimicé los flujos de trabajo en <strong>ArcGIS</strong> y las conexiones de bases de datos.",
+                            "Automatización de la generación de informes con <strong>Excel VBA</strong>."
+                        ]
+                    },
+                    {
+                        title: "Project Engineer",
+                        company: "Interra Chile",
+                        url: "http://www.interralatam.com/",
+                        location: "Santiago, CL",
+                        dates: "Ene 2012 - Mar 2012",
+                        bullets: [
+                            "Clasifiqué datos de terreno e interpreté orto-imágenes para modelos digitales.",
+                            "Contribuí a la creación de <strong>modelos de terreno de alta resolución</strong>."
+                        ]
+                    }
+                ],
+                educationTitle: "Educación",
+                education: [
+                    {
+                        title: "M.Sc. en Sensores Remotos",
+                        institution: "Julius-Maximilians-Universität Würzburg",
+                        url: "https://www.uni-wuerzburg.de/",
+                        dates: "Ago 2019 - Dic 2021",
+                        location: "Würzburg, Alemania",
+                        bullets: [
+                            "<strong>Enfoque:</strong> Sensores remotos, aprendizaje automático y aplicaciones SIG.",
+                            "<strong>Tesis:</strong> \"Exploring Remote Sensing and Machine Learning to Predict Grape Yields in Chile\"."
+                        ]
+                    },
+                    {
+                        title: "Prácticas en Sensores Remotos",
+                        institution: "German Aerospace Center (DLR)",
+                        url: "https://www.dlr.de/",
+                        dates: "Mar 2020 - Abr 2020",
+                        location: "Oberpfaffenhofen, Alemania",
+                        bullets: [
+                            "<strong>Enfoque:</strong> Utilicé sensores NTL para analizar la asignación de fondos de la UE a inversiones públicas.",
+                            "<strong>Proceso:</strong> Realicé pre-procesamiento y análisis estadístico de datos de series temporales."
+                        ]
+                    },
+                    {
+                        title: "B.Sc. en Ingeniería en Geomensura",
+                        institution: "Universidad de Santiago de Chile",
+                        url: "https://www.usach.cl/",
+                        dates: "2006 - 2011",
+                        location: "Santiago, Chile",
+                        bullets: [
+                            "<strong>Enfoque:</strong> Geodesia, recolección de datos topográficos y técnicas de modelado 3D.",
+                            "<strong>Tesis:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
+                        ]
+                    }
+                ],
+                certificationsTitle: "Licencias y certificaciones",
+                certifications: [
+                    {
+                        title: "Docker Essentials for Python Developers",
+                        issuer: "Udemy",
+                        dates: "Nov 2022",
+                        credentialId: "UC-4d634c10-ebde-4b53-bd41-3c698020b39b"
+                    },
+                    {
+                        title: "2022 Complete Python Bootcamp From Zero to Hero in Python",
+                        issuer: "Udemy",
+                        dates: "Jul 2022",
+                        credentialId: "UC-80ae18d8-1c94-49a1-93e2-9a2fb3786c98"
+                    },
+                    {
+                        title: "Git+GitHub: A whole version control system from scratch",
+                        issuer: "Udemy",
+                        dates: "Jul 2022",
+                        credentialId: "UC-1400fe44-9a47-459b-96f6-1416cb945ea6"
+                    },
+                    {
+                        title: "Deutsch als Fremdsprache B1",
+                        issuer: "https://www.uni-wuerzburg.de/zfs/startseite/",
+                        dates: "Mar 2021",
+                        credentialId: "khE0wj3LlmgfyaYr"
+                    },
+                    {
+                        title: "Zertifikat Deutsch B1",
+                        issuer: "telc GmbH - The European Language Certificates",
+                        dates: "Feb 2018",
+                        credentialId: "1474620"
+                    },
+                    {
+                        title: "Certified Customer Success Manager (CCSM) Level 1",
+                        issuer: "SuccessHACKER",
+                        dates: "Dic 2022 · Caducado Dic 2024",
+                        credentialId: ""
+                    },
+                    {
+                        title: "TOEFL iBT B2",
+                        issuer: "TOEFL Genius",
+                        dates: "Abr 2019 · Caducado Abr 2021",
+                        credentialId: "2182 2041 9017 2830"
+                    }
+                ],
+                projectsTitle: "Proyectos Destacados",
+                projects: [
+                    {
+                        title: "GeodesiCL",
+                        description: "Un pequeño viaje a la Geodesia Geométrica.",
+                        url: "https://github.com/diegoalarc/GeodesiCL"
+                    },
+                    {
+                        title: "Innovation laboratory EAGLE",
+                        description: "El laboratorio de innovación ofrece la oportunidad de realizar un proyecto de investigación.",
+                        url: "https://github.com/diegoalarc/Innovation_laboratory_EAGLE"
+                    },
+                    {
+                        title: "MB1 and MB2 Master EAGLE courses",
+                        description: "Códigos para la aprobación de los cursos de maestría.",
+                        url: "https://github.com/diegoalarc/Test__MB1_and_MB2"
+                    },
+                    {
+                        title: "Spatial modeling and prediction (SMP)",
+                        description: "Código y póster para la aprobación del curso SMP.",
+                        url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
+                    }
+                ],
+                footerText1: "&copy; 2024 Diego Alarcón. Todos los derechos reservados.",
+                timerText: "Tiempo en la página: ",
+                analyticsText: "Analíticas - Vistas totales: "
+            },
+            en: {
+                aboutMeTitle: "About Me",
+                aboutMeText: `My strong background in Geosciences, combined with a specialization in Geographic Information Systems (GIS) and Remote Sensing, makes me a versatile and highly qualified professional. My passion for programming, with a focus on <strong>Python</strong>, allows me to design innovative solutions and automate tasks to solve complex challenges. In my current role as a Technical Support Engineer at <strong>UP42</strong>, I apply my experience with APIs and Python to analyze data, optimize internal processes, and provide exceptional technical support. My commitment to excellence has positioned me as a <strong>SME (Subject Matter Expert)</strong>, collaborating closely with data and processing teams to ensure customer satisfaction. I consider myself a proactive and resourceful professional, always looking for new opportunities to combine my technical knowledge with my Geosciences experience. If you are looking for a motivated individual with a strong focus on innovation, I invite you to connect.`,
+                experienceTitle: "Professional Experience",
+                experience: [
+                    {
+                        title: "Technical Support Engineer",
+                        company: "UP42",
+                        url: "https://up42.com/",
+                        location: "Remote, Germany",
+                        dates: "Oct 2021 - Present",
+                        bullets: [
+                            "Maintained a <strong>99% customer satisfaction rate</strong> by resolving technical issues for geospatial APIs and data processing services.",
+                            "Administered the <strong>Zendesk</strong> platform, optimizing workflows and reducing response times for the Customer Success team.",
+                            "Provided expert support on <strong>Earth Observation datasets</strong> and processing workflows.",
+                            "Enhanced self-service documentation, <strong>reducing incoming support requests by 15%</strong>.",
+                            "Coordinated internal communications to ensure seamless feature rollouts."
+                        ]
+                    },
+                    {
+                        title: "Master Student in Remote Sensing, EAGLE",
+                        company: "University of Würzburg",
+                        url: "https://www.uni-wuerzburg.de/startseite/",
+                        location: "Germany",
+                        dates: "Sep 2019 - Dec 2021",
+                        bullets: [
+                            "Specialization in <strong>GIS, remote sensing, and spatial analysis</strong> with QGIS, ArcGIS, and R.",
+                            "Conducted research on predicting grape yield in Chile."
+                        ]
+                    },
+                    {
+                        title: "Senior GIS Analyst",
+                        company: "Aguas Andinas",
+                        url: "https://www.aguasandinas.cl/",
+                        location: "Santiago, CL",
+                        dates: "Nov 2018 - Sep 2019",
+                        bullets: [
+                            "Managed the GIS database, implemented <strong>new water and sewer networks</strong>, and updated the geodetic network.",
+                            "Automated workflows with <strong>Python</strong> to improve efficiency."
+                        ]
+                    },
+                    {
+                        title: "Survey Engineer",
+                        company: "Digimapas Chile Aerofotogrametría Ltda",
+                        url: "https://www.digimapas.cl/",
+                        location: "Santiago, CL",
+                        dates: "Jul 2018 - Sep 2018",
+                        bullets: [
+                            "Conducted field surveys with <strong>total stations and GPS</strong> for civil and engineering projects.",
+                            "Processed <strong>LIDAR</strong> data to create high-precision terrain models."
+                        ]
+                    },
+                    {
+                        title: "Senior Project Engineer",
+                        company: "Aconcagua Solutions",
+                        url: "https://www.aconcaguasolutions.com/",
+                        location: "Santiago, CL",
+                        dates: "Oct 2016 - May 2017",
+                        bullets: [
+                            "Developed Excel macros and Visual Basic projects for <strong>data automation</strong>.",
+                            "Performed <strong>web scraping</strong> to collect relevant information."
+                        ]
+                    },
+                    {
+                        title: "Field Analyst II",
+                        company: "Here Maps",
+                        url: "https://www.here.com/",
+                        location: "Santiago, CL",
+                        dates: "Sep 2013 - Feb 2016",
+                        bullets: [
+                            "Led <strong>GIS projects</strong>, including point of interest mapping and road network validation.",
+                            "Acted as a <strong>Database Engineering</strong> representative for communication with global teams."
+                        ]
+                    },
+                    {
+                        title: "Project Engineer",
+                        company: "Municipality of Providencia",
+                        url: "https://providencia.cl/",
+                        location: "Santiago, CL",
+                        dates: "Apr 2012 - Feb 2013",
+                        bullets: [
+                            "Digitized maps to support <strong>legal and cadastral formalization</strong>.",
+                            "Optimized <strong>ArcGIS</strong> workflows and database connections.",
+                            "Automated report generation with <strong>Excel VBA</strong>."
+                        ]
+                    },
+                    {
+                        title: "Project Engineer",
+                        company: "Interra Chile",
+                        url: "http://www.interralatam.com/",
+                        location: "Santiago, CL",
+                        dates: "Jan 2012 - Mar 2012",
+                        bullets: [
+                            "Classified terrain data and interpreted ortho-images for digital models.",
+                            "Contributed to the creation of <strong>high-resolution terrain models</strong>."
+                        ]
+                    }
+                ],
+                educationTitle: "Education",
+                education: [
+                    {
+                        title: "M.Sc. in Remote Sensing",
+                        institution: "Julius-Maximilians-Universität Würzburg",
+                        url: "https://www.uni-wuerzburg.de/",
+                        dates: "Aug 2019 - Dec 2021",
+                        location: "Würzburg, Germany",
+                        bullets: [
+                            "<strong>Focus:</strong> Remote sensing, machine learning, and GIS applications.",
+                            "<strong>Thesis:</strong> \"Exploring Remote Sensing and Machine Learning to Predict Grape Yields in Chile\"."
+                        ]
+                    },
+                    {
+                        title: "Internship in Remote Sensing",
+                        institution: "German Aerospace Center (DLR)",
+                        url: "https://www.dlr.de/",
+                        dates: "Mar 2020 - Apr 2020",
+                        location: "Oberpfaffenhofen, Germany",
+                        bullets: [
+                            "<strong>Focus:</strong> Utilized NTL sensors to analyze EU fund allocation to public investments.",
+                            "<strong>Process:</strong> Conducted pre-processing and statistical analyses of time-series data."
+                        ]
+                    },
+                    {
+                        title: "B.Sc. in Survey Engineering",
+                        institution: "Universidad de Santiago de Chile",
+                        url: "https://www.usach.cl/",
+                        dates: "2006 - 2011",
+                        location: "Santiago, Chile",
+                        bullets: [
+                            "<strong>Focus:</strong> Geodesy, topographic data collection, and 3D modeling techniques.",
+                            "<strong>Thesis:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
+                        ]
+                    }
+                ],
+                certificationsTitle: "Licenses & Certifications",
+                certifications: [
+                    {
+                        title: "Docker Essentials for Python Developers",
+                        issuer: "Udemy",
+                        dates: "Nov 2022",
+                        credentialId: "UC-4d634c10-ebde-4b53-bd41-3c698020b39b"
+                    },
+                    {
+                        title: "2022 Complete Python Bootcamp From Zero to Hero in Python",
+                        issuer: "Udemy",
+                        dates: "Jul 2022",
+                        credentialId: "UC-80ae18d8-1c94-49a1-93e2-9a2fb3786c98"
+                    },
+                    {
+                        title: "Git+GitHub: A whole version control system from scratch",
+                        issuer: "Udemy",
+                        dates: "Jul 2022",
+                        credentialId: "UC-1400fe44-9a47-459b-96f6-1416cb945ea6"
+                    },
+                    {
+                        title: "Deutsch als Fremdsprache B1",
+                        issuer: "https://www.uni-wuerzburg.de/zfs/startseite/",
+                        dates: "Mar 2021",
+                        credentialId: "khE0wj3LlmgfyaYr"
+                    },
+                    {
+                        title: "Zertifikat Deutsch B1",
+                        issuer: "telc GmbH - The European Language Certificates",
+                        dates: "Feb 2018",
+                        credentialId: "1474620"
+                    },
+                    {
+                        title: "Certified Customer Success Manager (CCSM) Level 1",
+                        issuer: "SuccessHACKER",
+                        dates: "Dec 2022 · Expired Dec 2024",
+                        credentialId: ""
+                    },
+                    {
+                        title: "TOEFL iBT B2",
+                        issuer: "TOEFL Genius",
+                        dates: "Apr 2019 · Expired Apr 2021",
+                        credentialId: "2182 2041 9017 2830"
+                    }
+                ],
+                projectsTitle: "Featured Projects",
+                projects: [
+                    {
+                        title: "GeodesiCL",
+                        description: "A little journey into Geometric Geodesy.",
+                        url: "https://github.com/diegoalarc/GeodesiCL"
+                    },
+                    {
+                        title: "Innovation laboratory EAGLE",
+                        description: "The innovation laboratory offers the opportunity to carry out a research project.",
+                        url: "https://github.com/diegoalarc/Innovation_laboratory_EAGLE"
+                    },
+                    {
+                        title: "MB1 and MB2 Master EAGLE courses",
+                        description: "Codes for the approval of master's courses.",
+                        url: "https://github.com/diegoalarc/Test__MB1_and_MB2"
+                    },
+                    {
+                        title: "Spatial modeling and prediction (SMP)",
+                        description: "Code and poster for the approval of the SMP course.",
+                        url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
+                    }
+                ],
+                footerText1: "&copy; 2024 Diego Alarcón. All rights reserved.",
+                timerText: "Time on page: ",
+                analyticsText: "Analytics - Total Views: "
+            },
+            de: {
+                aboutMeTitle: "Über mich",
+                aboutMeText: `Meine fundierte Ausbildung in Geowissenschaften, kombiniert mit einer Spezialisierung in Geographischen Informationssystemen (GIS) und Fernerkundung, macht mich zu einem vielseitigen und hochqualifizierten Fachmann. Meine Leidenschaft für die Programmierung, mit einem Schwerpunkt auf <strong>Python</strong>, ermöglicht es mir, innovative Lösungen zu entwickeln und Aufgaben zu automatisieren, um komplexe Herausforderungen zu lösen. In meiner aktuellen Rolle als technischer Support-Ingenieur bei <strong>UP42</strong> wende ich meine Erfahrung mit APIs und Python an, um Daten zu analysieren, interne Prozesse zu optimieren und einen außergewöhnlichen technischen Support zu bieten. Mein Engagement für Exzellenz hat mich als <strong>SME (Subject Matter Expert)</strong>, wobei ich eng mit den Daten- und Verarbeitungsteams zusammenarbeite, um die Kundenzufriedenheit sicherzustellen. Ich sehe mich als proaktiven und lösungsorientierten Fachmann, der stets nach neuen Möglichkeiten sucht, um sein technisches Wissen mit seiner Erfahrung in den Geowissenschaften zu verbinden. Wenn Sie eine motivierte Person mit einem starken Fokus auf Innovation, lade ich Sie ein, Kontakt...
+`,
+            }
+        };
+
+        const languageSwitcher = document.getElementById('language-switcher');
+        let timerInterval;
+        let seconds = 0;
+        let firebaseApp, firestore, auth;
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('about-me-title').textContent = content[lang].aboutMeTitle;
+            document.getElementById('about-me-text').innerHTML = content[lang].aboutMeText;
+            document.getElementById('experience-title').textContent = content[lang].experienceTitle;
+            document.getElementById('education-title').textContent = content[lang].educationTitle;
+            document.getElementById('certifications-title').textContent = content[lang].certificationsTitle;
+            document.getElementById('projects-title').textContent = content[lang].projectsTitle;
+            document.getElementById('footer-text-1').innerHTML = content[lang].footerText1;
+
+            const tooltipElements = document.querySelectorAll('.floating-nav a');
+            tooltipElements.forEach(el => {
+                el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`));
+            });
+
+            // Update dynamically loaded content
+            loadExperience(lang);
+            loadEducation(lang);
+            loadCertifications(lang);
+            loadProjects(lang);
+        }
+
+        function loadExperience(lang) {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = '';
+            content[lang].experience.forEach(exp => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item';
+                let bulletsHtml = exp.bullets.map(bullet => `<li>${bullet}</li>`).join('');
+                item.innerHTML = `
+                    <h3 class="font-semibold text-lg highlight-text">${exp.title}</h3>
+                    <p class="text-sm font-medium text-gray-400">${exp.company} - ${exp.location}</p>
+                    <p class="text-xs text-gray-500">${exp.dates}</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        ${bulletsHtml}
+                    </ul>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function loadEducation(lang) {
+            const container = document.getElementById('education-container');
+            container.innerHTML = '';
+            content[lang].education.forEach(edu => {
+                const item = document.createElement('div');
+                item.className = 'p-6 rounded-lg shadow-md';
+                item.style.backgroundColor = 'var(--card-color-current)';
+                let bulletsHtml = edu.bullets.map(bullet => `<li>${bullet}</li>`).join('');
+                item.innerHTML = `
+                    <h3 class="font-semibold text-lg highlight-text">${edu.title}</h3>
+                    <p class="text-sm font-medium text-gray-400">${edu.institution} - ${edu.location}</p>
+                    <p class="text-xs text-gray-500">${edu.dates}</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        ${bulletsHtml}
+                    </ul>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function loadCertifications(lang) {
+            const container = document.getElementById('certifications-container');
+            container.innerHTML = '';
+            content[lang].certifications.forEach(cert => {
+                const item = document.createElement('div');
+                item.className = 'p-6 rounded-lg shadow-md';
+                item.style.backgroundColor = 'var(--card-color-current)';
+                item.innerHTML = `
+                    <h3 class="font-semibold text-lg highlight-text">${cert.title}</h3>
+                    <p class="text-sm font-medium text-gray-400">${cert.issuer}</p>
+                    <p class="text-xs text-gray-500">${cert.dates}</p>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function loadProjects(lang) {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '';
+            content[lang].projects.forEach(proj => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                card.innerHTML = `
+                    <a href="${proj.url}" target="_blank" class="project-link block w-full h-full p-4">
+                        <h3 class="text-white">${proj.title}</h3>
+                        <span class="tooltiptext">${proj.description}</span>
+                    </a>
+                `;
+                container.appendChild(card);
+            });
+        }
+        
+        function setTheme(theme) {
+            const body = document.body;
+            body.className = body.className.replace(/theme-(dark|light|current)/, `theme-${theme}`);
+            
+            // Get the current color variables from the body's computed style
+            const style = getComputedStyle(document.body);
+            const currentBgColor = style.getPropertyValue('--bg-color-current');
+            const currentBgLighter = style.getPropertyValue('--bg-color-current-lighter');
+            const currentTextColor = style.getPropertyValue('--text-color-current');
+            const currentHighlightColor = style.getPropertyValue('--highlight-color-current');
+            const currentCardColor = style.getPropertyValue('--card-color-current');
+            
+            // Set the new color variables based on the selected theme
+            let newBgColor, newBgLighter, newTextColor, newHighlightColor, newCardColor;
+            
+            if (theme === 'dark') {
+                newBgColor = 'var(--bg-color-dark)';
+                newBgLighter = 'var(--bg-color-darker)';
+                newTextColor = 'var(--text-color-dark)';
+                newHighlightColor = 'var(--highlight-color-dark)';
+                newCardColor = 'var(--card-color-dark)';
+            } else if (theme === 'light') {
+                newBgColor = 'var(--bg-color-light)';
+                newBgLighter = 'var(--bg-color-lighter)';
+                newTextColor = 'var(--text-color-light)';
+                newHighlightColor = 'var(--highlight-color-light)';
+                newCardColor = 'var(--card-color-light)';
+            } else { // 'current' theme
+                newBgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-color-dark');
+                newBgLighter = getComputedStyle(document.documentElement).getPropertyValue('--bg-color-darker');
+                newTextColor = getComputedStyle(document.documentElement).getPropertyValue('--text-color-dark');
+                newHighlightColor = getComputedStyle(document.documentElement).getPropertyValue('--highlight-color-dark');
+                newCardColor = getComputedStyle(document.documentElement).getPropertyValue('--card-color-dark');
+            }
+
+            document.documentElement.style.setProperty('--bg-color-current', newBgColor);
+            document.documentElement.style.setProperty('--bg-color-current-lighter', newBgLighter);
+            document.documentElement.style.setProperty('--text-color-current', newTextColor);
+            document.documentElement.style.setProperty('--highlight-color-current', newHighlightColor);
+            document.documentElement.style.setProperty('--card-color-current', newCardColor);
+            
+            // Force re-load dynamic content to apply new theme colors
+            const currentLang = document.documentElement.lang;
+            loadExperience(currentLang);
+            loadEducation(currentLang);
+            loadCertifications(currentLang);
+            loadProjects(currentLang);
+        }
+
+        function updateTimer() {
+            seconds++;
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const remainingSeconds = seconds % 60;
+
+            const format = (val) => val < 10 ? `0${val}` : val;
+
+            const timerText = `${format(hours)}:${format(minutes)}:${format(remainingSeconds)}`;
+            document.getElementById('timer').textContent = `${content[document.documentElement.lang].timerText} ${timerText}`;
+        }
+
+        // Firebase Analytics and Firestore
+        const firebaseConfig = {
+            apiKey: "...",
+            authDomain: "...",
+            projectId: "...",
+            storageBucket: "...",
+            messagingSenderId: "...",
+            appId: "...",
+            measurementId: "..."
+        };
+
+        function initFirebaseAndAnalytics() {
+            try {
+                if (typeof firebase !== 'undefined') {
+                    firebaseApp = initializeApp(firebaseConfig);
+                    firestore = getFirestore(firebaseApp);
+                    auth = getAuth(firebaseApp);
+                    logUserVisit();
+                } else {
+                    console.warn("Firebase SDK not loaded.");
+                }
+            } catch (error) {
+                console.error("Error initializing Firebase:", error);
+            }
+        }
+
+        async function logUserVisit() {
+            try {
+                // Autenticación anónima para obtener un ID de usuario único
+                let userCredential = await signInAnonymously(auth);
+                const userId = userCredential.user.uid;
+                const userDocRef = doc(firestore, "analytics", "portfolio-visits");
+
+                // Usar onSnapshot para escuchar en tiempo real
+                onSnapshot(userDocRef, (docSnap) => {
+                    const data = docSnap.exists() ? docSnap.data() : { visits: {} };
+                    const visits = data.visits || {};
+                    let totalViews = 0;
+                    for (const key in visits) {
+                        totalViews += visits[key].count;
+                    }
+                    totalViews = totalViews || 0;
+                    document.getElementById('analytics-data').textContent = `${content[document.documentElement.lang].analyticsText}${totalViews} | User ID: ${userId}`;
+                });
+                
+                // Actualizar el conteo de visitas para este usuario
+                await setDoc(userDocRef, {
+                    visits: {
+                        [userId]: {
+                            count: (data.visits[userId]?.count || 0) + 1,
+                            timestamp: new Date()
+                        }
+                    }
+                }, { merge: true });
+
+            } catch (error) {
+                console.error("Error logging user visit:", error);
+            }
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initial setup
+        const userLang = navigator.language.split('-')[0];
+        const initialLang = (userLang === 'es' || userLang === 'de') ? userLang : 'en';
+        setLanguage(initialLang);
+        setTheme('dark');
+        document.getElementById('language-switcher').value = initialLang;
+
+        // Add event listeners
+        document.getElementById('language-switcher').addEventListener('change', (event) => {
+            setLanguage(event.target.value);
+        });
+
+        // Start timer
+        timerInterval = setInterval(updateTimer, 1000);
+
+        // Iniciar Firebase y analíticas
+        initFirebaseAndAnalytics();
+
+    </script>
+</body>
+</html>
