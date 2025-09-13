@@ -175,9 +175,6 @@
         .floating-nav:hover {
             transform: translateY(-50%) translateX(-5px);
         }
-        .floating-nav-mobile {
-            right: 1rem;
-        }
         @media (min-width: 768px) {
             .floating-nav {
                 right: auto;
@@ -243,41 +240,41 @@
         </select>
     </div>
 
-    <nav class="floating-nav floating-nav-mobile md:floating-nav">
+    <nav class="floating-nav md:floating-nav">
         <ul class="flex flex-col gap-2 p-2 rounded-lg shadow-lg" style="background-color: var(--bg-color-darker);">
             <li>
-                <a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <i class="fa-solid fa-user"></i>
+                <a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fa-solid fa-user text-base md:text-lg"></i>
                 </a>
             </li>
             <li>
-                <a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <i class="fa-solid fa-briefcase"></i>
+                <a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fa-solid fa-briefcase text-base md:text-lg"></i>
                 </a>
             </li>
             <li>
-                <a href="#education" data-tooltip-es="Educación" data-tooltip-en="Education" data-tooltip-de="Ausbildung" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                <a href="#education" data-tooltip-es="Educación" data-tooltip-en="Education" data-tooltip-de="Ausbildung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fa-solid fa-graduation-cap text-base md:text-lg"></i>
                 </a>
             </li>
             <li>
-                <a href="#projects" data-tooltip-es="Proyectos Destacados" data-tooltip-en="Featured Projects" data-tooltip-de="Ausgewählte Projekte" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <i class="fa-solid fa-code-fork"></i>
+                <a href="#projects" data-tooltip-es="Proyectos Destacados" data-tooltip-en="Featured Projects" data-tooltip-de="Ausgewählte Projekte" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fa-solid fa-code-fork text-base md:text-lg"></i>
                 </a>
             </li>
             <li>
-                <a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <i class="fa-solid fa-award"></i>
+                <a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fa-solid fa-award text-base md:text-lg"></i>
                 </a>
             </li>
             <li>
-                <a href="#more-about-me" data-tooltip-es="Más sobre mí" data-tooltip-en="More about me" data-tooltip-de="Mehr über mich" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <i class="fa-solid fa-lightbulb"></i>
+                <a href="#more-about-me" data-tooltip-es="Más sobre mí" data-tooltip-en="More about me" data-tooltip-de="Mehr über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fa-solid fa-lightbulb text-base md:text-lg"></i>
                 </a>
             </li>
             <li>
-                <a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fa-solid fa-envelope text-base md:text-lg"></i>
                 </a>
             </li>
         </ul>
@@ -546,6 +543,8 @@
         </footer>
     </div>
     <script type="module">
+        let pageTime = 0; // Moved to the top to fix ReferenceError
+
         const content = {
             es: {
                 aboutMeTitle: "Acerca de mí",
@@ -617,7 +616,7 @@
                         location: "Santiago, CL",
                         dates: "Sep 2013 - Feb 2016",
                         bullets: [
-                            "Lideré proyectos de <strong>GIS</strong>, incluyendo el mapeo de puntos de interés y la validación de la red vial.",
+                            "Lideré <strong>GIS</strong> proyectos, incluyendo el mapeo de puntos de interés y la validación de la red vial.",
                             "Actué como representante de <strong>Ingeniería de Bases de Datos</strong> para la comunicación con equipos globales."
                         ]
                     },
@@ -704,7 +703,7 @@
                         url: "https://github.com/diegoalarc/SMP_Module_Project"
                     }
                 ],
-                certificationsTitle: "Licenses & Certifications",
+                certificationsTitle: "Certificaciones",
                 certifications: [
                     {
                         title: "Docker Essentials for Python Developers",
@@ -859,7 +858,7 @@
                         location: "Santiago, CL",
                         dates: "Sep 2013 - Feb 2016",
                         bullets: [
-                            "Led <strong>GIS</strong> projects, including mapping Points of Interest and validating the road network.",
+                            "Lede <strong>GIS</strong> projects, including mapping Points of Interest and validating the road network.",
                             "Acted as the <strong>Database Engineering</strong> representative for communication with global teams."
                         ]
                     },
@@ -1033,7 +1032,7 @@
             },
             de: {
                 aboutMeTitle: "Über mich",
-                aboutMeText: `Technischer Support-Ingenieur mit fundiertem Hintergrund in Geowissenschaften und einer Spezialisierung auf GIS und Fernerkundung. Meine Erfahrung bei <strong>UP42</strong> konzentriert sich auf die Analyse von Geodaten und die Optimierung von Prozessen mithilfe von APIs und Python, wobei ich stets eine hohe Kundenzufriedenheit sicherstelle. Als Fachexperte (SME) arbeite ich eng mit interdisziplinären Teams zusammen, um komplexe Herausforderungen zu lösen und erfolgreiche Implementierungen zu gewährleisten. Ich bin ständig bestrebt, mein technisches Wissen und meine Problemlösungsfähigkeiten in innovative Projekte einzubringen.`,
+                aboutMeText: `Technischer Support-Ingenieur mit fundiertem Hintergrund in Geowissenschaften und einer Spezialisierung auf GIS und Fernerkundung. Meine Erfahrung bei <strong>UP42</strong> konzentriert sich auf die Analyse von Geodaten und die Optimierung von Prozessen mithilfe von APIs und Python, wobei ich stets eine hohe Kundenzufriedenheit sicherstelle. Als Fachexperte (SME) arbeotiere ich eng mit interdisziplinären Teams zusammen, um komplexe Herausforderungen zu lösen und erfolgreiche Implementierungen zu gewährleisten. Ich bin ständig bestrebt, mein technisches Wissen und meine Problemlösungsfähigkeiten in innovative Projekte einzubringen.`,
                 experienceTitle: "Berufserfahrung",
                 experience: [
                     {
@@ -1068,7 +1067,7 @@
                         location: "Santiago, CL",
                         dates: "Nov 2018 - Sep 2019",
                         bullets: [
-                            "Verwaltete die GIS-Datenbank, implementierte <strong>neue Wasser- und Abwassernetze</strong> und aktualisierte das geodätische Netzwerk.",
+                            "Verwaltete die GIS-Datenbank, implementierte <strong>neue Wasser- und Abwassernetze</strong> y aktualisierte das geodätische Netzwerk.",
                             "Automatisierung von Workflows mit <strong>Python</strong> zur Steigerung der Effizienz."
                         ]
                     },
@@ -1277,6 +1276,16 @@
 
         const updateContent = (lang) => {
             const currentContent = content[lang];
+            
+            // Update tooltip attributes on floating nav links
+            const navLinks = document.querySelectorAll('.floating-nav a');
+            navLinks.forEach(link => {
+                const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
+                if (tooltipText) {
+                    link.setAttribute('data-tooltip', tooltipText);
+                }
+            });
+
             document.getElementById('about-me-title').textContent = currentContent.aboutMeTitle;
             document.getElementById('about-me-text').innerHTML = currentContent.aboutMeText;
 
@@ -1444,6 +1453,7 @@
         };
         const setLanguage = (lang) => {
             updateContent(lang);
+            document.getElementById('language-switcher').value = lang; // This line was added to fix the language change
             localStorage.setItem('lang', lang);
         };
 
@@ -1458,9 +1468,8 @@
         });
 
         // Initial setup
-        const initialLang = 'es';
+        const initialLang = localStorage.getItem('lang') || 'en';
         setLanguage(initialLang);
-        document.getElementById('language-switcher').value = initialLang;
 
         // Add event listeners
         document.getElementById('language-switcher').addEventListener('change', (event) => {
@@ -1468,7 +1477,6 @@
         });
 
         // Start timer
-        let pageTime = 0;
         setInterval(() => {
             pageTime++;
             if (document.getElementById('timer')) {
