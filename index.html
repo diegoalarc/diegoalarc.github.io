@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Diego Alarcón</title>
+    <title id="page-title">Portafolio de Diego Alarcón</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -284,11 +284,11 @@
         <header class="mb-10 text-center sm:text-left">
             <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start">
                 <div class="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
-                    <img src="https://github.com/diegoalarc/diegoalarc.github.io/blob/main/images/foto_diego.jpg?raw=true" alt="Foto de perfil de Diego Alarcón" class="w-full h-full object-cover">
+                    <img src="https://github.com/diegoalarc/diegoalarc.github.io/blob/main/images/foto_diego.jpg?raw=true" alt="" id="profile-image">
                 </div>
                 <div class="flex flex-col items-center sm:items-start">
                     <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
-                    <p class="text-lg text-gray-400">Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.</p>
+                    <p class="text-lg text-gray-400" id="profile-description"></p>
                     <div class="flex space-x-4 mt-2">
                         <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -331,205 +331,7 @@
 
         <section class="mb-10" id="more-about-me">
             <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="more-about-me-title"></h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300">
-                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
-                    <h3 class="text-lg font-semibold highlight-text mb-2">Main Skills</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li>
-                            <p class="font-medium">Microsoft <i class="fa-brands fa-microsoft"></i></p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star-half-stroke half-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">Apple <i class="fa-brands fa-apple"></i></p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">Linux <i class="fa-brands fa-linux"></i></p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star-half-stroke half-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">Docker <i class="fa-brands fa-docker"></i></p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star-half-stroke half-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">GitHub <i class="fa-brands fa-github"></i></p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star-half-stroke half-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">Python <i class="fa-brands fa-python"></i></p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">R <i class="fa-brands fa-r-project"></i></p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">ArcGIS</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">VSCode</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">QGIS</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
-                    <h3 class="text-lg font-semibold highlight-text mb-2">Coding experience</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li>
-                            <p class="font-medium">Geopandas</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">Rasterio</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">Scikit-ML</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star-half-stroke half-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">Json</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">API</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star-half-stroke half-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
-                    <h3 class="text-lg font-semibold highlight-text mb-2">Languages</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li>
-                            <p class="font-medium">Spanish</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">English</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="font-medium">German</p>
-                            <div class="skill-rating text-lg">
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star filled-star"></i>
-                                <i class="fa-solid fa-star-half-stroke half-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                                <i class="fa-regular fa-star empty-star"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="more-about-me-container"></div>
         </section>
 
         <footer class="text-center mt-12 pt-6 border-t border-gray-600 text-gray-500 text-sm">
@@ -543,10 +345,13 @@
         </footer>
     </div>
     <script type="module">
-        let pageTime = 0; // Moved to the top to fix ReferenceError
+        let pageTime = 0;
 
         const content = {
             es: {
+                pageTitle: "Portafolio de Diego Alarcón",
+                profileAlt: "Foto de perfil de Diego Alarcón",
+                profileDescription: "Ingeniero de Soporte Técnico | Especialista en Geociencias, Python y API | Ayudando a los clientes a resolver desafíos técnicos complejos.",
                 aboutMeTitle: "Acerca de mí",
                 aboutMeText: `Ingeniero de Soporte Técnico con una sólida trayectoria en Geociencias y especialización en SIG y teledetección. Mi experiencia en <strong>UP42</strong> se centra en el análisis de datos geoespaciales y la optimización de procesos utilizando APIs y Python, logrando consistentemente una alta satisfacción del cliente. Como Experto en la Materia (SME), colaboro estrechamente con equipos multifuncionales para resolver desafíos complejos y asegurar implementaciones exitosas. Busco constantemente aplicar mi conocimiento técnico y habilidades de resolución de problemas para contribuir a proyectos innovadores.`,
                 experienceTitle: "Experiencia Profesional",
@@ -640,7 +445,7 @@
                         dates: "Ene 2012 - Mar 2012",
                         bullets: [
                             "Clasifiqué datos de terreno e interpreté orto-imágenes para modelos digitales.",
-                            "Contribuí a la creación de <strong>modelos de terreno de alta resolución</strong>."
+                            "Tumbri a la creación de <strong>modelos de terreno de alta resolución</strong>."
                         ]
                     }
                 ],
@@ -684,59 +489,59 @@
                 projects: [
                     {
                         title: "GeodesiCL",
-                        description: "A small journey into Geometric Geodesy.",
+                        description: "Una pequeña travesía por la Geodesia Geométrica.",
                         url: "https://github.com/diegoalarc/GeodesyCL"
                     },
                     {
                         title: "Innovation laboratory EAGLE",
-                        description: "The innovation lab offers the opportunity to carry out a research project.",
+                        description: "El laboratorio de innovación ofrece la oportunidad de realizar un proyecto de investigación.",
                         url: "https://github.com/diegoalarc/Innovation-Laboratory-EAGLE"
                     },
                     {
                         title: "MB1 and MB2 Master EAGLE courses",
-                        description: "Codes for passing master courses.",
+                        description: "Códigos para aprobar los cursos de maestría.",
                         url: "https://github.com/diegoalarc/MB1_MB2_EAGLE_Courses"
                     },
                     {
                         title: "Spatial modeling and prediction (SMP)",
-                        description: "Code and poster for passing the SMP course.",
+                        description: "Código y póster para aprobar el curso SMP.",
                         url: "https://github.com/diegoalarc/SMP_Module_Project"
                     }
                 ],
                 certificationsTitle: "Certificaciones",
                 certifications: [
                     {
-                        title: "Docker Essentials for Python Developers",
+                        title: "Fundamentos de Docker para Desarrolladores de Python",
                         institution: "Udemy",
                         dates: "Nov 2022",
                         credentialId: "UC-4d634c10-ebde-4b53-bd41-3c698020b39b"
                     },
                     {
-                        title: "2022 Complete Python Bootcamp From Zero to Hero in Python",
+                        title: "2022 Bootcamp Completo de Python De Cero a Héroe en Python",
                         institution: "Udemy",
                         dates: "Jul 2022",
                         credentialId: "UC-80ae18d8-1c94-49a1-93e2-9a2fb3786c98"
                     },
                     {
-                        title: "Git+GitHub: A whole version control system from scratch",
+                        title: "Git+GitHub: Un sistema de control de versiones completo desde cero",
                         institution: "Udemy",
                         dates: "Jul 2022",
                         credentialId: "UC-1400fe44-9a47-459b-96f6-1416cb945ea6"
                     },
                     {
-                        title: "Deutsch als Fremdsprache B1",
+                        title: "Alemán como Lengua Extranjera B1",
                         institution: "https://www.uni-wuerzburg.de/zfs/startseite/",
                         dates: "Mar 2021",
                         credentialId: "khE0wj3LlmgfyaYr"
                     },
                     {
-                        title: "Zertifikat Deutsch B1",
+                        title: "Certificado de Alemán B1",
                         institution: "telc GmbH - The European Language Certificates",
                         dates: "Feb 2018",
                         credentialId: "1474620"
                     },
                     {
-                        title: "Certified Customer Success Manager (CCSM) Level 1",
+                        title: "Gerente Certificado de Éxito del Cliente (CCSM) Nivel 1",
                         institution: "SuccessHACKER",
                         dates: "Dec 2022 · Expired Dec 2024"
                     },
@@ -750,7 +555,7 @@
                 moreAboutMeTitle: "Más sobre mí",
                 moreAboutMe: {
                     mainSkills: {
-                        title: "Main Skills",
+                        title: "Habilidades principales",
                         skills: [
                             { name: "Microsoft", icon: "fa-brands fa-microsoft", rating: 4.5 },
                             { name: "Apple", icon: "fa-brands fa-apple", rating: 4 },
@@ -765,7 +570,7 @@
                         ]
                     },
                     coding: {
-                        title: "Coding experience",
+                        title: "Experiencia en codificación",
                         skills: [
                             { name: "Geopandas", rating: 3 },
                             { name: "Rasterio", rating: 3 },
@@ -775,11 +580,11 @@
                         ]
                     },
                     languages: {
-                        title: "Languages",
+                        title: "Idiomas",
                         skills: [
-                            { name: "Spanish", rating: 5 },
-                            { name: "English", rating: 4 },
-                            { name: "German", rating: 2.5 }
+                            { name: "Español", rating: 5 },
+                            { name: "Inglés", rating: 4 },
+                            { name: "Alemán", rating: 2.5 }
                         ]
                     }
                 },
@@ -789,6 +594,9 @@
                 }
             },
             en: {
+                pageTitle: "Diego Alarcón's Portfolio",
+                profileAlt: "Profile picture of Diego Alarcón",
+                profileDescription: "Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.",
                 aboutMeTitle: "About Me",
                 aboutMeText: `Technical Support Engineer with a strong background in Geosciences and a specialization in GIS and remote sensing. My experience at <strong>UP42</strong> focuses on analyzing geospatial data and optimizing processes using APIs and Python, consistently achieving high customer satisfaction. As a Subject Matter Expert (SME), I collaborate closely with cross-functional teams to resolve complex challenges and ensure successful deployments. I am constantly seeking to apply my technical knowledge and problem-solving skills to contribute to innovative projects.`,
                 experienceTitle: "Professional Experience",
@@ -966,13 +774,13 @@
                         credentialId: "UC-1400fe44-9a47-459b-96f6-1416cb945ea6"
                     },
                     {
-                        title: "Deutsch als Fremdsprache B1",
+                        title: "German as a foreign language B1",
                         institution: "https://www.uni-wuerzburg.de/zfs/startseite/",
                         dates: "Mar 2021",
                         credentialId: "khE0wj3LlmgfyaYr"
                     },
                     {
-                        title: "Zertifikat Deutsch B1",
+                        title: "Certificate of German B1",
                         institution: "telc GmbH - The European Language Certificates",
                         dates: "Feb 2018",
                         credentialId: "1474620"
@@ -1031,8 +839,11 @@
                 }
             },
             de: {
+                pageTitle: "Portfolio von Diego Alarcón",
+                profileAlt: "Profilbild von Diego Alarcón",
+                profileDescription: "Technischer Support-Ingenieur | Spezialist für Geowissenschaften, Python und API | Unterstützung von Kunden bei der Lösung komplexer technischer Herausforderungen.",
                 aboutMeTitle: "Über mich",
-                aboutMeText: `Technischer Support-Ingenieur mit fundiertem Hintergrund in Geowissenschaften und einer Spezialisierung auf GIS und Fernerkundung. Meine Erfahrung bei <strong>UP42</strong> konzentriert sich auf die Analyse von Geodaten und die Optimierung von Prozessen mithilfe von APIs und Python, wobei ich stets eine hohe Kundenzufriedenheit sicherstelle. Als Fachexperte (SME) arbeotiere ich eng mit interdisziplinären Teams zusammen, um komplexe Herausforderungen zu lösen und erfolgreiche Implementierungen zu gewährleisten. Ich bin ständig bestrebt, mein technisches Wissen und meine Problemlösungsfähigkeiten in innovative Projekte einzubringen.`,
+                aboutMeText: `Technischer Support-Ingenieur mit fundiertem Hintergrund in Geowissenschaften und einer Spezialisierung auf GIS und Fernerkundung. Meine Erfahrung bei <strong>UP42</strong> konzentriert sich auf die Analyse von Geodaten und die Optimierung von Prozessen mithilfe von APIs und Python, wobei ich stets eine hohe Kundenzufriedenheit sicherstelle. Als Fachexperte (SME) arbebiere ich eng mit interdisziplinären Teams zusammen, um komplexe Herausforderungen zu lösen und erfolgreiche Implementierungen zu gewährleisten. Ich bin ständig bestrebt, mein technisches Wissen und meine Problemlösungsfähigkeiten in innovative Projekte einzubringen.`,
                 experienceTitle: "Berufserfahrung",
                 experience: [
                     {
@@ -1044,7 +855,7 @@
                         bullets: [
                             "Erhielt eine <strong>99%ige Kundenzufriedenheit</strong> durch die Lösung technischer Probleme für Geodaten-APIs und Datenverarbeitungsdienste.",
                             "Verwaltete die <strong>Zendesk</strong>-Plattform, optimierte Arbeitsabläufe und reduzierte die Reaktionszeiten.",
-                            "Bot kompetente Unterstützung bei <strong>Erdbeobachtungsdaten</strong> und Verarbeitungsworkflows.",
+                            "Bot kompetente Unterstützung bei <strong>Erdbeobachtungsdaten</strong> y Verarbeitungsworkflows.",
                             "Verbesserte die Selbsthilfe-Dokumentation, was die <strong>eingehenden Support-Anfragen um 15% reduzierte</strong>.",
                             "Koordinierte die interne Kommunikation, um reibungslose Feature-Deployments zu gewährleisten."
                         ]
@@ -1168,41 +979,41 @@
                 projects: [
                     {
                         title: "GeodesiCL",
-                        description: "A small journey into Geometric Geodesy.",
+                        description: "Eine kleine Reise in die geometrische Geodäsie.",
                         url: "https://github.com/diegoalarc/GeodesyCL"
                     },
                     {
                         title: "Innovation laboratory EAGLE",
-                        description: "The innovation lab offers the opportunity to carry out a research project.",
+                        description: "Das Innovationslabor bietet die Möglichkeit, ein Forschungsprojekt durchzuführen.",
                         url: "https://github.com/diegoalarc/Innovation-Laboratory-EAGLE"
                     },
                     {
                         title: "MB1 and MB2 Master EAGLE courses",
-                        description: "Codes for passing master courses.",
+                        description: "Codes zum Bestehen von Masterstudiengängen.",
                         url: "https://github.com/diegoalarc/MB1_MB2_EAGLE_Courses"
                     },
                     {
                         title: "Spatial modeling and prediction (SMP)",
-                        description: "Code and poster for passing the SMP course.",
+                        description: "Code und Poster zum Bestehen des SMP-Kurses.",
                         url: "https://github.com/diegoalarc/SMP_Module_Project"
                     }
                 ],
                 certificationsTitle: "Lizenzen & Zertifizierungen",
                 certifications: [
                     {
-                        title: "Docker Essentials for Python Developers",
+                        title: "Docker-Grundlagen für Python-Entwickler",
                         institution: "Udemy",
                         dates: "Nov 2022",
                         credentialId: "UC-4d634c10-ebde-4b53-bd41-3c698020b39b"
                     },
                     {
-                        title: "2022 Complete Python Bootcamp From Zero to Hero in Python",
+                        title: "2022 Kompletter Python-Bootcamp von Null zum Helden in Python",
                         institution: "Udemy",
                         dates: "Jul 2022",
                         credentialId: "UC-80ae18d8-1c94-49a1-93e2-9a2fb3786c98"
                     },
                     {
-                        title: "Git+GitHub: A whole version control system from scratch",
+                        title: "Git+GitHub: Ein vollständiges Versionskontrollsystem von Grund auf",
                         institution: "Udemy",
                         dates: "Jul 2022",
                         credentialId: "UC-1400fe44-9a47-459b-96f6-1416cb945ea6"
@@ -1220,7 +1031,7 @@
                         credentialId: "1474620"
                     },
                     {
-                        title: "Certified Customer Success Manager (CCSM) Level 1",
+                        title: "Zertifizierter Customer Success Manager (CCSM) Level 1",
                         institution: "SuccessHACKER",
                         dates: "Dec 2022 · Expired Dec 2024"
                     },
@@ -1234,7 +1045,7 @@
                 moreAboutMeTitle: "Mehr über mich",
                 moreAboutMe: {
                     mainSkills: {
-                        title: "Main Skills",
+                        title: "Hauptfähigkeiten",
                         skills: [
                             { name: "Microsoft", icon: "fa-brands fa-microsoft", rating: 4.5 },
                             { name: "Apple", icon: "fa-brands fa-apple", rating: 4 },
@@ -1249,7 +1060,7 @@
                         ]
                     },
                     coding: {
-                        title: "Coding experience",
+                        title: "Programmiererfahrung",
                         skills: [
                             { name: "Geopandas", rating: 3 },
                             { name: "Rasterio", rating: 3 },
@@ -1259,11 +1070,11 @@
                         ]
                     },
                     languages: {
-                        title: "Languages",
+                        title: "Sprachen",
                         skills: [
-                            { name: "Spanish", rating: 5 },
-                            { name: "English", rating: 4 },
-                            { name: "German", rating: 2.5 }
+                            { name: "Spanisch", rating: 5 },
+                            { name: "Inglés", rating: 4 },
+                            { name: "Deutsch", rating: 2.5 }
                         ]
                     }
                 },
@@ -1277,6 +1088,13 @@
         const updateContent = (lang) => {
             const currentContent = content[lang];
             
+            // Update static HTML elements
+            document.getElementById('page-title').textContent = currentContent.pageTitle;
+            document.getElementById('profile-image').alt = currentContent.profileAlt;
+            document.getElementById('profile-description').textContent = currentContent.profileDescription;
+            document.getElementById('about-me-title').textContent = currentContent.aboutMeTitle;
+            document.getElementById('about-me-text').innerHTML = currentContent.aboutMeText;
+
             // Update tooltip attributes on floating nav links
             const navLinks = document.querySelectorAll('.floating-nav a');
             navLinks.forEach(link => {
@@ -1285,9 +1103,6 @@
                     link.setAttribute('data-tooltip', tooltipText);
                 }
             });
-
-            document.getElementById('about-me-title').textContent = currentContent.aboutMeTitle;
-            document.getElementById('about-me-text').innerHTML = currentContent.aboutMeText;
 
             // Professional Experience Section
             document.getElementById('experience-title').textContent = currentContent.experienceTitle;
@@ -1339,7 +1154,6 @@
                 educationContainer.appendChild(itemDiv);
             });
 
-
             // Featured Projects Section
             document.getElementById('projects-title').textContent = currentContent.projectsTitle;
             const projectsContainer = document.getElementById('projects-container');
@@ -1380,16 +1194,16 @@
 
             // More About Me Section
             document.getElementById('more-about-me-title').textContent = currentContent.moreAboutMeTitle;
+            const moreAboutMeContainer = document.getElementById('more-about-me-container');
+            moreAboutMeContainer.innerHTML = '';
 
-            const mainSkills = currentContent.moreAboutMe.mainSkills;
-            const codingSkills = currentContent.moreAboutMe.coding;
-            const languagesSkills = currentContent.moreAboutMe.languages;
-
-            const mainSkillsHtml = `
-                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
-                    <h3 class="text-lg font-semibold highlight-text mb-2">${mainSkills.title}</h3>
+            const renderSkillsCard = (skillsData) => {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'p-4 rounded-lg container-bg border border-gray-700 shadow-md';
+                cardDiv.innerHTML = `
+                    <h3 class="text-lg font-semibold highlight-text mb-2">${skillsData.title}</h3>
                     <ul class="space-y-2 text-sm">
-                        ${mainSkills.skills.map(skill => `
+                        ${skillsData.skills.map(skill => `
                             <li>
                                 <p class="font-medium">${skill.name} ${skill.icon ? `<i class="${skill.icon}"></i>` : ''}</p>
                                 <div class="skill-rating text-lg">
@@ -1400,46 +1214,13 @@
                             </li>
                         `).join('')}
                     </ul>
-                </div>
-            `;
+                `;
+                moreAboutMeContainer.appendChild(cardDiv);
+            };
 
-            const codingHtml = `
-                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
-                    <h3 class="text-lg font-semibold highlight-text mb-2">${codingSkills.title}</h3>
-                    <ul class="space-y-2 text-sm">
-                        ${codingSkills.skills.map(skill => `
-                            <li>
-                                <p class="font-medium">${skill.name}</p>
-                                <div class="skill-rating text-lg">
-                                    ${Array(Math.floor(skill.rating)).fill('<i class="fa-solid fa-star filled-star"></i>').join('')}
-                                    ${(skill.rating % 1 !== 0) ? '<i class="fa-solid fa-star-half-stroke half-star"></i>' : ''}
-                                    ${Array(5 - Math.ceil(skill.rating)).fill('<i class="fa-regular fa-star empty-star"></i>').join('')}
-                                </div>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>
-            `;
-
-            const languagesHtml = `
-                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
-                    <h3 class="text-lg font-semibold highlight-text mb-2">${languagesSkills.title}</h3>
-                    <ul class="space-y-2 text-sm">
-                        ${languagesSkills.skills.map(skill => `
-                            <li>
-                                <p class="font-medium">${skill.name}</p>
-                                <div class="skill-rating text-lg">
-                                    ${Array(Math.floor(skill.rating)).fill('<i class="fa-solid fa-star filled-star"></i>').join('')}
-                                    ${(skill.rating % 1 !== 0) ? '<i class="fa-solid fa-star-half-stroke half-star"></i>' : ''}
-                                    ${Array(5 - Math.ceil(skill.rating)).fill('<i class="fa-regular fa-star empty-star"></i>').join('')}
-                                </div>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>
-            `;
-            document.querySelector('#more-about-me .grid').innerHTML = mainSkillsHtml + codingHtml + languagesHtml;
-
+            renderSkillsCard(currentContent.moreAboutMe.mainSkills);
+            renderSkillsCard(currentContent.moreAboutMe.coding);
+            renderSkillsCard(currentContent.moreAboutMe.languages);
 
             // Footer
             document.getElementById('footer-text-1').innerHTML = currentContent.footer.text1;
@@ -1453,7 +1234,7 @@
         };
         const setLanguage = (lang) => {
             updateContent(lang);
-            document.getElementById('language-switcher').value = lang; // This line was added to fix the language change
+            document.getElementById('language-switcher').value = lang;
             localStorage.setItem('lang', lang);
         };
 
@@ -1468,7 +1249,7 @@
         });
 
         // Initial setup
-        const initialLang = localStorage.getItem('lang') || 'en';
+        const initialLang = localStorage.getItem('lang') || 'es';
         setLanguage(initialLang);
 
         // Add event listeners
@@ -1480,7 +1261,7 @@
         setInterval(() => {
             pageTime++;
             if (document.getElementById('timer')) {
-                document.getElementById('timer').textContent = content[document.getElementById('language-switcher').value].timerText + formatTime(pageTime);
+                document.getElementById('timer').textContent = content[document.getElementById('language-switcher').value].footer.timerText + formatTime(pageTime);
             }
         }, 1000);
 
