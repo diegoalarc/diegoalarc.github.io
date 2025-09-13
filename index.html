@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
@@ -86,30 +87,36 @@
             transform: scale(1.2);
             animation-play-state: paused;
         }
-        .project-card {
-            height: 150px;
+        .project-card, .certification-card {
+            min-height: 150px;
+            height: 100%; /* Ensures cards in the same row are the same height */
             position: relative;
             overflow: hidden;
             border-radius: 12px;
             background-color: var(--card-color-dark);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
             border: 2px solid transparent;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            align-items: flex-start;
             padding: 1rem;
         }
-        .project-card:hover {
+        .project-card:hover, .certification-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 15px 30px rgba(0, 0, 0, 0.15);
             border-color: var(--highlight-color-dark);
         }
-        .project-card h3 {
+        .project-card h3, .certification-card h3 {
             font-size: 1.25rem;
             font-weight: 600;
+            transition: color 0.3s ease-in-out;
         }
-        .project-card p {
+        .project-card:hover h3, .certification-card:hover h3 {
+            color: var(--highlight-color-dark);
+        }
+        .project-card p, .certification-card p {
             font-size: 0.875rem;
             margin-top: 0.25rem;
         }
@@ -202,9 +209,21 @@
         .floating-nav a:hover::after {
             opacity: 1;
         }
+        /* Custom skill rating styles */
+        .skill-rating {
+            display: flex;
+            align-items: center;
+        }
+        .skill-rating .filled-star, .skill-rating .half-star, .skill-rating .empty-star {
+            color: var(--highlight-color-dark);
+            margin-right: 0.25rem;
+        }
+        .skill-rating .empty-star {
+            color: #4A5568; /* A darker color for empty stars */
+        }
     </style>
 </head>
-<body class="p-4 sm:p-8 lg:p-12">
+<body class="p-4 sm:p-8 lg:p-10">
 
     <div class="fixed top-4 right-4 z-50 flex flex-col items-end gap-2">
         <select id="language-switcher" class="p-2 rounded-md bg-gray-700 text-white cursor-pointer">
@@ -218,32 +237,37 @@
         <ul class="flex flex-col gap-2 p-2 rounded-lg shadow-lg" style="background-color: var(--bg-color-darker);">
             <li>
                 <a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 </a>
             </li>
             <li>
                 <a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V7"></path><path d="M8 21V7"></path><path d="M12 21V7"></path><line x1="2" y1="7" x2="22" y2="7"></line><path d="M10 5h4"></path></svg>
                 </a>
             </li>
             <li>
                 <a href="#education" data-tooltip-es="Educación" data-tooltip-en="Education" data-tooltip-de="Ausbildung" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                </a>
-            </li>
-            <li>
-                <a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M14 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2z"></path><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="10" x2="12" y2="10"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                 </a>
             </li>
             <li>
                 <a href="#projects" data-tooltip-es="Proyectos Destacados" data-tooltip-en="Featured Projects" data-tooltip-de="Ausgewählte Projekte" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 17V5c0-1.1.9-2 2-2h12.5L20 5.5v13.5c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2z"></path><path d="M8 8h8"></path><path d="M8 12h8"></path><path d="M8 16h8"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><path d="M10 12h8"></path><path d="M14 16h4"></path></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.5l-4.59 2.76 1.22-5.32-4.11-3.56 5.43-.47L12 3l2.05 4.91 5.43.47-4.11 3.56 1.22 5.32L12 17.5z"></path></svg>
+                </a>
+            </li>
+            <li>
+                <a href="#more-about-me" data-tooltip-es="Más sobre mí" data-tooltip-en="More about me" data-tooltip-de="Mehr über mich" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 12h8m-4 4v-8m-4 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                 </a>
             </li>
             <li>
                 <a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </a>
             </li>
         </ul>
@@ -253,7 +277,7 @@
         <header class="mb-10 text-center sm:text-left">
             <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start">
                 <div class="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
-                    <img src="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/images/foto_diego.jpg" alt="Foto de perfil de Diego Alarcón" class="w-full h-full object-cover">
+                    <img src="https://github.com/diegoalarc/diegoalarc.github.io/blob/main/images/foto_diego.jpg?raw=true" alt="Foto de perfil de Diego Alarcón" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col items-center sm:items-start">
                     <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
@@ -262,7 +286,7 @@
                         <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         </a>
-                        <a href="https://diegoalarc.github.io/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <a href="https://github.com/diegoalarc" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.94 13.94 0 0 0-3 0c-2.73-1.83-3.91-1.2-3.91-1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                         </a>
                         <a href="https://www.linkedin.com/in/diego-alarcon-diaz-13b772271/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
@@ -288,20 +312,222 @@
             <div class="space-y-6 text-gray-300" id="education-container"></div>
         </section>
 
-        <section class="mb-10" id="certifications">
-            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="certifications-title"></h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="certifications-container"></div>
-        </section>
-
         <section class="mb-10" id="projects">
             <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-6 border-b-2 border-teal-400 pb-2" id="projects-title"></h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container"></div>
         </section>
 
+        <section class="mb-10" id="certifications">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="certifications-title"></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="certifications-container"></div>
+        </section>
+
+        <section class="mb-10" id="more-about-me">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="more-about-me-title"></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300">
+                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
+                    <h3 class="text-lg font-semibold highlight-text mb-2">Data Science experience</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <p class="font-medium">Geopandas</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Rasterio</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Scikit-ML</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star-half-stroke half-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Json</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">API</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star-half-stroke half-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
+                    <h3 class="text-lg font-semibold highlight-text mb-2">Main Skills</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <p class="font-medium">Microsoft <i class="fa-brands fa-microsoft"></i></p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star-half-stroke half-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Apple <i class="fa-brands fa-apple"></i></p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Linux <i class="fa-brands fa-linux"></i></p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star-half-stroke half-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Docker <i class="fa-brands fa-docker"></i></p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star-half-stroke half-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">GitHub <i class="fa-brands fa-github"></i></p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star-half-stroke half-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">Python <i class="fa-brands fa-python"></i></p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">R <i class="fa-brands fa-r-project"></i></p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">ArcGIS</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">VSCode</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">QGIS</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-4 rounded-lg container-bg border border-gray-700 shadow-md">
+                    <h3 class="text-lg font-semibold highlight-text mb-2">Languages</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <p class="font-medium">Spanish</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">English</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="font-medium">German</p>
+                            <div class="skill-rating text-lg">
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star filled-star"></i>
+                                <i class="fa-solid fa-star-half-stroke half-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                                <i class="fa-regular fa-star empty-star"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <footer class="text-center mt-12 pt-6 border-t border-gray-600 text-gray-500 text-sm">
             <p id="footer-text-1"></p>
             <div id="timer" class="mt-4 text-sm font-semibold text-gray-400"></div>
-            <div id="analytics-data" class="mt-2 text-sm text-gray-500"></div>
             <div class="mt-2">
                 <a href="mailto:diego.alarcondiaz@gmail.com" class="hover:text-white transition-colors duration-300">diego.alarcondiaz@gmail.com</a>
                 <span class="mx-2">|</span>
@@ -312,13 +538,6 @@
     </div>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, doc, getDoc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-        import { setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-        // Establecer el nivel de registro de depuración para Firestore
-        setLogLevel('debug');
         const content = {
             es: {
                 aboutMeTitle: "Acerca de mí",
@@ -342,7 +561,7 @@
                     {
                         title: "Master Student in Remote Sensing, EAGLE",
                         company: "University of Würzburg",
-                        url: "https://www.uni-wuerzburg.de/startseite/",
+                        url: "https://eagle-science.org/",
                         location: "Alemania",
                         dates: "Sep 2019 - Dic 2021",
                         bullets: [
@@ -403,7 +622,7 @@
                         bullets: [
                             "Digitalicé mapas para apoyar la <strong>formalización legal y catastral</strong>.",
                             "Optimicé los flujos de trabajo en <strong>ArcGIS</strong> y las conexiones de bases de datos.",
-                            "Automatié la generación de informes con <strong>Excel VBA</strong>."
+                            "Automatización de la generación de informes con <strong>Excel VBA</strong>."
                         ]
                     },
                     {
@@ -423,7 +642,7 @@
                     {
                         title: "M.Sc. en Sensores Remotos",
                         institution: "Julius-Maximilians-Universität Würzburg",
-                        url: "https://www.uni-wuerzburg.de/",
+                        url: "https://eagle-science.org/",
                         dates: "Ago 2019 - Dic 2021",
                         location: "Würzburg, Alemania",
                         bullets: [
@@ -518,13 +737,13 @@
                     },
                     {
                         title: "Spatial modeling and prediction (SMP)",
-                        description: "Código y póster para la aprobación del curso SMP.",
+                        description: "Code y póster para la aprobación del curso SMP.",
                         url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
                     }
                 ],
+                moreAboutMeTitle: "Más sobre mí",
                 footerText1: "&copy; 2024 Diego Alarcón. Todos los derechos reservados.",
                 timerText: "Tiempo en la página: ",
-                analyticsText: "Analíticas - Vistas totales: "
             },
             en: {
                 aboutMeTitle: "About Me",
@@ -548,7 +767,7 @@
                     {
                         title: "Master Student in Remote Sensing, EAGLE",
                         company: "University of Würzburg",
-                        url: "https://www.uni-wuerzburg.de/startseite/",
+                        url: "https://eagle-science.org/",
                         location: "Germany",
                         dates: "Sep 2019 - Dec 2021",
                         bullets: [
@@ -629,7 +848,7 @@
                     {
                         title: "M.Sc. in Remote Sensing",
                         institution: "Julius-Maximilians-Universität Würzburg",
-                        url: "https://www.uni-wuerzburg.de/",
+                        url: "https://eagle-science.org/",
                         dates: "Aug 2019 - Dec 2021",
                         location: "Würzburg, Germany",
                         bullets: [
@@ -655,12 +874,12 @@
                         dates: "2006 - 2011",
                         location: "Santiago, Chile",
                         bullets: [
-                            "<strong>Focus:</strong> Geodesy, topographical data collection, and 3D modeling techniques.",
+                            "<strong>Focus:</strong> Geodesy, topographic data collection, and 3D modeling techniques.",
                             "<strong>Thesis:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
                         ]
                     }
                 ],
-                certificationsTitle: "Certifications",
+                certificationsTitle: "Licenses & Certifications",
                 certifications: [
                     {
                         title: "Docker Essentials for Python Developers",
@@ -719,84 +938,84 @@
                     },
                     {
                         title: "MB1 and MB2 Master EAGLE courses",
-                        description: "Code for passing the master's courses.",
+                        description: "Codes for passing master courses.",
                         url: "https://github.com/diegoalarc/Test__MB1_and_MB2"
                     },
                     {
                         title: "Spatial modeling and prediction (SMP)",
-                        description: "Code and poster for the approval of the SMP course.",
+                        description: "Code and poster for passing the SMP course.",
                         url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
                     }
                 ],
-                footerText1: "&copy; 2024 Diego Alarcón. All rights reserved.",
-                timerText: "Time on page: ",
-                analyticsText: "Analytics - Total Views: "
+                moreAboutMeTitle: "More about me",
+                footerText1: "&copy; 2024 Diego Alarcón. All Rights Reserved.",
+                timerText: "Page time: ",
             },
             de: {
                 aboutMeTitle: "Über mich",
-                aboutMeText: `Mein fundierter Hintergrund in den Geowissenschaften, kombiniert mit einer Spezialisierung auf Geografische Informationssysteme (GIS) und Fernerkundung, macht mich zu einem vielseitigen und hochqualifizierten Fachmann. Meine Leidenschaft für die Programmierung, mit einem Schwerpunkt auf <strong>Python</strong>, ermöglicht es mir, innovative Lösungen zu entwerfen und Aufgaben zur Lösung komplexer Herausforderungen zu automatisieren. In meiner aktuellen Rolle als technischer Support-Ingenieur bei <strong>UP42</strong> wende ich meine Erfahrung mit APIs und Python an, um Daten zu analysieren, interne Prozesse zu optimieren und außergewöhnlichen technischen Support zu bieten. Mein Engagement für Exzellenz hat mich als <strong>SME (Subject Matter Expert)</strong> positioniert, indem ich eng mit den Daten- und Verarbeitungsteams zusammenarbeite, um die Kundenzufriedenheit sicherzustellen. Ich betrachte mich als proaktiven und lösungsorientierten Fachmann, der ständig nach neuen Möglichkeiten sucht, sein technisches Wissen mit seiner Erfahrung in den Geowissenschaften zu verbinden. Wenn Sie nach einer motivierten Person mit einem starken Fokus auf Innovation suchen, lade ich Sie ein, sich zu vernetzen.`,
+                aboutMeText: `Mein starker geowissenschaftlicher Hintergrund, kombiniert mit einer Spezialisierung auf Geographische Informationssysteme (GIS) und Fernerkundung, macht mich zu einem vielseitigen und hochqualifizierten Fachmann. Meine Leidenschaft für die Programmierung, mit Schwerpunkt auf <strong>Python</strong>, ermöglicht es mir, innovative Lösungen zu entwickeln und Aufgaben zu automatisieren, um komplexe Herausforderungen zu lösen. In meiner aktuellen Rolle als technischer Support-Ingenieur bei <strong>UP42</strong> setze ich meine Erfahrung mit APIs und Python ein, um Daten zu analysieren, interne Prozesse zu optimieren und einen außergewöhnlichen technischen Support zu leisten. Mein Engagement für Exzellenz hat mich als <strong>SME (Subject Matter Expert)</strong>, der eng mit den Daten- und Verarbeitungsteams zusammenarbeitet, um die Kundenzufriedenheit zu gewährleisten. Wenn Sie eine motivierte Person mit einem starken Fokus auf Innovation suchen, lade ich Sie ein, Kontakt aufzunehmen.`,
                 experienceTitle: "Berufserfahrung",
                 experience: [
                     {
                         title: "Technical Support Engineer",
                         company: "UP42",
                         url: "https://up42.com/",
-                        location: "Remote, Deutschland",
-                        dates: "Okt 2021 - Gegenwart",
+                        location: "Remote, Germany",
+                        dates: "Okt 2021 - Heute",
                         bullets: [
-                            "Erhaltung einer <strong>99%igen Kundenzufriedenheit</strong> durch die Lösung technischer Probleme für geo-räumliche APIs und Datenverarbeitungsdienste.",
-                            "Verwaltung der <strong>Zendesk</strong>-Plattform, Optimierung der Arbeitsabläufe und Verkürzung der Antwortzeiten.",
-                            "Bereitstellung von Expertenunterstützung für <strong>Erdbeobachtungsdatensätze</strong> und Verarbeitungsabläufe.",
-                            "Verbesserung der Self-Service-Dokumentation, was zu einer <strong>Reduzierung der eingehenden Support-Anfragen um 15%</strong> führte.",
-                            "Koordination der internen Kommunikation, um eine reibungslose Implementierung neuer Funktionen zu gewährleisten."
+                            "Aufrechterhaltung einer <strong>99% Kundenzufriedenheit</strong> durch die Lösung technischer Probleme für Geodaten-APIs und Datenverarbeitungsdienste.",
+                            "Verwaltung der <strong>Zendesk</strong>-Plattform, Optimierung der Arbeitsabläufe und Reduzierung der Reaktionszeiten für das Customer Success Team.",
+                            "Bereitstellung von fachkundiger Unterstützung bei <strong>Erdbeobachtungsdatensätzen</strong> und Verarbeitungs-Workflows.",
+                            "Verbesserung der Self-Service-Dokumentation, <strong>Reduzierung der eingehenden Support-Anfragen um 15%</strong>.",
+                            "Koordination interner Kommunikationen, um einen reibungslosen Start von Funktionen zu gewährleisten."
                         ]
                     },
                     {
-                        title: "Masterstudent in Fernerkundung, EAGLE",
-                        company: "Universität Würzburg",
-                        url: "https://www.uni-wuerzburg.de/startseite/",
+                        title: "Master Student in Remote Sensing, EAGLE",
+                        company: "University of Würzburg",
+                        url: "https://eagle-science.org/",
                         location: "Deutschland",
                         dates: "Sep 2019 - Dez 2021",
                         bullets: [
-                            "Spezialisierung auf <strong>GIS, Fernerkundung und räumliche Analyse</strong> mit QGIS, ArcGIS, Python und R.",
-                            "Durchführung von Forschungen zur Vorhersage des Traubenertrags in Chile."
+                            "Spezialisierung auf <strong>GIS, Fernerkundung und räumliche Analyse</strong> con QGIS, ArcGIS und R.",
+                            "Durchführung von Forschung zur Vorhersage des Traubenertrags in Chile."
                         ]
                     },
                     {
-                        title: "Senior GIS-Analyst",
+                        title: "Senior GIS Analyst",
                         company: "Aguas Andinas",
                         url: "https://www.aguasandinas.cl/",
                         location: "Santiago, CL",
                         dates: "Nov 2018 - Sep 2019",
                         bullets: [
-                            "Verwaltung der GIS-Datenbank, Implementierung <strong>neuer Wasser- und Abwassernetze</strong> und Aktualisierung des geodätischen Netzes.",
+                            "Verwaltung der GIS-Datenbank, Implementierung <strong>neuer Wasser- und Abwassernetze</strong> y Aktualisierung des geodätischen Netzes.",
                             "Automatisierung von Arbeitsabläufen mit <strong>Python</strong> zur Steigerung der Effizienz."
                         ]
                     },
                     {
-                        title: "Vermessungsingenieur",
+                        title: "Survey Engineer",
                         company: "Digimapas Chile Aerofotogrametría Ltda",
                         url: "https://www.digimapas.cl/",
                         location: "Santiago, CL",
                         dates: "Jul 2018 - Sep 2018",
                         bullets: [
-                            "Durchführung von Feldvermessungen mit <strong>Totalstationen und GPS</strong> für zivile und Ingenieurprojekte.",
+                            "Durchführung von Feldvermessungen mit <strong>Totalstationen und GPS</strong> für Bau- und Ingenieurprojekte.",
                             "Verarbeitung von <strong>LIDAR</strong>-Daten zur Erstellung hochpräziser Geländemodelle."
                         ]
                     },
                     {
-                        title: "Senior Projektingenieur",
+                        title: "Senior Project Engineer",
                         company: "Aconcagua Solutions",
                         url: "https://www.aconcaguasolutions.com/",
                         location: "Santiago, CL",
                         dates: "Okt 2016 - Mai 2017",
                         bullets: [
                             "Entwicklung von Excel-Makros und Visual Basic-Projekten zur <strong>Datenautomatisierung</strong>.",
-                            "Durchführung von <strong>Web Scraping</strong> zur Sammlung relevanter Informationen."
+                            "Durchführung von <strong>Web-Scraping</strong> zur Sammlung relevanter Informationen."
                         ]
                     },
                     {
-                        title: "Feldanalyst II",
+                        title: "Field Analyst II",
                         company: "Here Maps",
                         url: "https://www.here.com/",
                         location: "Santiago, CL",
@@ -807,25 +1026,25 @@
                         ]
                     },
                     {
-                        title: "Projektingenieur",
-                        company: "Gemeinde Providencia",
+                        title: "Project Engineer",
+                        company: "Municipality of Providencia",
                         url: "https://providencia.cl/",
                         location: "Santiago, CL",
                         dates: "Apr 2012 - Feb 2013",
                         bullets: [
                             "Digitalisierung von Karten zur Unterstützung der <strong>rechtlichen und katastralen Formalisierung</strong>.",
-                            "Optimierung von <strong>ArcGIS</strong>-Arbeitsabläufen und Datenbankverbindungen.",
+                            "Optimierung von <strong>ArcGIS</strong>-Workflows und Datenbankverbindungen.",
                             "Automatisierung der Berichterstellung mit <strong>Excel VBA</strong>."
                         ]
                     },
                     {
-                        title: "Projektingenieur",
+                        title: "Project Engineer",
                         company: "Interra Chile",
                         url: "http://www.interralatam.com/",
                         location: "Santiago, CL",
                         dates: "Jan 2012 - Mär 2012",
                         bullets: [
-                            "Klassifizierung von Geländedaten und Interpretation von Orthobildern für digitale Modelle.",
+                            "Klassifizierung von Geländedaten und Interpretation von Ortho-Bildern für digitale Modelle.",
                             "Beitrag zur Erstellung von <strong>hochauflösenden Geländemodellen</strong>."
                         ]
                     }
@@ -835,7 +1054,7 @@
                     {
                         title: "M.Sc. in Fernerkundung",
                         institution: "Julius-Maximilians-Universität Würzburg",
-                        url: "https://www.uni-wuerzburg.de/",
+                        url: "https://eagle-science.org/",
                         dates: "Aug 2019 - Dez 2021",
                         location: "Würzburg, Deutschland",
                         bullets: [
@@ -845,24 +1064,24 @@
                     },
                     {
                         title: "Praktikum in Fernerkundung",
-                        institution: "Deutsches Zentrum für Luft- und Raumfahrt (DLR)",
+                        institution: "German Aerospace Center (DLR)",
                         url: "https://www.dlr.de/",
-                        dates: "März 2020 - Apr 2020",
+                        dates: "Mär 2020 - Apr 2020",
                         location: "Oberpfaffenhofen, Deutschland",
                         bullets: [
-                            "<strong>Schwerpunkt:</strong> Nutzung von NTL-Sensoren zur Analyse der EU-Fondsallokation für öffentliche Investitionen.",
+                            "<strong>Schwerpunkt:</strong> Nutzung von NTL-Sensoren zur Analyse der Zuweisung von EU-Geldern zu öffentlichen Investitionen.",
                             "<strong>Prozess:</strong> Durchführung von Vorverarbeitung und statistischen Analysen von Zeitreihendaten."
                         ]
                     },
                     {
-                        title: "B.Sc. in Vermessungstechnik",
+                        title: "B.Sc. in Vermessungswesen",
                         institution: "Universidad de Santiago de Chile",
                         url: "https://www.usach.cl/",
                         dates: "2006 - 2011",
                         location: "Santiago, Chile",
                         bullets: [
-                            "<strong>Schwerpunkt:</strong> Geodäsie, topografische Datenerfassung und 3D-Modellierungstechniken.",
-                            "<strong>Bachelorarbeit:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
+                            "<strong>Schwerpunkt:</strong> Geodäsie, topographische Datenerfassung und 3D-Modellierungstechniken.",
+                            "<strong>Abschlussarbeit:</strong> \"A Comparison of LiDAR vs. Topographical Points Precision for 3D Modeling\"."
                         ]
                     }
                 ],
@@ -889,7 +1108,7 @@
                     {
                         title: "Deutsch als Fremdsprache B1",
                         issuer: "https://www.uni-wuerzburg.de/zfs/startseite/",
-                        dates: "Mar 2021",
+                        dates: "Mär 2021",
                         credentialId: "khE0wj3LlmgfyaYr"
                     },
                     {
@@ -925,199 +1144,125 @@
                     },
                     {
                         title: "MB1 and MB2 Master EAGLE courses",
-                        description: "Codes für die Zulassung zu den Masterstudiengängen.",
+                        description: "Codes zum Bestehen der Masterstudiengänge.",
                         url: "https://github.com/diegoalarc/Test__MB1_and_MB2"
                     },
                     {
                         title: "Spatial modeling and prediction (SMP)",
-                        description: "Code und Poster für die Zulassung zum SMP-Kurs.",
+                        description: "Code und Poster für die Genehmigung des SMP-Kurses.",
                         url: "https://github.com/diegoalarc/Spatial_Modeling_and_Prediction"
                     }
                 ],
+                moreAboutMeTitle: "Mehr über mich",
                 footerText1: "&copy; 2024 Diego Alarcón. Alle Rechte vorbehalten.",
                 timerText: "Zeit auf der Seite: ",
-                analyticsText: "Analytik - Gesamtaufrufe: "
             }
         };
 
-        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
+        const languageSwitcher = document.getElementById('language-switcher');
+        const elements = {
+            aboutMeTitle: document.getElementById('about-me-title'),
+            aboutMeText: document.getElementById('about-me-text'),
+            experienceTitle: document.getElementById('experience-title'),
+            experienceContainer: document.getElementById('experience-container'),
+            educationTitle: document.getElementById('education-title'),
+            educationContainer: document.getElementById('education-container'),
+            certificationsTitle: document.getElementById('certifications-title'),
+            certificationsContainer: document.getElementById('certifications-container'),
+            projectsTitle: document.getElementById('projects-title'),
+            projectsContainer: document.getElementById('projects-container'),
+            moreAboutMeTitle: document.getElementById('more-about-me-title'),
+            footerText1: document.getElementById('footer-text-1'),
+            timer: document.getElementById('timer'),
+            navLinks: document.querySelectorAll('.floating-nav a'),
+            pageTitle: document.querySelector('title')
         };
-
+        const updateContent = (lang) => {
+            const langContent = content[lang];
+            elements.pageTitle.textContent = lang === 'es' ? 'Portafolio de Diego Alarcón' : 'Diego Alarcon\'s Portfolio';
+            elements.aboutMeTitle.textContent = langContent.aboutMeTitle;
+            elements.aboutMeText.innerHTML = langContent.aboutMeText;
+            elements.experienceTitle.textContent = langContent.experienceTitle;
+            elements.educationTitle.textContent = langContent.educationTitle;
+            elements.certificationsTitle.textContent = langContent.certificationsTitle;
+            elements.projectsTitle.textContent = langContent.projectsTitle;
+            elements.moreAboutMeTitle.textContent = langContent.moreAboutMeTitle;
+            elements.footerText1.innerHTML = langContent.footerText1;
+            elements.timer.textContent = langContent.timerText + formatTime(pageTime);
+            elements.navLinks.forEach(link => {
+                link.setAttribute('data-tooltip', link.getAttribute(`data-tooltip-${lang}`));
+            });
+            renderExperience(langContent.experience);
+            renderEducation(langContent.education);
+            renderCertifications(langContent.certifications);
+            renderProjects(langContent.projects);
+        };
+        const renderExperience = (experienceData) => {
+            elements.experienceContainer.innerHTML = experienceData.map(item => `
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold">${item.title}</h3>
+                    <div class="flex justify-between items-start w-full text-gray-400 mt-1">
+                        <p>
+                            ${item.url ? `<a href="${item.url}" target="_blank" class="text-teal-400 hover:underline">${item.company}</a>` : item.company} | ${item.location}
+                        </p>
+                        <p class="text-teal-400 font-bold">${item.dates}</p>
+                    </div>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-400">
+                        ${item.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                    </ul>
+                </div>
+            `).join('');
+        };
+        const renderEducation = (educationData) => {
+            elements.educationContainer.innerHTML = educationData.map(item => `
+                <div class="p-6 rounded-lg container-bg border border-gray-700 shadow-lg">
+                    <h3 class="text-xl font-semibold">${item.title}</h3>
+                    <p class="text-gray-400 mt-1">${item.url ? `<a href="${item.url}" target="_blank" class="text-teal-400 hover:underline">${item.institution}</a>` : item.institution} | ${item.location} | <span class="text-xs font-medium text-gray-500">${item.dates}</span></p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-400">
+                        ${item.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
+                    </ul>
+                </div>
+            `).join('');
+        };
+        const renderCertifications = (certificationsData) => {
+            elements.certificationsContainer.innerHTML = certificationsData.map(item => `
+                <div class="certification-card">
+                    <h3 class="text-lg font-semibold">${item.title}</h3>
+                    <p class="text-sm text-gray-400 mt-1">${item.issuer}</p>
+                    <p class="text-sm text-gray-300 font-bold mt-1">${item.dates}</p>
+                    ${item.credentialId ? `<p class="text-sm text-gray-300 font-bold mt-1">Credential ID: <b>${item.credentialId}</b></p>` : ''}
+                </div>
+            `).join('');
+        };
+        const renderProjects = (projectsData) => {
+            elements.projectsContainer.innerHTML = projectsData.map(item => `
+                <a href="${item.url}" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <div class="tooltiptext">${item.description}</div>
+                        <h3 class="text-white">${item.title}</h3>
+                        <p class="text-gray-400 mt-1">${item.description}</p>
+                    </div>
+                </a>
+            `).join('');
+        };
+        let pageTime = 0;
         let timerInterval;
-        let seconds = 0;
-        let initialPageLoadTime = Date.now();
-
-        function updateTimer() {
-            seconds++;
-            const minutes = Math.floor(seconds / 60);
-            const remainingSeconds = seconds % 60;
-            const timerDisplay = document.getElementById('timer');
-            if (timerDisplay) {
-                timerDisplay.textContent = `${content[currentLanguage].timerText}${minutes}m ${remainingSeconds}s`;
+        const updateTimer = () => {
+            pageTime++;
+            if (elements.timer) {
+                elements.timer.textContent = content[document.getElementById('language-switcher').value].timerText + formatTime(pageTime);
             }
-        }
-
-        function renderExperience(experienceData) {
-            const container = document.getElementById('experience-container');
-            container.innerHTML = '';
-            experienceData.forEach(item => {
-                const itemHtml = `
-                    <div class="timeline-item">
-                        <h3 class="font-semibold text-lg">${item.title}</h3>
-                        <p class="text-sm text-gray-400">${item.company} | ${item.dates}</p>
-                        <p class="text-xs text-gray-500">${item.location}</p>
-                        <ul class="list-disc list-inside mt-2 space-y-1">
-                            ${item.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
-                        </ul>
-                    </div>
-                `;
-                container.innerHTML += itemHtml;
-            });
-        }
-
-        function renderEducation(educationData) {
-            const container = document.getElementById('education-container');
-            container.innerHTML = '';
-            educationData.forEach(item => {
-                const itemHtml = `
-                    <div class="p-4 border border-gray-600 rounded-lg">
-                        <h3 class="font-semibold text-lg">${item.title}</h3>
-                        <p class="text-sm text-gray-400">${item.institution} | ${item.dates}</p>
-                        <ul class="list-disc list-inside mt-2 space-y-1">
-                            ${item.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
-                        </ul>
-                    </div>
-                `;
-                container.innerHTML += itemHtml;
-            });
-        }
-
-        function renderCertifications(certificationsData) {
-            const container = document.getElementById('certifications-container');
-            container.innerHTML = '';
-            certificationsData.forEach(item => {
-                const itemHtml = `
-                    <div class="bg-gray-700 p-4 rounded-lg shadow-md">
-                        <h3 class="font-semibold text-lg">${item.title}</h3>
-                        <p class="text-sm text-gray-400">${item.issuer}</p>
-                        <p class="text-xs text-gray-500 mt-1">${item.dates}</p>
-                        ${item.credentialId ? `<p class="text-xs text-gray-400 mt-2"><strong>Certification ID:</strong> ${item.credentialId}</p>` : ''}
-                    </div>
-                `;
-                container.innerHTML += itemHtml;
-            });
-        }
-
-        function renderProjects(projectsData) {
-            const container = document.getElementById('projects-container');
-            container.innerHTML = '';
-            projectsData.forEach(item => {
-                const itemHtml = `
-                    <a href="${item.url}" target="_blank" class="project-card flex flex-col justify-start text-white hover:text-teal-400 transition-colors duration-300">
-                        <h3 class="font-semibold text-lg">${item.title}</h3>
-                        <p class="text-sm text-gray-400 mt-1">${item.description}</p>
-                    </a>
-                `;
-                container.innerHTML += itemHtml;
-            });
-        }
-
-        let currentLanguage = 'es';
-
-        function setLanguage(lang) {
-            currentLanguage = lang;
-            document.getElementById('about-me-title').textContent = content[lang].aboutMeTitle;
-            document.getElementById('about-me-text').innerHTML = content[lang].aboutMeText;
-            document.getElementById('experience-title').textContent = content[lang].experienceTitle;
-            document.getElementById('education-title').textContent = content[lang].educationTitle;
-            document.getElementById('certifications-title').textContent = content[lang].certificationsTitle;
-            document.getElementById('projects-title').textContent = content[lang].projectsTitle;
-            document.getElementById('footer-text-1').innerHTML = content[lang].footerText1;
-
-            document.getElementById('language-switcher').value = lang;
-
-            document.querySelectorAll('.floating-nav a').forEach(link => {
-                const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
-                if (tooltipText) {
-                    link.setAttribute('data-tooltip', tooltipText);
-                }
-            });
-
-            renderExperience(content[lang].experience);
-            renderEducation(content[lang].education);
-            renderCertifications(content[lang].certifications);
-            renderProjects(content[lang].projects);
-        }
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-        let userDocRef;
-        let userId;
-        let lastVisitTimestamp = 0;
-
-        async function initFirebaseAndAnalytics() {
-            try {
-                const user = await signInAnonymously(auth);
-                userId = user.user.uid;
-                userDocRef = doc(db, 'analytics', 'portfolio-data');
-
-                onSnapshot(userDocRef, (doc) => {
-                    if (doc.exists()) {
-                        const data = doc.data();
-                        const totalVisits = data.totalVisits || 0;
-                        document.getElementById('analytics-data').textContent = `${content[currentLanguage].analyticsText}${totalVisits}`;
-                    }
-                });
-
-                logUserVisit();
-            } catch (error) {
-                console.error("Firebase initialization failed:", error);
-            }
-        }
-
-        async function logUserVisit() {
-            try {
-                const docSnap = await getDoc(userDocRef);
-                const data = docSnap.exists() ? docSnap.data() : {};
-                const now = Date.now();
-                
-                // Only log a new visit if the last one was more than 30 minutes ago
-                if (now - lastVisitTimestamp > 30 * 60 * 1000) {
-                    await setDoc(userDocRef, {
-                        totalVisits: (data.totalVisits || 0) + 1,
-                        lastVisit: new Date(),
-                        visits: {
-                            [userId]: {
-                                count: (data.visits && data.visits[userId] && data.visits[userId].count) ? data.visits[userId].count + 1 : 1,
-                                timestamp: new Date()
-                            }
-                        }
-                    }, { merge: true });
-                    lastVisitTimestamp = now;
-                }
-
-                // Or just log the visit
-                await setDoc(userDocRef, {
-                    visits: {
-                        [userId]: {
-                            count: (data.visits[userId]?.count || 0) + 1,
-                            timestamp: new Date()
-                        }
-                    }
-                }, { merge: true });
-
-            } catch (error) {
-                console.error("Error logging user visit:", error);
-            }
-        }
+        };
+        const formatTime = (seconds) => {
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor((seconds % 3600) / 60);
+            const s = seconds % 60;
+            return [h, m, s].map(v => v < 10 ? "0" + v : v).join(":");
+        };
+        const setLanguage = (lang) => {
+            updateContent(lang);
+            localStorage.setItem('lang', lang);
+        };
 
         // Smooth scroll for navigation links
         document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
@@ -1142,9 +1287,6 @@
 
         // Start timer
         timerInterval = setInterval(updateTimer, 1000);
-
-        // Iniciar Firebase y analíticas
-        initFirebaseAndAnalytics();
 
     </script>
 </body>
