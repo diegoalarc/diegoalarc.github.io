@@ -15,15 +15,15 @@
     <title id="page-title">Diego Alarcón's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/satellite-icon.ico">
 
-    <!-- Google Fonts (preload for performance) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Tailwind (⚠️ Solo para testing, en producción compila tu CSS con PostCSS o Tailwind CLI) -->
+    <!-- Tailwind (solo pruebas, en producción compila CSS) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Estilos propios -->
@@ -43,19 +43,21 @@
     <!-- Navigation -->
     <nav class="floating-nav md:floating-nav">
         <ul class="flex flex-col gap-2 p-2 rounded-lg shadow-lg" style="background-color: var(--bg-color-darker);">
-            <li><a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-briefcase"></i></a></li>
-            <li><a href="#education" data-tooltip-es="Educación" data-tooltip-en="Education" data-tooltip-de="Ausbildung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-graduation-cap"></i></a></li>
-            <li><a href="#projects" data-tooltip-es="Proyectos Destacados" data-tooltip-en="Featured Projects" data-tooltip-de="Ausgewählte Projekte" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-code-fork"></i></a></li>
-            <li><a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-award"></i></a></li>
-            <li><a href="#more-about-me" data-tooltip-es="Más sobre mí" data-tooltip-en="More about me" data-tooltip-de="Mehr über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-lightbulb"></i></a></li>
-            <li><a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="#about-me" class="flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#experience" class="flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-briefcase"></i></a></li>
+            <li><a href="#education" class="flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-graduation-cap"></i></a></li>
+            <li><a href="#projects" class="flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-code-fork"></i></a></li>
+            <li><a href="#certifications" class="flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-award"></i></a></li>
+            <li><a href="#more-about-me" class="flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-lightbulb"></i></a></li>
+            <li><a href="mailto:diego.alarcondiaz@gmail.com" class="flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
-    <div class="max-w-4xl mx-auto container-bg rounded-xl shadow-2xl p-6 sm:p-8 lg:p-10">
-        <header class="mb-10 text-center sm:text-left">
+    <div class="max-w-4xl mx-auto container-bg rounded-xl shadow-2xl p-6 sm:p-8 lg:p-10 space-y-6">
+
+        <!-- Header -->
+        <header class="text-center sm:text-left mb-10">
             <div class="flex flex-col sm:flex-row items-center sm:items-start">
                 <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
                     <img src="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/images/foto_diego.jpg" alt="Foto de Diego" id="profile-image" loading="lazy">
@@ -64,7 +66,7 @@
                     <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
                     <p class="text-lg text-gray-400" id="profile-description"></p>
                     <div class="flex space-x-4 mt-2">
-                        <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white"><i class="fa-solid fa-envelope text-xl"></i></a>
+                        <a href="mailto:diego.alarcondiaz@gmail.com" class="text-gray-400 hover:text-white"><i class="fa-solid fa-envelope text-xl"></i></a>
                         <a href="https://github.com/diegoalarc" target="_blank" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
                         <a href="https://www.linkedin.com/in/diegoalarcondiaz/" target="_blank" class="text-gray-400 hover:text-white"><i class="fa-brands fa-linkedin text-xl"></i></a>
                     </div>
@@ -72,19 +74,50 @@
             </div>
         </header>
 
-        <!-- Sections -->
-        <section id="about-me" class="mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="about-me-title"></h2>
-            <p class="text-gray-300 leading-relaxed" id="about-me-text"></p>
-        </section>
-        
-        <section id="experience" class="mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-6 border-b-2 border-teal-400 pb-2" id="experience-title"></h2>
-            <div class="timeline-container text-gray-300" id="experience-container"></div>
-        </section>
+        <!-- Secciones colapsables -->
+        <details class="group container-bg p-6 rounded-lg shadow-md">
+            <summary class="cursor-pointer text-2xl font-semibold highlight-text">🚀 Sobre mí</summary>
+            <div class="mt-4 text-gray-300">
+                <p id="about-me-text">Aquí va tu descripción personal sobre ti.</p>
+            </div>
+        </details>
 
-        <!-- Agrega el resto de secciones igual que antes -->
+        <details class="group container-bg p-6 rounded-lg shadow-md">
+            <summary class="cursor-pointer text-2xl font-semibold highlight-text">💼 Experiencia</summary>
+            <div class="mt-4 text-gray-300 timeline-container" id="experience-container">
+                <!-- Timeline items aquí -->
+            </div>
+        </details>
 
+        <details class="group container-bg p-6 rounded-lg shadow-md">
+            <summary class="cursor-pointer text-2xl font-semibold highlight-text">🎓 Educación</summary>
+            <div class="mt-4 text-gray-300" id="education-container">
+                <!-- Educación aquí -->
+            </div>
+        </details>
+
+        <details class="group container-bg p-6 rounded-lg shadow-md">
+            <summary class="cursor-pointer text-2xl font-semibold highlight-text">💻 Proyectos</summary>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
+                <!-- Project cards -->
+            </div>
+        </details>
+
+        <details class="group container-bg p-6 rounded-lg shadow-md">
+            <summary class="cursor-pointer text-2xl font-semibold highlight-text">🏆 Certificaciones</summary>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="certifications-container">
+                <!-- Certifications cards -->
+            </div>
+        </details>
+
+        <details class="group container-bg p-6 rounded-lg shadow-md">
+            <summary class="cursor-pointer text-2xl font-semibold highlight-text">💡 Más sobre mí</summary>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="more-about-me-container">
+                <!-- Más información -->
+            </div>
+        </details>
+
+        <!-- Footer -->
         <footer class="text-center mt-12 pt-6 border-t border-gray-600 text-gray-500 text-sm">
             <p id="footer-text-1"></p>
             <div class="mt-2">
@@ -93,9 +126,9 @@
                 <a href="https://diegoalarc.github.io/" target="_blank" class="hover:text-white">diegoalarc.github.io</a>
             </div>
         </footer>
+
     </div>
 
-    <!-- Scripts -->
     <script type="module" src="assets/js/scripts.js" defer></script>
 </body>
 </html>
