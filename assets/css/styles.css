@@ -144,6 +144,9 @@ body, .container-bg, .project-card, .floating-nav ul {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+/* --- SECCIÓN CORREGIDA PARA LA BARRA DE NAVEGACIÓN --- */
+
 .floating-nav {
     position: fixed;
     top: 50%;
@@ -153,15 +156,13 @@ body, .container-bg, .project-card, .floating-nav ul {
     transition: transform 0.3s ease-in-out;
 }
 
-/* --- INICIO DE LA CORRECCIÓN DEFINITIVA --- */
-/* Esta media query es la clave: el código dentro de ella
-   SÓLO se aplicará en dispositivos con ratón que puedan hacer "hover". */
+/* CORRECCIÓN #1: El efecto de mover la barra SÓLO se aplica en dispositivos con ratón.
+   En móviles, este bloque de código es ignorado, evitando que la barra se mueva. */
 @media (hover: hover) {
     .floating-nav:hover {
         transform: translateY(-50%) translateX(-5px);
     }
 }
-/* --- FIN DE LA CORRECCIÓN DEFINITIVA --- */
 
 @media (min-width: 768px) {
     .floating-nav {
@@ -170,18 +171,20 @@ body, .container-bg, .project-card, .floating-nav ul {
         transform: translateY(-50%);
     }
     
-    /* Hacemos lo mismo para la versión de escritorio */
     @media (hover: hover) {
         .floating-nav:hover {
             transform: translateY(-50%) translateX(5px);
         }
     }
 }
+
+/* CORRECCIÓN #2: Se eliminan los resaltados en los íconos individuales. */
 .floating-nav a {
     position: relative;
     -webkit-tap-highlight-color: transparent !important;
     outline: none !important;
 }
+
 .floating-nav a::after {
     content: attr(data-tooltip);
     position: absolute;
