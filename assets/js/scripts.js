@@ -5,7 +5,22 @@ const content = {
         profileAlt: "Foto de perfil de Diego Alarcón",
         profileDescription: "Ingeniero de Soporte Técnico | Especialista en Geociencias, Python y API | Ayudando a los clientes a resolver desafíos técnicos complejos.",
         aboutMeTitle: "Acerca de mí",
-        aboutMeText: `Ingeniero de Soporte Técnico con una sólida trayectoria en Geociencias y especialización en SIG y teledetección. Mi experiencia en <strong>UP42</strong> se centra en el análisis de datos geoespaciales y la optimización de procesos utilizando APIs y Python, logrando consistentemente una alta satisfacción del cliente. Como Experto en la Materia (SME), colaboro estrechamente con equipos multifuncionales para resolver desafíos complejos y asegurar implementaciones exitosas. Busco constantemente aplicar mi conocimiento técnico y habilidades de resolución de problemas para contribuir a proyectos innovadores.`,
+        aboutMeText: `Soy **Diego Alarcón**, Ingeniero en Geociencias originario de **Santiago de Chile** y actualmente radicado en **Alemania**.
+        Decidí mudarme en busca de un sueño, de nuevos desafíos profesionales y personales, y también del amor de mi vida.  
+        
+        Mi trayectoria no ha sido lineal ni sencilla: ha estado llena de aprendizajes y obstáculos que me han formado tanto como profesional como persona. 
+        Los he enfrentado siempre con actitud positiva y sin miedo, porque estoy convencido de que **no existe problema sin solución** y que **todo desafío trae consigo una ganancia**. 
+        Esta mentalidad me ha permitido adaptarme a entornos cambiantes y aportar valor en situaciones complejas.  
+        
+        En lo profesional, cuento con experiencia sólida en **GIS, Teledetección y Soporte Técnico**, y actualmente desempeño el rol de **Technical Support Engineer en UP42**, 
+        donde ayudo a clientes y equipos a resolver problemas técnicos vinculados a **datos satelitales, APIs y Python**.  
+        
+        Me destaco por mi capacidad de **trabajar bajo presión sin perder la calma**, de **delegar tareas de manera eficiente**, y de **organizar documentación y procesos** para asegurar la continuidad del trabajo. 
+        Además, tengo experiencia coordinando directamente con clientes, lo que me permite **alinear expectativas, anticipar necesidades y mejorar la calidad de las entregas**.  
+        
+        Me considero una persona **curiosa, resiliente y orientada a resultados**, con una visión clara: crecer de manera continua y aportar tanto en lo humano como en lo técnico a cada equipo en el que participo.  
+        
+        *"La vida premia a quienes se atreven"* es una frase que me acompaña y guía mis decisiones.`,
         experienceTitle: "Experiencia Profesional",
         experience: [
             { title: "Technical Support Engineer", company: "UP42", url: "https://up42.com/", location: "Remoto, Alemania", dates: "Oct 2021 - Presente", bullets: ["Mantuve un <strong>99% de satisfacción del cliente</strong> resolviendo problemas técnicos para APIs geoespaciales y servicios de procesamiento de datos.", "Administré la plataforma <strong>Zendesk</strong>, optimizando los flujos de trabajo y reduciendo los tiempos de respuesta.", "Proporcioné soporte experto en <strong>datos de Observación de la Tierra</strong> y flujos de trabajo de procesamiento.", "Mejoré la documentación de auto-servicio, <strong>reduciendo las solicitudes de soporte entrantes en un 15%</strong>.", "Coordiné las comunicaciones internas para garantizar implementaciones de funciones sin problemas."] },
@@ -53,8 +68,22 @@ const content = {
         profileAlt: "Profile picture of Diego Alarcón",
         profileDescription: "Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.",
         aboutMeTitle: "About Me",
-        aboutMeText: `Technical Support Engineer with a strong background in Geosciences and a specialization in GIS and remote sensing. My experience at <strong>UP42</strong> focuses on analyzing geospatial data and optimizing processes using APIs and Python, consistently achieving high customer satisfaction. As a Subject Matter Expert (SME), I collaborate closely with cross-functional teams to resolve complex challenges and ensure successful deployments. I am constantly seeking to apply my technical knowledge and problem-solving skills to contribute to innovative projects.`,
-        experienceTitle: "Professional Experience",
+        aboutMeText: `I am **Diego Alarcón**, a Geoscience Engineer originally from **Santiago, Chile**, now based in **Germany**. I moved here to pursue a dream, take on new professional and personal challenges, and also follow the love of my life.  
+
+My journey has not been easy: it has been full of learning experiences and obstacles that have shaped me both professionally and personally. 
+I have always faced them with a positive mindset and without panic, as I firmly believe that **there is no problem without a solution**, and that **every challenge brings a reward**. 
+This mindset has allowed me to adapt to changing environments and add value in complex situations.  
+
+Professionally, I have solid experience in **GIS, Remote Sensing, and Technical Support**, and I am currently working as a **Technical Support Engineer at UP42**, 
+where I help clients and teams solve technical challenges related to **satellite data, APIs, and Python**.  
+
+I am recognized for my ability to **work under pressure without losing composure**, **delegate tasks effectively**, and **organize documentation and processes** to ensure continuity and efficiency. 
+I also have experience coordinating directly with clients, enabling me to **align expectations, anticipate needs, and improve deliverables**.  
+
+I see myself as a **curious, resilient, and results-driven professional**, with a clear vision: to keep growing and contribute both technically and personally to any team I am part of.  
+
+*"Life rewards those who dare"* is a phrase that inspires me and guides my decisions.
+  `,        experienceTitle: "Professional Experience",
         experience: [
             { title: "Technical Support Engineer", company: "UP42", url: "https://up42.com/", location: "Remote, Germany", dates: "Oct 2021 - Present", bullets: ["Maintained a <strong>99% customer satisfaction</strong> by resolving technical issues for geospatial APIs and data processing services.", "Managed the <strong>Zendesk</strong> platform, optimizing workflows and reducing response times.", "Provided expert support on <strong>Earth Observation data</strong> and processing workflows.", "Improved self-service documentation, <strong>reducing incoming support requests by 15%</strong>.", "Coordinated internal communications to ensure seamless feature deployments."] },
             { title: "Master Student in Remote Sensing, EAGLE", company: "University of Würzburg", url: "https://eagle-science.org/", location: "Germany", dates: "Sep 2019 - Dec 2021", bullets: ["Specialization in <strong>GIS, remote sensing, and spatial analysis</strong> using QGIS, ArcGIS, Python and R.", "Conducted research on grape yield prediction in Chile."] },
@@ -62,8 +91,8 @@ const content = {
             { title: "Survey Engineer", company: "Digimapas Chile Aerofotogrametría Ltda", url: "https://www.digimapas.cl/", location: "Santiago, CL", dates: "Jul 2018 - Sep 2018", bullets: ["Conducted field surveys with <strong>Total Stations and GPS</strong> for civil and engineering projects.", "Processed <strong>LIDAR</strong> data for the creation of high-precision terrain models."] },
             { title: "Senior Project Engineer", company: "Aconcagua Solutions", url: "https://www.aconcaguasolutions.com/", location: "Santiago, CL", dates: "Oct 2016 - May 2017", bullets: ["Developed macros in Excel and projects in Visual Basic for the <strong>automación de datos</strong>.", "Performed <strong>web scraping</strong> for relevant information gathering."] },
             { title: "Field Analyst II", company: "Here Maps", url: "https://www.here.com/", location: "Santiago, CL", dates: "Sep 2013 - Feb 2016", bullets: ["Led <strong>GIS</strong> projects, including mapping of points of interest and road network validation.", "Acted as a <strong>Database Engineering</strong> representative for communication with global teams."] },
-            { title: "Project Engineer", company: "Municipality of Providencia", url: "https://providencia.cl/", location: "Santiago, CL", dates: "Apr 2012 - Feb 2013", bullets: ["Digitized maps to support <strong>legal and cadastral formalization</strong>.", "Optimized workflows in <strong>ArcGIS</strong> and database connections.", "Automated report generation with <strong>Excel VBA</strong>."] },
-            { title: "Project Engineer", company: "Interra Chile", url: "http://www.interralatam.com/", location: "Santiago, CL", dates: "Jan 2012 - Mar 2012", bullets: ["Classified terrain data and interpreted orthoimages for digital models.", "Contributed to the creation of <strong>high-resolution terrain models</strong>."] }
+            { title: "Project Engineer", company: "Municipality of Providencia", url: "https://providencia.cl/", location: "Apr 2012 - Feb 2013", bullets: ["Digitized maps to support <strong>legal and cadastral formalization</strong>.", "Optimized workflows in <strong>ArcGIS</strong> and database connections.", "Automated report generation with <strong>Excel VBA</strong>."] },
+            { title: "Project Engineer", company: "Interra Chile", url: "http://www.interralatam.com/", location: "Jan 2012 - Mar 2012", bullets: ["Classified terrain data and interpreted orthoimages for digital models.", "Contributed to the creation of <strong>high-resolution terrain models</strong>."] }
         ],
         educationTitle: "Education",
         education: [
@@ -101,7 +130,24 @@ const content = {
         profileAlt: "Profilbild von Diego Alarcón",
         profileDescription: "Technical Support Engineer | Geowissenschaften-, Python- und API-Spezialist | Unterstützt Kunden bei der Lösung komplexer technischer Herausforderungen.",
         aboutMeTitle: "Über mich",
-        aboutMeText: `Technical Support Engineer mit einem starken Hintergrund in Geowissenschaften und einer Spezialisierung in GIS und Fernerkundung. Meine Erfahrung bei <strong>UP42</strong> konzentriert sich auf die Analyse von Geodaten und die Optimierung von Prozessen mittels APIs und Python, wobei ich stets eine hohe Kundenzufriedenheit erreiche. Als Fachexperte (SME) arbeabo closely with cross-functional teams to resolve complex challenges and ensure successful deployments. I am constantly seeking to apply my technical knowledge and problem-solving skills to contribute to innovative projects.`,
+        aboutMeText: `
+Ich bin **Diego Alarcón**, Geowissenschaftsingenieur aus **Santiago de Chile**, heute in **Deutschland** ansässig. 
+Ich bin hierhergezogen, um einen Traum zu verfolgen, neue berufliche und persönliche Herausforderungen anzunehmen und auch der Liebe meines Lebens zu folgen.  
+
+Mein Weg war nicht einfach: voller Lernprozesse und Hindernisse, die mich sowohl beruflich als auch persönlich geprägt haben. 
+Ich habe sie stets mit einer positiven Einstellung und ohne Panik gemeistert, da ich fest davon überzeugt bin, dass **es kein Problem ohne Lösung gibt** und dass **jede Herausforderung einen Gewinn mit sich bringt**. 
+Diese Haltung hat es mir ermöglicht, mich an wechselnde Umgebungen anzupassen und in komplexen Situationen echten Mehrwert zu liefern.  
+
+Beruflich habe ich fundierte Erfahrung in **GIS, Fernerkundung und technischem Support** und arbeite derzeit als **Technical Support Engineer bei UP42**, 
+wo ich Kunden und Teams bei technischen Herausforderungen rund um **Satellitendaten, APIs und Python** unterstütze.  
+
+Ich zeichne mich durch meine Fähigkeit aus, **unter Druck ruhig und effizient zu arbeiten**, Aufgaben **gezielt zu delegieren** und **Dokumentationen sowie Prozesse zu organisieren**, um einen reibungslosen Ablauf zu gewährleisten. 
+Darüber hinaus habe ich Erfahrung in der direkten Kundenkoordination, wodurch ich **Erwartungen abstimmen, Bedürfnisse frühzeitig erkennen und die Qualität der Ergebnisse verbessern** kann.  
+
+Ich sehe mich selbst als **neugierig, resilient und ergebnisorientiert**, mit einer klaren Vision: kontinuierlich zu wachsen und sowohl fachlich als auch menschlich einen Beitrag zu jedem Team zu leisten.  
+
+*"Das Leben belohnt die Mutigen"* ist ein Leitsatz, der mich begleitet und meine Entscheidungen prägt.
+  `,
         experienceTitle: "Berufserfahrung",
         experience: [
             { title: "Technical Support Engineer", company: "UP42", url: "https://up42.com/", location: "Remote, Deutschland", dates: "Okt 2021 - Heute", bullets: ["Erreichte eine <strong>99%ige Kundenzufriedenheit</strong> durch die Lösung technischer Probleme für Geodaten-APIs und Datenverarbeitungsdienste.", "Verwaltete die <strong>Zendesk</strong>-Plattform, optimierte Arbeitsabläufe und verkürzte die Antwortzeiten.", "Bot Experten-Support für <strong>Erdbeobachtungsdaten</strong> und Verarbeitungsabläufe.", "Verbesserte die Selbstbedienungsdokumentation, <strong>reduzierte eingehende Support-Anfragen um 15%</strong>.", "Koordinierte die interne Kommunikation, um reibungslose Funktionsbereitstellungen sicherzustellen."] },
@@ -110,8 +156,8 @@ const content = {
             { title: "Survey Engineer", company: "Digimapas Chile Aerofotogrametría Ltda", url: "https://www.digimapas.cl/", location: "Santiago, CL", dates: "Juli 2018 - Sep 2018", bullets: ["Führte Feldvermessungen mit <strong>Totalstationen und GPS</strong> für Zivil- und Ingenieurprojekte durch.", "Verarbeitete <strong>LIDAR</strong>-Daten zur Erstellung hochpräziser Geländemodelle."] },
             { title: "Senior Project Engineer", company: "Aconcagua Solutions", url: "https://www.aconcaguasolutions.com/", location: "Santiago, CL", dates: "Okt 2016 - Mai 2017", bullets: ["Entwickelte Excel-Makros und Visual Basic-Projekte zur <strong>Datenautomatisierung</strong>.", "Führte <strong>Web-Scraping</strong> zur Sammlung relevanter Informationen durch."] },
             { title: "Field Analyst II", company: "Here Maps", url: "https://www.here.com/", location: "Santiago, CL", dates: "Sep 2013 - Feb 2016", bullets: ["Leitete <strong>GIS</strong>-Projekte, einschließlich der Kartierung von Points of Interest und der Validierung des Straßennetzes.", "Agierte als <strong>Datenbankingenieur</strong>-Vertreter für die Kommunikation mit globalen Teams."] },
-            { title: "Project Engineer", company: "Municipality of Providencia", url: "https://providencia.cl/", location: "Santiago, CL", dates: "April 2012 - Feb 2013", bullets: ["Digitalisierte Karten zur Unterstützung der <strong>rechtlichen und katastralen Formalisierung</strong>.", "Optimierte Arbeitsabläufe in <strong>ArcGIS</strong> und Datenbankverbindungen.", "Automatisierte die Berichterstellung mit <strong>Excel VBA</strong>."] },
-            { title: "Project Engineer", company: "Interra Chile", url: "http://www.interralatam.com/", location: "Santiago, CL", dates: "Jan 2012 - Mär 2012", bullets: ["Klassifizierte Geländedaten und interpretierte Orthobilder für digitale Modelle.", "Trug zur Erstellung von <strong>hochaufgelösten Geländemodellen</strong> bei."] }
+            { title: "Project Engineer", company: "Municipality of Providencia", url: "https://providencia.cl/", location: "April 2012 - Feb 2013", bullets: ["Digitalisierte Karten zur Unterstützung der <strong>rechtlichen und katastralen Formalisierung</strong>.", "Optimierte Arbeitsabläufe in <strong>ArcGIS</strong> und Datenbankverbindungen.", "Automatisierte die Berichterstellung mit <strong>Excel VBA</strong>."] },
+            { title: "Project Engineer", company: "Interra Chile", url: "http://www.interralatam.com/", location: "Jan 2012 - Mär 2012", bullets: ["Klassifizierte Geländedaten und interpretierte Orthobilder für digitale Modelle.", "Trug zur Erstellung von <strong>hochaufgelösten Geländemodellen</strong> bei."] }
         ],
         educationTitle: "Ausbildung",
         education: [
