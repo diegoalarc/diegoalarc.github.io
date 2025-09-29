@@ -152,31 +152,35 @@ body, .container-bg, .project-card, .floating-nav ul {
     z-index: 50;
     transition: transform 0.3s ease-in-out;
 }
-.floating-nav:hover {
-    transform: translateY(-50%) translateX(-5px);
+
+/* --- INICIO DE LA CORRECCIÓN DEFINITIVA --- */
+/* Esta media query es la clave: el código dentro de ella
+   SÓLO se aplicará en dispositivos con ratón que puedan hacer "hover". */
+@media (hover: hover) {
+    .floating-nav:hover {
+        transform: translateY(-50%) translateX(-5px);
+    }
 }
+/* --- FIN DE LA CORRECCIÓN DEFINITIVA --- */
+
 @media (min-width: 768px) {
     .floating-nav {
         right: auto;
         left: 0;
         transform: translateY(-50%);
     }
-    .floating-nav:hover {
-        transform: translateY(-50%) translateX(5px);
+    
+    /* Hacemos lo mismo para la versión de escritorio */
+    @media (hover: hover) {
+        .floating-nav:hover {
+            transform: translateY(-50%) translateX(5px);
+        }
     }
 }
 .floating-nav a {
     position: relative;
-    
-    /* --- INICIO DE LA CORRECCIÓN POTENTE --- */
-    
-    /* Elimina la "burbuja" de resaltado al tocar en móviles */
     -webkit-tap-highlight-color: transparent !important;
-
-    /* Elimina cualquier contorno o borde que aparezca al tocar */
     outline: none !important;
-    
-    /* --- FIN DE LA CORRECCIÓN --- */
 }
 .floating-nav a::after {
     content: attr(data-tooltip);
