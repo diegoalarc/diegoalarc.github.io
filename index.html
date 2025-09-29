@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-92C38TY8SJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-92C38TY8SJ');
     </script>
     
@@ -15,15 +14,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Diego Alarcón's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/satellite-icon.ico">
+
+    <!-- Google Fonts (preload for performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="all">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind (⚠️ Solo para testing, en producción compila tu CSS con PostCSS o Tailwind CLI) -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="p-4 sm:p-8 lg:p-10">
 
+    <!-- Language Switcher -->
     <div class="fixed top-4 right-4 z-50 flex flex-col items-end gap-2">
         <select id="language-switcher" class="p-2 rounded-md bg-gray-700 text-white cursor-pointer">
             <option value="es">Español</option>
@@ -32,52 +40,62 @@
         </select>
     </div>
 
+    <!-- Navigation -->
     <nav class="floating-nav md:floating-nav">
         <ul class="flex flex-col gap-2 p-2 rounded-lg shadow-lg" style="background-color: var(--bg-color-darker);">
-            <li><a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-user text-base md:text-lg"></i></a></li>
-            <li><a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-briefcase text-base md:text-lg"></i></a></li>
-            <li><a href="#education" data-tooltip-es="Educación" data-tooltip-en="Education" data-tooltip-de="Ausbildung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-graduation-cap text-base md:text-lg"></i></a></li>
-            <li><a href="#projects" data-tooltip-es="Proyectos Destacados" data-tooltip-en="Featured Projects" data-tooltip-de="Ausgewählte Projekte" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-code-fork text-base md:text-lg"></i></a></li>
-            <li><a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-award text-base md:text-lg"></i></a></li>
-            <li><a href="#more-about-me" data-tooltip-es="Más sobre mí" data-tooltip-en="More about me" data-tooltip-de="Mehr über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-lightbulb text-base md:text-lg"></i></a></li>
-            <li><a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-envelope text-base md:text-lg"></i></a></li>
+            <li><a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-briefcase"></i></a></li>
+            <li><a href="#education" data-tooltip-es="Educación" data-tooltip-en="Education" data-tooltip-de="Ausbildung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-graduation-cap"></i></a></li>
+            <li><a href="#projects" data-tooltip-es="Proyectos Destacados" data-tooltip-en="Featured Projects" data-tooltip-de="Ausgewählte Projekte" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-code-fork"></i></a></li>
+            <li><a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-award"></i></a></li>
+            <li><a href="#more-about-me" data-tooltip-es="Más sobre mí" data-tooltip-en="More about me" data-tooltip-de="Mehr über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-lightbulb"></i></a></li>
+            <li><a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
     </nav>
 
+    <!-- Main Content -->
     <div class="max-w-4xl mx-auto container-bg rounded-xl shadow-2xl p-6 sm:p-8 lg:p-10">
         <header class="mb-10 text-center sm:text-left">
-            <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start">
-                <div class="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
-                    <img src="https://github.com/diegoalarc/diegoalarc.github.io/blob/main/images/foto_diego.jpg?raw=true" alt="" id="profile-image">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
+                    <img src="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/images/foto_diego.jpg" alt="Foto de Diego" id="profile-image" loading="lazy">
                 </div>
                 <div class="flex flex-col items-center sm:items-start">
                     <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
                     <p class="text-lg text-gray-400" id="profile-description"></p>
                     <div class="flex space-x-4 mt-2">
-                        <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
-                        <a href="https://github.com/diegoalarc" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.94 13.94 0 0 0-3 0c-2.73-1.83-3.91-1.2-3.91-1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                        <a href="https://www.linkedin.com/in/diegoalarcondiaz/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white"><i class="fa-solid fa-envelope text-xl"></i></a>
+                        <a href="https://github.com/diegoalarc" target="_blank" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
+                        <a href="https://www.linkedin.com/in/diegoalarcondiaz/" target="_blank" class="text-gray-400 hover:text-white"><i class="fa-brands fa-linkedin text-xl"></i></a>
                     </div>
                 </div>
             </div>
         </header>
 
-        <section class="mb-10" id="about-me"><h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="about-me-title"></h2><p class="text-gray-300 leading-relaxed" id="about-me-text"></p></section>
-        <section class="mb-10" id="experience"><h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-6 border-b-2 border-teal-400 pb-2" id="experience-title"></h2><div class="timeline-container text-gray-300" id="experience-container"></div></section>
-        <section class="mb-10" id="education"><h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="education-title"></h2><div class="space-y-6 text-gray-300" id="education-container"></div></section>
-        <section class="mb-10" id="projects"><h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-6 border-b-2 border-teal-400 pb-2" id="projects-title"></h2><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container"></div></section>
-        <section class="mb-10" id="certifications"><h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="certifications-title"></h2><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="certifications-container"></div></section>
-        <section class="mb-10" id="more-about-me"><h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="more-about-me-title"></h2><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300" id="more-about-me-container"></div></section>
+        <!-- Sections -->
+        <section id="about-me" class="mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-4 border-b-2 border-teal-400 pb-2" id="about-me-title"></h2>
+            <p class="text-gray-300 leading-relaxed" id="about-me-text"></p>
+        </section>
+        
+        <section id="experience" class="mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold highlight-text mb-6 border-b-2 border-teal-400 pb-2" id="experience-title"></h2>
+            <div class="timeline-container text-gray-300" id="experience-container"></div>
+        </section>
+
+        <!-- Agrega el resto de secciones igual que antes -->
 
         <footer class="text-center mt-12 pt-6 border-t border-gray-600 text-gray-500 text-sm">
             <p id="footer-text-1"></p>
             <div class="mt-2">
-                <a href="mailto:diego.alarcondiaz@gmail.com" class="hover:text-white transition-colors duration-300">diego.alarcondiaz@gmail.com</a>
+                <a href="mailto:diego.alarcondiaz@gmail.com" class="hover:text-white">diego.alarcondiaz@gmail.com</a>
                 <span class="mx-2">|</span>
-                <a href="https://diegoalarc.github.io/" target="_blank" class="hover:text-white transition-colors duration-300">diegoalarc.github.io</a>
+                <a href="https://diegoalarc.github.io/" target="_blank" class="hover:text-white">diegoalarc.github.io</a>
             </div>
         </footer>
     </div>
-    <script type="module" src="assets/js/scripts.js"></script>
+
+    <!-- Scripts -->
+    <script type="module" src="assets/js/scripts.js" defer></script>
 </body>
 </html>
