@@ -1,4 +1,4 @@
-// --- NUEVA LÍNEA PARA DETECTAR DISPOSITIVOS TÁCTILES ---
+// Variable para detectar si es un dispositivo táctil (móvil o tablet)
 const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
 let pageTime = 0;
@@ -175,6 +175,7 @@ Ich betrachte mich als <strong>neugierige, resiliente und ergebnisorientierte</s
         footer: { text1: `Gemacht mit &#x2764;&#xfe0f; und Kaffee` }
     }
 };
+
 const updateContent = (lang) => {
     const currentContent = content[lang];
     document.getElementById('page-title').textContent = currentContent.pageTitle;
@@ -192,15 +193,22 @@ const updateContent = (lang) => {
     document.getElementById('more-about-me-title').textContent = currentContent.moreAboutMeTitle;
     renderSkills(currentContent.moreAboutMe);
     document.getElementById('footer-text-1').innerHTML = currentContent.footer.text1;
+    
     const navLinks = document.querySelectorAll('.floating-nav a');
     navLinks.forEach(link => {
-        const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
-        if (tooltipText) {
-            link.setAttribute('data-tooltip', tooltipText);
+        // --- LÓGICA MODIFICADA ---
+        // Solo establece los tooltips si NO es un dispositivo táctil.
+        if (!isTouchDevice) {
+            const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
+            if (tooltipText) {
+                link.setAttribute('data-tooltip', tooltipText);
+            }
         }
     });
+
     document.getElementById('profile-image').alt = currentContent.profileAlt;
 };
+
 const renderExperience = (experienceData) => {
     const container = document.getElementById('experience-container');
     if (!experienceData) return;
@@ -244,6 +252,7 @@ const renderEducation = (educationData) => {
         </div>
     `).join('');
 };
+
 const renderProjects = (projectsData) => {
     const container = document.getElementById('projects-container');
     if (!projectsData) return;
@@ -331,26 +340,12 @@ const setLanguage = (lang) => {
     localStorage.setItem('lang', lang);
 };
 
-// CÓDIGO CORREGIDO PARA EL COMPORTAMIENTO EN MÓVILES
+// --- CÓDIGO SIMPLIFICADO ---
+// La lógica para ocultar tooltips fue eliminada porque ya no es necesaria.
+// Este bloque ahora solo se encarga del desplazamiento suave.
 document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
-        // --- LÓGICA MEJORADA ---
-        // Este código ahora SOLO se ejecuta en dispositivos táctiles.
-        if (isTouchDevice) {
-            const originalTooltip = this.getAttribute('data-tooltip');
-            if (originalTooltip) {
-                this.removeAttribute('data-tooltip');
-            }
-
-            setTimeout(() => {
-                if (originalTooltip) {
-                    this.setAttribute('data-tooltip', originalTooltip);
-                }
-            }, 500);
-        }
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
