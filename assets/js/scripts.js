@@ -172,6 +172,7 @@ Ich betrachte mich als <strong>neugierige, resiliente und ergebnisorientierte</s
         footer: { text1: `Gemacht mit &#x2764;&#xfe0f; und Kaffee` }
     }
 };
+// Función para actualizar contenido según idioma
 const updateContent = (lang) => {
     const currentContent = content[lang];
     document.getElementById('page-title').textContent = currentContent.pageTitle;
@@ -189,15 +190,38 @@ const updateContent = (lang) => {
     document.getElementById('more-about-me-title').textContent = currentContent.moreAboutMeTitle;
     renderSkills(currentContent.moreAboutMe);
     document.getElementById('footer-text-1').innerHTML = currentContent.footer.text1;
+
+    // Actualiza tooltips y agrega efecto fade-out
     const navLinks = document.querySelectorAll('.floating-nav a');
     navLinks.forEach(link => {
         const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
         if (tooltipText) {
             link.setAttribute('data-tooltip', tooltipText);
+
+            // Limpiar posibles tooltips previos
+            const existingTooltip = link.querySelector('.tooltip-text');
+            if (existingTooltip) existingTooltip.remove();
+
+            // Crear tooltip flotante
+            const tooltip = document.createElement('span');
+            tooltip.className = 'tooltip-text absolute bg-gray-800 text-white text-xs rounded px-2 py-1 opacity-0 transition-opacity duration-500';
+            tooltip.textContent = tooltipText;
+            link.appendChild(tooltip);
+
+            // Mostrar tooltip al presionar
+            link.addEventListener('click', () => {
+                tooltip.style.opacity = '1';
+                setTimeout(() => {
+                    tooltip.style.opacity = '0';
+                }, 2000); // Desaparece después de 2 segundos
+            });
         }
     });
+
     document.getElementById('profile-image').alt = currentContent.profileAlt;
 };
+
+// Funciones de renderizado (experience, education, projects, certifications, skills)
 const renderExperience = (experienceData) => {
     const container = document.getElementById('experience-container');
     if (!experienceData) return;
@@ -241,6 +265,7 @@ const renderEducation = (educationData) => {
         </div>
     `).join('');
 };
+
 const renderProjects = (projectsData) => {
     const container = document.getElementById('projects-container');
     if (!projectsData) return;
@@ -311,23 +336,20 @@ const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-    for (let i = 0; i < fullStars; i++) {
-        stars += `<i class="fa-solid fa-star filled-star"></i>`;
-    }
-    if (hasHalfStar) {
-        stars += `<i class="fa-solid fa-star-half-stroke half-star"></i>`;
-    }
-    for (let i = 0; i < emptyStars; i++) {
-        stars += `<i class="fa-regular fa-star empty-star"></i>`;
-    }
+    for (let i = 0; i < fullStars; i++) stars += `<i class="fa-solid fa-star filled-star"></i>`;
+    if (hasHalfStar) stars += `<i class="fa-solid fa-star-half-stroke half-star"></i>`;
+    for (let i = 0; i < emptyStars; i++) stars += `<i class="fa-regular fa-star empty-star"></i>`;
     return stars;
 };
+
+// Cambio de idioma
 const setLanguage = (lang) => {
     updateContent(lang);
     document.getElementById('language-switcher').value = lang;
     localStorage.setItem('lang', lang);
 };
 
+// Smooth scroll para navbar
 document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -336,6 +358,8 @@ document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Inicialización de idioma
 const initialLang = localStorage.getItem('lang') || 'es';
 setLanguage(initialLang);
 document.getElementById('language-switcher').addEventListener('change', (event) => {
