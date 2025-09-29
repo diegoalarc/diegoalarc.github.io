@@ -5,22 +5,22 @@ const content = {
         profileAlt: "Foto de perfil de Diego Alarcón",
         profileDescription: "Ingeniero de Soporte Técnico | Especialista en Geociencias, Python y API | Ayudando a los clientes a resolver desafíos técnicos complejos.",
         aboutMeTitle: "Acerca de mí",
-        aboutMeText: `Soy **Diego Alarcón**, Ingeniero en Geociencias originario de **Santiago de Chile** y actualmente radicado en **Alemania**.
+        aboutMeText: `Soy <strong>Diego Alarcón<strong>, Ingeniero en Geociencias originario de <strong>Santiago de Chile<strong> y actualmente radicado en <strong>Alemania<strong>.
         Decidí mudarme en busca de un sueño, de nuevos desafíos profesionales y personales, y también del amor de mi vida.  
         
         Mi trayectoria no ha sido lineal ni sencilla: ha estado llena de aprendizajes y obstáculos que me han formado tanto como profesional como persona. 
-        Los he enfrentado siempre con actitud positiva y sin miedo, porque estoy convencido de que **no existe problema sin solución** y que **todo desafío trae consigo una ganancia**. 
+        Los he enfrentado siempre con actitud positiva y sin miedo, porque estoy convencido de que <strong>no existe problema sin solución<strong> y que <strong>todo desafío trae consigo una ganancia<strong>. 
         Esta mentalidad me ha permitido adaptarme a entornos cambiantes y aportar valor en situaciones complejas.  
         
-        En lo profesional, cuento con experiencia sólida en **GIS, Teledetección y Soporte Técnico**, y actualmente desempeño el rol de **Technical Support Engineer en UP42**, 
-        donde ayudo a clientes y equipos a resolver problemas técnicos vinculados a **datos satelitales, APIs y Python**.  
+        En lo profesional, cuento con experiencia sólida en <strong>GIS, Teledetección y Soporte Técnico<strong>, y actualmente desempeño el rol de **Technical Support Engineer en UP42**, 
+        donde ayudo a clientes y equipos a resolver problemas técnicos vinculados a <strong>datos satelitales, APIs y Python<strong>.  
         
-        Me destaco por mi capacidad de **trabajar bajo presión sin perder la calma**, de **delegar tareas de manera eficiente**, y de **organizar documentación y procesos** para asegurar la continuidad del trabajo. 
-        Además, tengo experiencia coordinando directamente con clientes, lo que me permite **alinear expectativas, anticipar necesidades y mejorar la calidad de las entregas**.  
+        Me destaco por mi capacidad de <strong>trabajar bajo presión sin perder la calma<strong>, de <strong>delegar tareas de manera eficiente<strong>, y de <strong>organizar documentación y procesos<strong> para asegurar la continuidad del trabajo. 
+        Además, tengo experiencia coordinando directamente con clientes, lo que me permite <strong>alinear expectativas, anticipar necesidades y mejorar la calidad de las entregas<strong>.  
         
-        Me considero una persona **curiosa, resiliente y orientada a resultados**, con una visión clara: crecer de manera continua y aportar tanto en lo humano como en lo técnico a cada equipo en el que participo.  
+        Me considero una persona <strong>curiosa, resiliente y orientada a resultados<strong>, con una visión clara: crecer de manera continua y aportar tanto en lo humano como en lo técnico a cada equipo en el que participo.  
         
-        *"La vida premia a quienes se atreven"* es una frase que me acompaña y guía mis decisiones.`,
+        <em>"La vida premia a quienes se atreven"<em> es una frase que me acompaña y guía mis decisiones.`,
         experienceTitle: "Experiencia Profesional",
         experience: [
             { title: "Technical Support Engineer", company: "UP42", url: "https://up42.com/", location: "Remoto, Alemania", dates: "Oct 2021 - Presente", bullets: ["Mantuve un <strong>99% de satisfacción del cliente</strong> resolviendo problemas técnicos para APIs geoespaciales y servicios de procesamiento de datos.", "Administré la plataforma <strong>Zendesk</strong>, optimizando los flujos de trabajo y reduciendo los tiempos de respuesta.", "Proporcioné soporte experto en <strong>datos de Observación de la Tierra</strong> y flujos de trabajo de procesamiento.", "Mejoré la documentación de auto-servicio, <strong>reduciendo las solicitudes de soporte entrantes en un 15%</strong>.", "Coordiné las comunicaciones internas para garantizar implementaciones de funciones sin problemas."] },
@@ -68,21 +68,21 @@ const content = {
         profileAlt: "Profile picture of Diego Alarcón",
         profileDescription: "Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.",
         aboutMeTitle: "About Me",
-        aboutMeText: `I am **Diego Alarcón**, a Geoscience Engineer originally from **Santiago, Chile**, now based in **Germany**. I moved here to pursue a dream, take on new professional and personal challenges, and also follow the love of my life.  
+        aboutMeText: `I am <strong>Diego Alarcón<strong>, a Geoscience Engineer originally from <strong>Santiago, Chile<strong>, now based in <strong>Germany<strong>. I moved here to pursue a dream, take on new professional and personal challenges, and also follow the love of my life.  
 
 My journey has not been easy: it has been full of learning experiences and obstacles that have shaped me both professionally and personally. 
-I have always faced them with a positive mindset and without panic, as I firmly believe that **there is no problem without a solution**, and that **every challenge brings a reward**. 
+I have always faced them with a positive mindset and without panic, as I firmly believe that <strong>there is no problem without a solution<strong>, and that <strong>every challenge brings a reward<strong>. 
 This mindset has allowed me to adapt to changing environments and add value in complex situations.  
 
-Professionally, I have solid experience in **GIS, Remote Sensing, and Technical Support**, and I am currently working as a **Technical Support Engineer at UP42**, 
-where I help clients and teams solve technical challenges related to **satellite data, APIs, and Python**.  
+Professionally, I have solid experience in <strong>GIS, Remote Sensing, and Technical Support<strong>, and I am currently working as a <strong>Technical Support Engineer at UP42<strong>, 
+where I help clients and teams solve technical challenges related to <strong>satellite data, APIs, and Python<strong>.  
 
-I am recognized for my ability to **work under pressure without losing composure**, **delegate tasks effectively**, and **organize documentation and processes** to ensure continuity and efficiency. 
-I also have experience coordinating directly with clients, enabling me to **align expectations, anticipate needs, and improve deliverables**.  
+I am recognized for my ability to <strong>work under pressure without losing composure<strong>, <strong>delegate tasks effectively<strong>, and <strong>organize documentation and processes<strong> to ensure continuity and efficiency. 
+I also have experience coordinating directly with clients, enabling me to <strong>align expectations, anticipate needs, and improve deliverables<strong>.  
 
-I see myself as a **curious, resilient, and results-driven professional**, with a clear vision: to keep growing and contribute both technically and personally to any team I am part of.  
+I see myself as a <strong>curious, resilient, and results-driven professional<strong>, with a clear vision: to keep growing and contribute both technically and personally to any team I am part of.  
 
-*"Life rewards those who dare"* is a phrase that inspires me and guides my decisions.
+<em>"Life rewards those who dare"<em> is a phrase that inspires me and guides my decisions.
   `,        experienceTitle: "Professional Experience",
         experience: [
             { title: "Technical Support Engineer", company: "UP42", url: "https://up42.com/", location: "Remote, Germany", dates: "Oct 2021 - Present", bullets: ["Maintained a <strong>99% customer satisfaction</strong> by resolving technical issues for geospatial APIs and data processing services.", "Managed the <strong>Zendesk</strong> platform, optimizing workflows and reducing response times.", "Provided expert support on <strong>Earth Observation data</strong> and processing workflows.", "Improved self-service documentation, <strong>reducing incoming support requests by 15%</strong>.", "Coordinated internal communications to ensure seamless feature deployments."] },
@@ -131,22 +131,22 @@ I see myself as a **curious, resilient, and results-driven professional**, with 
         profileDescription: "Technical Support Engineer | Geowissenschaften-, Python- und API-Spezialist | Unterstützt Kunden bei der Lösung komplexer technischer Herausforderungen.",
         aboutMeTitle: "Über mich",
         aboutMeText: `
-Ich bin **Diego Alarcón**, Geowissenschaftsingenieur aus **Santiago de Chile**, heute in **Deutschland** ansässig. 
+Ich bin <strong>Diego Alarcón<strong>, Geowissenschaftsingenieur aus <strong>Santiago de Chile<strong>, heute in <strong>Deutschland<strong> ansässig. 
 Ich bin hierhergezogen, um einen Traum zu verfolgen, neue berufliche und persönliche Herausforderungen anzunehmen und auch der Liebe meines Lebens zu folgen.  
 
 Mein Weg war nicht einfach: voller Lernprozesse und Hindernisse, die mich sowohl beruflich als auch persönlich geprägt haben. 
-Ich habe sie stets mit einer positiven Einstellung und ohne Panik gemeistert, da ich fest davon überzeugt bin, dass **es kein Problem ohne Lösung gibt** und dass **jede Herausforderung einen Gewinn mit sich bringt**. 
+Ich habe sie stets mit einer positiven Einstellung und ohne Panik gemeistert, da ich fest davon überzeugt bin, dass <strong>es kein Problem ohne Lösung gibt<strong> und dass <strong>jede Herausforderung einen Gewinn mit sich bringt<strong>. 
 Diese Haltung hat es mir ermöglicht, mich an wechselnde Umgebungen anzupassen und in komplexen Situationen echten Mehrwert zu liefern.  
 
-Beruflich habe ich fundierte Erfahrung in **GIS, Fernerkundung und technischem Support** und arbeite derzeit als **Technical Support Engineer bei UP42**, 
-wo ich Kunden und Teams bei technischen Herausforderungen rund um **Satellitendaten, APIs und Python** unterstütze.  
+Beruflich habe ich fundierte Erfahrung in <strong>GIS, Fernerkundung und technischem Support<strong> und arbeite derzeit als <strong>Technical Support Engineer bei UP42<strong>, 
+wo ich Kunden und Teams bei technischen Herausforderungen rund um <strong>Satellitendaten, APIs und Python<strong> unterstütze.  
 
-Ich zeichne mich durch meine Fähigkeit aus, **unter Druck ruhig und effizient zu arbeiten**, Aufgaben **gezielt zu delegieren** und **Dokumentationen sowie Prozesse zu organisieren**, um einen reibungslosen Ablauf zu gewährleisten. 
-Darüber hinaus habe ich Erfahrung in der direkten Kundenkoordination, wodurch ich **Erwartungen abstimmen, Bedürfnisse frühzeitig erkennen und die Qualität der Ergebnisse verbessern** kann.  
+Ich zeichne mich durch meine Fähigkeit aus, <strong>unter Druck ruhig und effizient zu arbeiten<strong>, Aufgaben <strong>gezielt zu delegieren<strong> und <strong>Dokumentationen sowie Prozesse zu organisieren<strong>, um einen reibungslosen Ablauf zu gewährleisten. 
+Darüber hinaus habe ich Erfahrung in der direkten Kundenkoordination, wodurch ich <strong>Erwartungen abstimmen, Bedürfnisse frühzeitig erkennen und die Qualität der Ergebnisse verbessern<strong> kann.  
 
-Ich sehe mich selbst als **neugierig, resilient und ergebnisorientiert**, mit einer klaren Vision: kontinuierlich zu wachsen und sowohl fachlich als auch menschlich einen Beitrag zu jedem Team zu leisten.  
+Ich sehe mich selbst als <strong>neugierig, resilient und ergebnisorientiert<strong>, mit einer klaren Vision: kontinuierlich zu wachsen und sowohl fachlich als auch menschlich einen Beitrag zu jedem Team zu leisten.  
 
-*"Das Leben belohnt die Mutigen"* ist ein Leitsatz, der mich begleitet und meine Entscheidungen prägt.
+<em>"Das Leben belohnt die Mutigen"<em> ist ein Leitsatz, der mich begleitet und meine Entscheidungen prägt.
   `,
         experienceTitle: "Berufserfahrung",
         experience: [
