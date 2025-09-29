@@ -191,37 +191,16 @@ const updateContent = (lang) => {
     renderSkills(currentContent.moreAboutMe);
     document.getElementById('footer-text-1').innerHTML = currentContent.footer.text1;
 
-    // Actualiza tooltips y agrega efecto fade-out
+    // Actualizar tooltips
     const navLinks = document.querySelectorAll('.floating-nav a');
     navLinks.forEach(link => {
         const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
-        if (tooltipText) {
-            link.setAttribute('data-tooltip', tooltipText);
-
-            // Limpiar posibles tooltips previos
-            const existingTooltip = link.querySelector('.tooltip-text');
-            if (existingTooltip) existingTooltip.remove();
-
-            // Crear tooltip flotante
-            const tooltip = document.createElement('span');
-            tooltip.className = 'tooltip-text absolute bg-gray-800 text-white text-xs rounded px-2 py-1 opacity-0 transition-opacity duration-500';
-            tooltip.textContent = tooltipText;
-            link.appendChild(tooltip);
-
-            // Mostrar tooltip al presionar
-            link.addEventListener('click', () => {
-                tooltip.style.opacity = '1';
-                setTimeout(() => {
-                    tooltip.style.opacity = '0';
-                }, 2000); // Desaparece después de 2 segundos
-            });
-        }
+        if (tooltipText) link.setAttribute('data-tooltip', tooltipText);
     });
 
     document.getElementById('profile-image').alt = currentContent.profileAlt;
 };
 
-// Funciones de renderizado (experience, education, projects, certifications, skills)
 const renderExperience = (experienceData) => {
     const container = document.getElementById('experience-container');
     if (!experienceData) return;
@@ -342,20 +321,46 @@ const renderStars = (rating) => {
     return stars;
 };
 
-// Cambio de idioma
 const setLanguage = (lang) => {
     updateContent(lang);
     document.getElementById('language-switcher').value = lang;
     localStorage.setItem('lang', lang);
 };
 
-// Smooth scroll para navbar
+// Scroll suave y tooltip fade
 document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        // Scroll suave
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+
+        // Remove previous tooltip
+        const existingTooltip = document.querySelector('.nav-tooltip');
+        if (existingTooltip) existingTooltip.remove();
+
+        // Crear nuevo tooltip
+        const tooltipText = this.getAttribute('data-tooltip');
+        if (tooltipText) {
+            const tooltip = document.createElement('span');
+            tooltip.className = 'nav-tooltip';
+            tooltip.textContent = tooltipText;
+            tooltip.style.position = 'absolute';
+            tooltip.style.background = 'rgba(0,0,0,0.75)';
+            tooltip.style.color = '#fff';
+            tooltip.style.padding = '4px 8px';
+            tooltip.style.borderRadius = '4px';
+            tooltip.style.fontSize = '12px';
+            tooltip.style.top = `${this.offsetTop - 30}px`;
+            tooltip.style.left = `${this.offsetLeft}px`;
+            tooltip.style.opacity = 1;
+            tooltip.style.transition = 'opacity 0.6s';
+            this.parentElement.appendChild(tooltip);
+
+            setTimeout(() => {
+                tooltip.style.opacity = 0;
+                setTimeout(() => tooltip.remove(), 600);
+            }, 2000);
+        }
     });
 });
 
