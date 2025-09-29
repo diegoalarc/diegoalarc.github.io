@@ -168,9 +168,15 @@ body, .container-bg, .project-card, .floating-nav ul {
 .floating-nav a {
     position: relative;
     
-    /* --- CORRECCIÓN AÑADIDA --- */
-    /* Esta línea elimina la "burbuja" de resaltado al tocar en móviles */
-    -webkit-tap-highlight-color: transparent;
+    /* --- INICIO DE LA CORRECCIÓN POTENTE --- */
+    
+    /* Elimina la "burbuja" de resaltado al tocar en móviles */
+    -webkit-tap-highlight-color: transparent !important;
+
+    /* Elimina cualquier contorno o borde que aparezca al tocar */
+    outline: none !important;
+    
+    /* --- FIN DE LA CORRECCIÓN --- */
 }
 .floating-nav a::after {
     content: attr(data-tooltip);
