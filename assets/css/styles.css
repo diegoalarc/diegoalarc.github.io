@@ -167,6 +167,10 @@ body, .container-bg, .project-card, .floating-nav ul {
 }
 .floating-nav a {
     position: relative;
+    
+    /* --- CORRECCIÓN AÑADIDA --- */
+    /* Esta línea elimina la "burbuja" de resaltado al tocar en móviles */
+    -webkit-tap-highlight-color: transparent;
 }
 .floating-nav a::after {
     content: attr(data-tooltip);
