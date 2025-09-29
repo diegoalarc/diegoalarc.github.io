@@ -5,7 +5,7 @@ const content = {
         profileAlt: "Foto de perfil de Diego Alarcón",
         profileDescription: "Ingeniero de Soporte Técnico | Especialista en Geociencias, Python y API | Ayudando a los clientes a resolver desafíos técnicos complejos.",
         aboutMeTitle: "Acerca de mí",
-        aboutMeText: `Soy <strong>Diego Alarcón</strong>, Ingeniero en Geociencias originario de <strong>Santiago de Chile</strong> y actualmente radicado en <strong>Alemania</strong>. 
+        aboutMeText: `Soy <strong>Diego Alarcón</strong>, Ingeniero en Geociencias originario de <strong>Santiago de Chile</strong> y actualmente radicado en <strong>Alemania</strong>. 
 Decidí mudarme en busca de un sueño, de nuevos desafíos profesionales y personales, y también del amor de mi vida.<br><br>
 Mi trayectoria no ha sido lineal ni sencilla: ha estado llena de aprendizajes y obstáculos que me han formado tanto como profesional como persona.
 Los he enfrentado siempre con actitud positiva y sin miedo, porque estoy convencido de que <strong>no existe problema sin solución</strong> y que <strong>todo desafío trae consigo una ganancia</strong>.<br>
@@ -62,7 +62,7 @@ Me considero una persona <strong>curiosa, resiliente y orientada a resultados</s
         profileAlt: "Profile picture of Diego Alarcón",
         profileDescription: "Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.",
         aboutMeTitle: "About Me",
-        aboutMeText: `I am <strong>Diego Alarcón</strong>, a Geoscience Engineer originally from <strong>Santiago de Chile</strong> and currently based in <strong>Germany</strong>. 
+        aboutMeText: `I am <strong>Diego Alarcón</strong>, a Geoscience Engineer originally from <strong>Santiago de Chile</strong> and currently based in <strong>Germany</strong>. 
 I decided to move in pursuit of a dream, new professional and personal challenges, and also the love of my life.<br><br>
 My journey has not been linear or easy: it has been full of lessons and obstacles that have shaped me both as a professional and as a person.
 I have always faced them with a positive attitude and without fear, because I am convinced that <strong>there is no problem without a solution</strong> and that <strong>every challenge brings its own reward</strong>.<br>
@@ -119,7 +119,7 @@ I consider myself a <strong>curious, resilient, and results-oriented</strong> pe
         profileAlt: "Profilbild von Diego Alarcón",
         profileDescription: "Technical Support Engineer | Geowissenschaften-, Python- und API-Spezialist | Unterstützt Kunden bei der Lösung komplexer technischer Herausforderungen.",
         aboutMeTitle: "Über mich",
-        aboutMeText: `Ich bin <strong>Diego Alarcón</strong>, Geowissenschaftsingenieur, ursprünglich aus <strong>Santiago de Chile</strong> und derzeit wohnhaft in <strong>Deutschland</strong>. 
+        aboutMeText: `Ich bin <strong>Diego Alarcón</strong>, Geowissenschaftsingenieur, ursprünglich aus <strong>Santiago de Chile</strong> und derzeit wohnhaft in <strong>Deutschland</strong>. 
 Ich habe beschlossen, umzuziehen, um einen Traum zu verfolgen, neue berufliche und persönliche Herausforderungen anzunehmen und auch die Liebe meines Lebens zu finden.<br><br>
 Mein Werdegang war weder linear noch einfach: Er war voller Lektionen und Hindernisse, die mich sowohl beruflich als auch persönlich geprägt haben.
 Ich habe ihnen stets mit positiver Einstellung und ohne Angst begegnet, weil ich überzeugt bin, dass <strong>kein Problem ohne Lösung existiert</strong> und dass <strong>jede Herausforderung ihre eigenen Belohnungen mit sich bringt</strong>.<br>
@@ -172,7 +172,6 @@ Ich betrachte mich als <strong>neugierige, resiliente und ergebnisorientierte</s
         footer: { text1: `Gemacht mit &#x2764;&#xfe0f; und Kaffee` }
     }
 };
-// Función para actualizar contenido según idioma
 const updateContent = (lang) => {
     const currentContent = content[lang];
     document.getElementById('page-title').textContent = currentContent.pageTitle;
@@ -190,17 +189,15 @@ const updateContent = (lang) => {
     document.getElementById('more-about-me-title').textContent = currentContent.moreAboutMeTitle;
     renderSkills(currentContent.moreAboutMe);
     document.getElementById('footer-text-1').innerHTML = currentContent.footer.text1;
-
-    // Actualizar tooltips
     const navLinks = document.querySelectorAll('.floating-nav a');
     navLinks.forEach(link => {
         const tooltipText = link.getAttribute(`data-tooltip-${lang}`);
-        if (tooltipText) link.setAttribute('data-tooltip', tooltipText);
+        if (tooltipText) {
+            link.setAttribute('data-tooltip', tooltipText);
+        }
     });
-
     document.getElementById('profile-image').alt = currentContent.profileAlt;
 };
-
 const renderExperience = (experienceData) => {
     const container = document.getElementById('experience-container');
     if (!experienceData) return;
@@ -244,7 +241,6 @@ const renderEducation = (educationData) => {
         </div>
     `).join('');
 };
-
 const renderProjects = (projectsData) => {
     const container = document.getElementById('projects-container');
     if (!projectsData) return;
@@ -315,56 +311,45 @@ const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-    for (let i = 0; i < fullStars; i++) stars += `<i class="fa-solid fa-star filled-star"></i>`;
-    if (hasHalfStar) stars += `<i class="fa-solid fa-star-half-stroke half-star"></i>`;
-    for (let i = 0; i < emptyStars; i++) stars += `<i class="fa-regular fa-star empty-star"></i>`;
+    for (let i = 0; i < fullStars; i++) {
+        stars += `<i class="fa-solid fa-star filled-star"></i>`;
+    }
+    if (hasHalfStar) {
+        stars += `<i class="fa-solid fa-star-half-stroke half-star"></i>`;
+    }
+    for (let i = 0; i < emptyStars; i++) {
+        stars += `<i class="fa-regular fa-star empty-star"></i>`;
+    }
     return stars;
 };
-
 const setLanguage = (lang) => {
     updateContent(lang);
     document.getElementById('language-switcher').value = lang;
     localStorage.setItem('lang', lang);
 };
 
-// Scroll suave y tooltip fade
+// CÓDIGO CORREGIDO PARA EL COMPORTAMIENTO EN MÓVILES
 document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        // Scroll suave
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
 
-        // Remove previous tooltip
-        const existingTooltip = document.querySelector('.nav-tooltip');
-        if (existingTooltip) existingTooltip.remove();
-
-        // Crear nuevo tooltip
-        const tooltipText = this.getAttribute('data-tooltip');
-        if (tooltipText) {
-            const tooltip = document.createElement('span');
-            tooltip.className = 'nav-tooltip';
-            tooltip.textContent = tooltipText;
-            tooltip.style.position = 'absolute';
-            tooltip.style.background = 'rgba(0,0,0,0.75)';
-            tooltip.style.color = '#fff';
-            tooltip.style.padding = '4px 8px';
-            tooltip.style.borderRadius = '4px';
-            tooltip.style.fontSize = '12px';
-            tooltip.style.top = `${this.offsetTop - 30}px`;
-            tooltip.style.left = `${this.offsetLeft}px`;
-            tooltip.style.opacity = 1;
-            tooltip.style.transition = 'opacity 0.6s';
-            this.parentElement.appendChild(tooltip);
-
-            setTimeout(() => {
-                tooltip.style.opacity = 0;
-                setTimeout(() => tooltip.remove(), 600);
-            }, 2000);
+        const originalTooltip = this.getAttribute('data-tooltip');
+        if (originalTooltip) {
+            this.removeAttribute('data-tooltip');
         }
+
+        setTimeout(() => {
+            if (originalTooltip) {
+                this.setAttribute('data-tooltip', originalTooltip);
+            }
+        }, 500);
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-// Inicialización de idioma
 const initialLang = localStorage.getItem('lang') || 'es';
 setLanguage(initialLang);
 document.getElementById('language-switcher').addEventListener('change', (event) => {
