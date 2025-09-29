@@ -1,3 +1,6 @@
+// --- NUEVA LÍNEA PARA DETECTAR DISPOSITIVOS TÁCTILES ---
+const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
 let pageTime = 0;
 const content = {
     es: {
@@ -333,16 +336,20 @@ document.querySelectorAll('.floating-nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const originalTooltip = this.getAttribute('data-tooltip');
-        if (originalTooltip) {
-            this.removeAttribute('data-tooltip');
-        }
-
-        setTimeout(() => {
+        // --- LÓGICA MEJORADA ---
+        // Este código ahora SOLO se ejecuta en dispositivos táctiles.
+        if (isTouchDevice) {
+            const originalTooltip = this.getAttribute('data-tooltip');
             if (originalTooltip) {
-                this.setAttribute('data-tooltip', originalTooltip);
+                this.removeAttribute('data-tooltip');
             }
-        }, 500);
+
+            setTimeout(() => {
+                if (originalTooltip) {
+                    this.setAttribute('data-tooltip', originalTooltip);
+                }
+            }, 500);
+        }
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
