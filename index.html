@@ -113,7 +113,8 @@
             e.preventDefault();
             if (typeof Calendly !== "undefined") {
               Calendly.initPopupWidget({
-                url: "https://calendly.com/diego-alarcondiaz/30min"
+                // FIX: Updated to the correct and verified Calendly event URL
+                url: "https://calendly.com/diego-alarcondiaz/30min-1"
               });
             } else {
               console.error("Calendly script not loaded yet");
