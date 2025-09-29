@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Diego Alarcón, showcasing professional experience, projects, and skills in software development.">
-
-    <title id="page-title">Diego Alarcón's Portfolio</title>
-    
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/satellite-icon.ico">
-    
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-92C38TY8SJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+    
       gtag('config', 'G-92C38TY8SJ');
     </script>
-
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Diego Alarcón's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/diegoalarc/diegoalarc.github.io/main/satellite-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="p-4 sm:p-8 lg:p-10">
@@ -38,7 +32,7 @@
         </select>
     </div>
 
-    <nav class="floating-nav">
+    <nav class="floating-nav md:floating-nav">
         <ul class="flex flex-col gap-2 p-2 rounded-lg shadow-lg" style="background-color: var(--bg-color-darker);">
             <li><a href="#about-me" data-tooltip-es="Acerca de mí" data-tooltip-en="About Me" data-tooltip-de="Über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-user text-base md:text-lg"></i></a></li>
             <li><a href="#experience" data-tooltip-es="Experiencia Profesional" data-tooltip-en="Professional Experience" data-tooltip-de="Berufserfahrung" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-briefcase text-base md:text-lg"></i></a></li>
@@ -47,17 +41,6 @@
             <li><a href="#certifications" data-tooltip-es="Certificaciones" data-tooltip-en="Certifications" data-tooltip-de="Lizenzen & Zertifizierungen" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-award text-base md:text-lg"></i></a></li>
             <li><a href="#more-about-me" data-tooltip-es="Más sobre mí" data-tooltip-en="More about me" data-tooltip-de="Mehr über mich" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-lightbulb text-base md:text-lg"></i></a></li>
             <li><a href="mailto:diego.alarcondiaz@gmail.com" data-tooltip-es="Contacto" data-tooltip-en="Contact" data-tooltip-de="Kontakt" class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300"><i class="fa-solid fa-envelope text-base md:text-lg"></i></a></li>
-            
-            <li>
-              <a href="#"
-                  id="calendly-link"
-                  data-tooltip-es="Agendar Reunión"
-                  data-tooltip-en="Schedule Meeting"
-                  data-tooltip-de="Termin buchen"
-                  class="track-click flex items-center gap-2 p-2 md:p-3 text-teal-400 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                  <i class="fa-solid fa-calendar-days text-base md:text-lg"></i>
-              </a>
-            </li>
         </ul>
     </nav>
 
@@ -65,21 +48,15 @@
         <header class="mb-10 text-center sm:text-left">
             <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start">
                 <div class="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-gray-600 mb-4 sm:mb-0 sm:mr-8">
-                    <img src="https://github.com/diegoalarc/diegoalarc.github.io/blob/main/images/foto_diego.jpg?raw=true" alt="Diego Alarcón" id="profile-image">
+                    <img src="https://github.com/diegoalarc/diegoalarc.github.io/blob/main/images/foto_diego.jpg?raw=true" alt="" id="profile-image">
                 </div>
                 <div class="flex flex-col items-center sm:items-start">
                     <h1 class="text-4xl sm:text-5xl font-bold highlight-text mb-2">Diego Alarcón</h1>
                     <p class="text-lg text-gray-400" id="profile-description"></p>
                     <div class="flex space-x-4 mt-2">
-                        <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Email</title><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </a>
-                        <a href="https://github.com/diegoalarc" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.94 13.94 0 0 0-3 0c-2.73-1.83-3.91-1.2-3.91-1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/diegoalarcondiaz/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>LinkedIn</title><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
+                        <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                        <a href="https://github.com/diegoalarc" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.94 13.94 0 0 0-3 0c-2.73-1.83-3.91-1.2-3.91-1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="https://www.linkedin.com/in/diegoalarcondiaz/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                     </div>
                 </div>
             </div>
@@ -101,27 +78,6 @@
             </div>
         </footer>
     </div>
-
     <script type="module" src="assets/js/scripts.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const calendlyLink = document.getElementById("calendly-link");
-
-        if (calendlyLink) {
-          calendlyLink.addEventListener("click", function (e) {
-            e.preventDefault();
-            if (typeof Calendly !== "undefined") {
-              Calendly.initPopupWidget({
-                // FIX: Updated to the correct and verified Calendly event URL
-                url: "https://calendly.com/diego-alarcondiaz/30min-1"
-              });
-            } else {
-              console.error("Calendly script not loaded yet");
-            }
-          });
-        }
-      });
-    </script>
 </body>
 </html>
