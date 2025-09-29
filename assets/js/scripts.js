@@ -5,13 +5,12 @@ const content = {
         profileAlt: "Foto de perfil de Diego Alarcón",
         profileDescription: "Ingeniero de Soporte Técnico | Especialista en Geociencias, Python y API | Ayudando a los clientes a resolver desafíos técnicos complejos.",
         aboutMeTitle: "Acerca de mí",
-        aboutMeText: `Soy <strong>Diego Alarcón</strong>, Ingeniero en Geociencias originario de <strong>Santiago de Chile</strong> y actualmente radicado en <strong>Alemania</strong>.<br><br>
+        aboutMeText: `Soy <strong>Diego Alarcón</strong>, Ingeniero en Geociencias originario de <strong>Santiago de Chile</strong> y actualmente radicado en <strong>Alemania</strong>. 
 Decidí mudarme en busca de un sueño, de nuevos desafíos profesionales y personales, y también del amor de mi vida.<br><br>
-Mi trayectoria no ha sido lineal ni sencilla: ha estado llena de aprendizajes y obstáculos que me han formado tanto como profesional como persona.<br>
+Mi trayectoria no ha sido lineal ni sencilla: ha estado llena de aprendizajes y obstáculos que me han formado tanto como profesional como persona.
 Los he enfrentado siempre con actitud positiva y sin miedo, porque estoy convencido de que <strong>no existe problema sin solución</strong> y que <strong>todo desafío trae consigo una ganancia</strong>.<br>
 Esta mentalidad me ha permitido adaptarme a entornos cambiantes y aportar valor en situaciones complejas.<br><br>
-En lo profesional, cuento con experiencia sólida en <strong>GIS, Teledetección y Soporte Técnico</strong>, y actualmente desempeño el rol de <strong>Technical Support Engineer en UP42</strong>,<br>
-donde ayudo a clientes y equipos a resolver problemas técnicos vinculados a <strong>datos satelitales, APIs y Python</strong>.<br><br>
+En lo profesional, cuento con experiencia sólida en <strong>GIS, Teledetección y Soporte Técnico</strong>, y actualmente desempeño el rol de <strong>Technical Support Engineer en UP42</strong>, donde ayudo a clientes y equipos a resolver problemas técnicos vinculados a <strong>datos satelitales, APIs y Python</strong>.<br><br>
 Me destaco por mi capacidad de <strong>trabajar bajo presión sin perder la calma</strong>, de <strong>delegar tareas de manera eficiente</strong>, y de <strong>organizar documentación y procesos</strong> para asegurar la continuidad del trabajo.<br>
 Además, tengo experiencia coordinando directamente con clientes, lo que me permite <strong>alinear expectativas, anticipar necesidades y mejorar la calidad de las entregas</strong>.<br><br>
 Me considero una persona <strong>curiosa, resiliente y orientada a resultados</strong>, con una visión clara: crecer de manera continua y aportar tanto en lo humano como en lo técnico a cada equipo en el que participo.<br><br>
@@ -63,13 +62,12 @@ Me considero una persona <strong>curiosa, resiliente y orientada a resultados</s
         profileAlt: "Profile picture of Diego Alarcón",
         profileDescription: "Technical Support Engineer | Geoscience, Python, and API Specialist | Helping clients solve complex technical challenges.",
         aboutMeTitle: "About Me",
-        aboutMeText: `I am <strong>Diego Alarcón</strong>, a Geoscience Engineer originally from <strong>Santiago de Chile</strong> and currently based in <strong>Germany</strong>.<br><br>
+        aboutMeText: `I am <strong>Diego Alarcón</strong>, a Geoscience Engineer originally from <strong>Santiago de Chile</strong> and currently based in <strong>Germany</strong>. 
 I decided to move in pursuit of a dream, new professional and personal challenges, and also the love of my life.<br><br>
-My journey has not been linear or easy: it has been full of lessons and obstacles that have shaped me both as a professional and as a person.<br>
+My journey has not been linear or easy: it has been full of lessons and obstacles that have shaped me both as a professional and as a person.
 I have always faced them with a positive attitude and without fear, because I am convinced that <strong>there is no problem without a solution</strong> and that <strong>every challenge brings its own reward</strong>.<br>
 This mindset has allowed me to adapt to changing environments and add value in complex situations.<br><br>
-Professionally, I have solid experience in <strong>GIS, Remote Sensing, and Technical Support</strong>, and I currently work as a <strong>Technical Support Engineer at UP42</strong>,<br>
-where I help clients and teams solve technical problems related to <strong>satellite data, APIs, and Python</strong>.<br><br>
+Professionally, I have solid experience in <strong>GIS, Remote Sensing, and Technical Support</strong>, and I currently work as a <strong>Technical Support Engineer at UP42</strong>, where I help clients and teams solve technical problems related to <strong>satellite data, APIs, and Python</strong>.<br><br>
 I stand out for my ability to <strong>work under pressure without losing composure</strong>, <strong>delegate tasks efficiently</strong>, and <strong>organize documentation and processes</strong> to ensure work continuity.<br>
 Additionally, I have experience coordinating directly with clients, which allows me to <strong>align expectations, anticipate needs, and improve delivery quality</strong>.<br><br>
 I consider myself a <strong>curious, resilient, and results-oriented</strong> person, with a clear vision: to grow continuously and contribute both humanly and technically to every team I participate in.<br><br>
@@ -121,13 +119,12 @@ I consider myself a <strong>curious, resilient, and results-oriented</strong> pe
         profileAlt: "Profilbild von Diego Alarcón",
         profileDescription: "Technical Support Engineer | Geowissenschaften-, Python- und API-Spezialist | Unterstützt Kunden bei der Lösung komplexer technischer Herausforderungen.",
         aboutMeTitle: "Über mich",
-        aboutMeText: `Ich bin <strong>Diego Alarcón</strong>, Geowissenschaftsingenieur, ursprünglich aus <strong>Santiago de Chile</strong> und derzeit wohnhaft in <strong>Deutschland</strong>.<br><br>
+        aboutMeText: `Ich bin <strong>Diego Alarcón</strong>, Geowissenschaftsingenieur, ursprünglich aus <strong>Santiago de Chile</strong> und derzeit wohnhaft in <strong>Deutschland</strong>. 
 Ich habe beschlossen, umzuziehen, um einen Traum zu verfolgen, neue berufliche und persönliche Herausforderungen anzunehmen und auch die Liebe meines Lebens zu finden.<br><br>
-Mein Werdegang war weder linear noch einfach: Er war voller Lektionen und Hindernisse, die mich sowohl beruflich als auch persönlich geprägt haben.<br>
+Mein Werdegang war weder linear noch einfach: Er war voller Lektionen und Hindernisse, die mich sowohl beruflich als auch persönlich geprägt haben.
 Ich habe ihnen stets mit positiver Einstellung und ohne Angst begegnet, weil ich überzeugt bin, dass <strong>kein Problem ohne Lösung existiert</strong> und dass <strong>jede Herausforderung ihre eigenen Belohnungen mit sich bringt</strong>.<br>
 Diese Denkweise hat es mir ermöglicht, mich an wechselnde Umgebungen anzupassen und in komplexen Situationen Wert zu schaffen.<br><br>
-Beruflich verfüge ich über solide Erfahrung in <strong>GIS, Fernerkundung und Technischem Support</strong> und arbeite derzeit als <strong>Technical Support Engineer bei UP42</strong>,<br>
-wo ich Kunden und Teams helfe, technische Probleme im Zusammenhang mit <strong>Satelittendaten, APIs und Python</strong> zu lösen.<br><br>
+Beruflich verfüge ich über solide Erfahrung in <strong>GIS, Fernerkundung und Technischem Support</strong> und arbeite derzeit als <strong>Technical Support Engineer bei UP42</strong>, wo ich Kunden und Teams helfe, technische Probleme im Zusammenhang mit <strong>Satelittendaten, APIs und Python</strong> zu lösen.<br><br>
 Ich zeichne mich durch meine Fähigkeit aus, <strong>unter Druck ruhig zu bleiben</strong>, <strong>Aufgaben effizient zu delegieren</strong> und <strong>Dokumentation und Prozesse zu organisieren</strong>, um die Kontinuität der Arbeit sicherzustellen.<br>
 Darüber hinaus habe ich Erfahrung in der direkten Koordination mit Kunden, was es mir ermöglicht, <strong>Erwartungen abzustimmen, Bedürfnisse vorherzusehen und die Qualität der Leistungen zu verbessern</strong>.<br><br>
 Ich betrachte mich als <strong>neugierige, resiliente und ergebnisorientierte</strong> Person mit einer klaren Vision: kontinuierlich zu wachsen und sowohl menschlich als auch fachlich zu jedem Team beizutragen, in dem ich mitwirke.<br><br>
