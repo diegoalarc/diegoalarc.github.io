@@ -12,7 +12,7 @@ const content = {
         Los he enfrentado siempre con actitud positiva y sin miedo, porque estoy convencido de que <strong>no existe problema sin solución<strong> y que <strong>todo desafío trae consigo una ganancia<strong>. 
         Esta mentalidad me ha permitido adaptarme a entornos cambiantes y aportar valor en situaciones complejas.  
         
-        En lo profesional, cuento con experiencia sólida en <strong>GIS, Teledetección y Soporte Técnico<strong>, y actualmente desempeño el rol de **Technical Support Engineer en UP42**, 
+        En lo profesional, cuento con experiencia sólida en <strong>GIS, Teledetección y Soporte Técnico<strong>, y actualmente desempeño el rol de <strong>Technical Support Engineer en UP42<strong>, 
         donde ayudo a clientes y equipos a resolver problemas técnicos vinculados a <strong>datos satelitales, APIs y Python<strong>.  
         
         Me destaco por mi capacidad de <strong>trabajar bajo presión sin perder la calma<strong>, de <strong>delegar tareas de manera eficiente<strong>, y de <strong>organizar documentación y procesos<strong> para asegurar la continuidad del trabajo. 
