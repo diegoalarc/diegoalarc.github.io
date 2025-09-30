@@ -8,9 +8,20 @@
 body {
     font-family: 'Inter', sans-serif;
     transition: background-color 0.5s ease;
-    background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
-    background-image: linear-gradient(to right, var(--bg-color-dark), var(--bg-color-darker), var(--bg-color-dark));
+
+    /* 🌈 Gradiente Prisma Scroll */
+    background: linear-gradient(
+        180deg,
+        #ff0080,
+        #7928ca,
+        #00e1ff,
+        #00ff85,
+        #ffd500
+    );
+    background-size: 100% 500%;
+    background-attachment: fixed;
+    transition: background-position 0.2s linear;
 }
 body, .container-bg, .project-card, .floating-nav ul {
     transition: all 0.5s ease;
@@ -48,10 +59,8 @@ body, .container-bg, .project-card, .floating-nav ul {
     background-color: rgba(79, 209, 197, 0.1);
 }
 @keyframes walking-dot {
-    0%, 100% { transform: scale(1);
-    opacity: 1; }
-    50% { transform: scale(1.4); opacity: 0.7;
-    }
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.7; }
 }
 .timeline-item::before {
     content: '';
@@ -144,6 +153,9 @@ body, .container-bg, .project-card, .floating-nav ul {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+/* --- SECCIÓN CORREGIDA PARA LA BARRA DE NAVEGACIÓN --- */
+
 .floating-nav {
     position: fixed;
     top: 50%;
@@ -152,22 +164,33 @@ body, .container-bg, .project-card, .floating-nav ul {
     z-index: 50;
     transition: transform 0.3s ease-in-out;
 }
-.floating-nav:hover {
-    transform: translateY(-50%) translateX(-5px);
+
+@media (hover: hover) {
+    .floating-nav:hover {
+        transform: translateY(-50%) translateX(-5px);
+    }
 }
+
 @media (min-width: 768px) {
     .floating-nav {
         right: auto;
         left: 0;
         transform: translateY(-50%);
     }
-    .floating-nav:hover {
-        transform: translateY(-50%) translateX(5px);
+    
+    @media (hover: hover) {
+        .floating-nav:hover {
+            transform: translateY(-50%) translateX(5px);
+        }
     }
 }
+
 .floating-nav a {
     position: relative;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
 }
+
 .floating-nav a::after {
     content: attr(data-tooltip);
     position: absolute;
