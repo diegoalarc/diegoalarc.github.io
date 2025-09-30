@@ -145,8 +145,6 @@ body, .container-bg, .project-card, .floating-nav ul {
     }
 }
 
-/* --- SECCIÓN CORREGIDA PARA LA BARRA DE NAVEGACIÓN --- */
-
 .floating-nav {
     position: fixed;
     top: 50%;
@@ -156,8 +154,6 @@ body, .container-bg, .project-card, .floating-nav ul {
     transition: transform 0.3s ease-in-out;
 }
 
-/* CORRECCIÓN #1: El efecto de mover la barra SÓLO se aplica en dispositivos con ratón.
-   En móviles, este bloque de código es ignorado, evitando que la barra se mueva. */
 @media (hover: hover) {
     .floating-nav:hover {
         transform: translateY(-50%) translateX(-5px);
@@ -178,7 +174,6 @@ body, .container-bg, .project-card, .floating-nav ul {
     }
 }
 
-/* CORRECCIÓN #2: Se eliminan los resaltados en los íconos individuales. */
 .floating-nav a {
     position: relative;
     -webkit-tap-highlight-color: transparent !important;
