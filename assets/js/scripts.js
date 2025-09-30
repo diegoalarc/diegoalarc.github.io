@@ -314,3 +314,9 @@ setLanguage(initialLang);
 document.getElementById('language-switcher').addEventListener('change', (event) => {
     setLanguage(event.target.value);
 });
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = scrollTop / docHeight;
+  document.body.style.backgroundPosition = `0 ${scrollPercent * 100}%`;
+});
