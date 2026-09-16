@@ -1,240 +1,405 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="terrain">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Alarcón — Customer Success Lead & Geospatial Data Scientist</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="shortcut icon" href="satellite-icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diego Alarcón — Customer Success Lead &amp; Geospatial Data Scientist</title>
+<meta name="description" content="Diego Alarcón — Customer Success Lead and Geospatial Data Scientist. M.Sc. in Remote Sensing (EAGLE, Würzburg). HubSpot, GIS, Python, satellite data." />
+<meta name="theme-color" content="#EEF1E9" />
+
+<meta property="og:title" content="Diego Alarcón — Customer Success Lead & Geospatial Data Scientist" />
+<meta property="og:description" content="10+ years across CRM architecture, technical support and geospatial data science. Trilingual: ES · EN · DE." />
+<meta property="og:image" content="images/foto_diego.jpg" />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="satellite-icon.ico" type="image/x-icon" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="nav-brand">Diego Alarcón</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" class="active">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<header class="site-nav">
+  <div class="nav-row">
+    <a href="#about" class="brand">Diego Alarcón</a>
+    <nav>
+      <ul class="links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#education" data-i18n="nav.education">Education</a></li>
+        <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#play" data-i18n="nav.play">Play</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
     </nav>
+    <div class="nav-controls">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-lang="es" aria-pressed="false">ES</button>
+        <button data-lang="en" aria-pressed="true">EN</button>
+        <button data-lang="de" aria-pressed="false">DE</button>
+      </div>
+      <button class="ndvi-toggle" id="ndviToggle" aria-label="Toggle satellite view" title="Toggle satellite (NDVI) view">
+        <span aria-hidden="true">🛰️</span><span id="ndviLabel">RGB</span>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <!-- Header / Hero Section -->
-    <header id="about" class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-text fade-in">
-                <h1>Diego Alarcón</h1>
-                <h2>Customer Success Lead | Geospatial Data Scientist</h2>
-                <p class="location"><i class="fa-solid fa-location-dot"></i> Hersbruck, Germany</p>
-                <p class="bio">
-                    Customer Success Lead and Geospatial Data Scientist with 10+ years of international experience spanning enterprise CRM administration, technical API support, and spatial analytics. Proven track record of architecting HubSpot CRM infrastructures, aligning Sales with Product engineering, and accelerating client onboarding. Specialized in translating complex user requirements into actionable technical solutions. Trilingual professional (Spanish, English, German) holding an M.Sc. in Remote Sensing.
-                </p>
-                <div class="social-links">
-                    <a href="mailto:diego.alarcondiaz@gmail.com" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://linkedin.com/in/diegoalarcondiaz" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/diegoalarc" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://twitter.com/DiegoAlarcnDaz2" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-            <div class="hero-image fade-in">
-                <img src="images/foto_diego.jpg" alt="Diego Alarcón">
-            </div>
+<main>
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow-coord" id="coordTag">49.5000° N, 11.3667° E — Hersbruck, Germany</span>
+        <h1>Diego Alarcón</h1>
+        <p class="role-line" data-i18n="hero.role">Customer Success Lead | Geospatial Data Scientist</p>
+        <p class="lede" data-i18n="hero.bio">Customer Success Lead and Geospatial Data Scientist with 10+ years of international experience spanning enterprise CRM administration, technical API support, and spatial analytics. Proven track record of architecting HubSpot CRM infrastructures, aligning Sales with Product engineering, and accelerating client onboarding. Specialized in translating complex user requirements into actionable technical solutions. Trilingual professional (Spanish, English, German) holding an M.Sc. in Remote Sensing.</p>
+
+        <div class="chip-row">
+          <span class="chip" data-i18n="hero.chip1">10+ years of experience</span>
+          <span class="chip gold" data-i18n="hero.chip2">Trilingual — ES · EN · DE</span>
+          <span class="chip" data-i18n="hero.chip3">M.Sc. in Remote Sensing</span>
+          <span class="chip" data-i18n="hero.chip4">Based in Germany</span>
         </div>
-    </header>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Technical & Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3><i class="fa-solid fa-users-gear"></i> Customer Success & CRM</h3>
-                    <p>HubSpot CRM Architecture • Zendesk Administration • Account Playbooks • Stakeholder Management • Enterprise Technical Onboarding</p>
-                </div>
-                <div class="skill-category fade-in">
-                    <h3><i class="fa-solid fa-code"></i> Data Science & Programming</h3>
-                    <p>Python 3 • R • SQL • GeoPandas • Machine Learning (Random Forest, SVM)</p>
-                </div>
-                <div class="skill-category fade-in">
-                    <h3><i class="fa-solid fa-server"></i> API & DevOps Ecosystem</h3>
-                    <p>REST APIs • OpenAPI Specification 3.0 • Linux • Git • Docker</p>
-                </div>
-                <div class="skill-category fade-in">
-                    <h3><i class="fa-solid fa-earth-americas"></i> Geospatial Engineering</h3>
-                    <p>QGIS • ArcGIS • Sentinel-2 Multispectral • LiDAR 3D • Photogrammetry</p>
-                </div>
-                <div class="skill-category fade-in">
-                    <h3><i class="fa-solid fa-language"></i> Languages</h3>
-                    <p>Spanish (Native) • English (C1 Professional) • German (B1)</p>
-                </div>
-            </div>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:diego.alarcondiaz@gmail.com" data-i18n="hero.cta1">Get in touch</a>
         </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title fade-in">Professional Experience</h2>
-            <div class="timeline">
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-header">
-                        <h3>Customer Success Lead</h3>
-                        <span class="company"><a href="https://avesreality.com/" target="_blank" rel="noopener">AVES Reality</a></span>
-                        <span class="date">Sep 2026 — Present | Remote, Hersbruck, Germany</span>
-                    </div>
-                    <ul>
-                        <li>Architect, configure, and administer the company-wide <strong>HubSpot CRM</strong> infrastructure to optimize pipeline tracking, customer health metrics, and executive reporting.</li>
-                        <li>Orchestrate cross-functional alignment between Sales and Product teams to synchronize enterprise client requirements directly with engineering roadmaps.</li>
-                        <li>Manage end-to-end customer communication and onboarding workflows, ensuring 100% on-time delivery of highly technical spatial datasets.</li>
-                        <li>Author and operationalize Customer Success playbooks in collaboration with Sales, significantly driving account retention and post-onboarding growth.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-header">
-                        <h3>Senior Technical Support Engineer</h3>
-                        <span class="company"><a href="https://up42.com/" target="_blank" rel="noopener">UP42 (Geospatial Data Marketplace)</a></span>
-                        <span class="date">Jan 2026 — Aug 2026 | Remote, Hersbruck, Germany</span>
-                    </div>
-                    <ul>
-                        <li>Commanded high-priority technical escalations for enterprise developer integrations, directly elevating customer satisfaction (CSAT) and account retention.</li>
-                        <li>Acted as primary Point of Contact (POC) for Data Product Managers, evaluating pre-release builds and channeling user friction points into sprint planning.</li>
-                        <li>Executed comprehensive REST API testing and maintained developer documentation compliant with <strong>OpenAPI Specification 3.0</strong> standards.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-header">
-                        <h3>Technical Documentation Engineer <small>(Secondment)</small></h3>
-                        <span class="company"><a href="https://up42.com/" target="_blank" rel="noopener">UP42 (Geospatial Data Marketplace)</a></span>
-                        <span class="date">Jul 2022 — Oct 2022 | Remote, Hersbruck, Germany</span>
-                    </div>
-                    <ul>
-                        <li>Authored developer FAQs, API integration recipes, and geospatial dataset specifications utilized by international enterprise clients.</li>
-                        <li>Restructured public documentation architecture, cutting navigation friction and reducing Tier 1 support ticket volume.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-header">
-                        <h3>Technical Support Engineer</h3>
-                        <span class="company"><a href="https://up42.com/" target="_blank" rel="noopener">UP42 (Geospatial Data Marketplace)</a></span>
-                        <span class="date">Oct 2021 — Dec 2025 | Remote, Hersbruck, Germany</span>
-                    </div>
-                    <ul>
-                        <li>Resolved complex support requests regarding automated API pipelines and multi-sensor satellite catalog access.</li>
-                        <li>Administered Zendesk; engineered automated triggers, macros, and reporting dashboards that measurably reduced average ticket resolution times.</li>
-                        <li>Guided technical customer onboarding onto REST APIs, accelerating time-to-value for new platform users.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-header">
-                        <h3>Senior GIS Analyst</h3>
-                        <span class="company"><a href="https://www.aguasandinas.cl/" target="_blank" rel="noopener">Aguas Andinas S.A.</a></span>
-                        <span class="date">Nov 2018 — Sep 2019 | Santiago, Chile</span>
-                    </div>
-                    <ul>
-                        <li>Maintained enterprise GIS databases for millions of utility customers; engineered Python automation scripts in ArcGIS that accelerated data processing times by <strong>40%</strong>.</li>
-                        <li>Executed high-precision GNSS field resurveys to enhance spatial integrity for urban infrastructure planning.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-header">
-                        <h3>Senior Project Engineer — GIS & Data Automation</h3>
-                        <span class="company"><a href="https://www.aconcaguasolutions.com/" target="_blank" rel="noopener">Aconcagua Solutions</a></span>
-                        <span class="date">Oct 2016 — May 2017 | Santiago, Chile</span>
-                    </div>
-                    <ul>
-                        <li>Engineered Excel VBA automation tools to eliminate manual data entry and developed Python web scrapers to harvest municipal open geodata.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-header">
-                        <h3>Field Analyst II — GIS Project Manager</h3>
-                        <span class="company"><a href="https://www.here.com/" target="_blank" rel="noopener">HERE Maps (Nokia / HERE Technologies)</a></span>
-                        <span class="date">Sep 2013 — Feb 2016 | Santiago, Chile</span>
-                    </div>
-                    <ul>
-                        <li>Directed national POI and mapping projects across Chile, negotiating municipal data-sharing agreements and enforcing strict corporate Quality Assurance standards.</li>
-                    </ul>
-                </div>
-
-            </div>
+        <div class="social-row">
+          <a href="mailto:diego.alarcondiaz@gmail.com" title="Email" aria-label="Email">✉</a>
+          <a href="https://linkedin.com/in/diegoalarcondiaz" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://github.com/diegoalarc" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">gh</a>
+          <a href="https://twitter.com/DiegoAlarcnDaz2" title="Twitter / X" aria-label="Twitter" target="_blank" rel="noopener">𝕏</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Education</h2>
-            <div class="education-grid">
-                <div class="edu-card fade-in">
-                    <h3>Master of Science (M.Sc.) in Remote Sensing — EAGLE</h3>
-                    <p class="institution"><a href="https://www.uni-wuerzburg.de/" target="_blank" rel="noopener">Julius-Maximilians-Universität Würzburg</a></p>
-                    <p class="date">Aug 2019 — Dec 2021 | Würzburg, Germany</p>
-                    <p><strong>Thesis:</strong> <em>"Predicting Grape Yields in Chile using Sentinel-2 Imagery and Machine Learning Models"</em> (Python/R pipelines using Random Forest and SVM).</p>
-                </div>
-                <div class="edu-card fade-in">
-                    <h3>Bachelor of Science (B.Sc.) in Survey Engineering</h3>
-                    <p class="institution"><a href="https://www.usach.cl/" target="_blank" rel="noopener">Universidad de Santiago de Chile (USACH)</a></p>
-                    <p class="date">2006 — 2011 | Santiago, Chile</p>
-                    <p>Focus on Geodesy, topographic measurement systems, and 3D spatial modeling.</p>
-                </div>
-            </div>
+      <div class="hero-photo-col">
+        <svg class="contour-rings" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="150" cy="150" rx="140" ry="130" fill="none" stroke="var(--line-strong)" stroke-width="1"/>
+          <ellipse cx="150" cy="150" rx="115" ry="107" fill="none" stroke="var(--line-strong)" stroke-width="1"/>
+          <ellipse cx="150" cy="150" rx="90" ry="84" fill="none" stroke="var(--gold)" stroke-width="1" stroke-dasharray="2 6"/>
+        </svg>
+        <div class="photo-frame">
+          <img src="images/foto_diego.jpg" alt="Portrait of Diego Alarcón" />
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects & Initiatives -->
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title fade-in">Projects & Initiatives</h2>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <h3><i class="fa-solid fa-box-open"></i> GeodesiCL (Author)</h3>
-                    <p>Author of the official R package for geodesic calculations tailored to Chilean projections, widely adopted nationwide.</p>
-                    <a href="https://github.com/diegoalarc/GeodesiCL" target="_blank" rel="noopener" class="link-btn">View Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="project-card fade-in">
-                    <h3><i class="fa-solid fa-people-group"></i> Geocodigos Chile (Founder)</h3>
-                    <p>Founded a community initiative mentoring over 100+ geoscientists in open-source programming methodologies between 2019 and 2023.</p>
-                    <a href="https://github.com/Geocodigos-cl" target="_blank" rel="noopener" class="link-btn">View Organization <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="project-card fade-in">
-                    <h3><i class="fa-solid fa-satellite"></i> DLR Internship</h3>
-                    <p>Completed a competitive research internship at the German Aerospace Center (DLR) focusing on advanced satellite time-series analysis.</p>
-                </div>
-            </div>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <h2 data-i18n="skills.title">Technical &amp; Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 data-i18n="skills.cat1">Customer Success &amp; CRM</h3>
+          <p data-i18n="skills.cat1items">HubSpot CRM Architecture · Zendesk Administration · Account Playbooks · Stakeholder Management · Enterprise Technical Onboarding</p>
         </div>
-    </section>
-
-    <!-- Footer / Contact -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Interested in collaboration, geospatial analytics, or Customer Success leadership?</p>
-            <p><a href="mailto:diego.alarcondiaz@gmail.com" class="btn-primary"><i class="fa-solid fa-envelope"></i> Get in Touch</a></p>
-            <p class="copyright">&copy; 2026 Diego Alarcón. All rights reserved.</p>
+        <div class="skill-card">
+          <h3 data-i18n="skills.cat2">Data Science &amp; Programming</h3>
+          <p data-i18n="skills.cat2items">Python 3 · R · SQL · GeoPandas · Machine Learning (Random Forest, SVM)</p>
         </div>
-    </footer>
+        <div class="skill-card">
+          <h3 data-i18n="skills.cat3">API &amp; DevOps Ecosystem</h3>
+          <p data-i18n="skills.cat3items">REST APIs · OpenAPI Specification 3.0 · Linux · Git · Docker</p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skills.cat4">Geospatial Engineering</h3>
+          <p data-i18n="skills.cat4items">QGIS · ArcGIS · Sentinel-2 Multispectral · LiDAR 3D · Photogrammetry</p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skills.cat5">Languages</h3>
+          <p data-i18n="skills.cat5items">Spanish (Native) · English (C1 Professional) · German (B1)</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <h2 data-i18n="experience.title">Professional Experience</h2>
+      <div class="timeline">
 
-    <script src="assets/js/scripts.js"></script>
+        <div class="tl-item">
+          <div class="tl-meta">Sep 2026 — Present · Remote, Hersbruck, Germany</div>
+          <h3><a href="https://avesreality.com/" target="_blank" rel="noopener" data-i18n="exp.aves.role">Customer Success Lead — AVES Reality</a></h3>
+          <ul>
+            <li data-i18n="exp.aves.b1">Architect, configure, and administer the company-wide <strong>HubSpot CRM</strong> infrastructure to optimize pipeline tracking, customer health metrics, and executive reporting.</li>
+            <li data-i18n="exp.aves.b2">Orchestrate cross-functional alignment between Sales and Product teams to synchronize enterprise client requirements directly with engineering roadmaps.</li>
+            <li data-i18n="exp.aves.b3">Manage end-to-end customer communication and onboarding workflows, ensuring 100% on-time delivery of highly technical spatial datasets.</li>
+            <li data-i18n="exp.aves.b4">Author and operationalize Customer Success playbooks in collaboration with Sales, significantly driving account retention and post-onboarding growth.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-meta">Jan 2026 — Aug 2026 · Remote, Hersbruck, Germany</div>
+          <h3><a href="https://up42.com/" target="_blank" rel="noopener" data-i18n="exp.up42sr.role">Senior Technical Support Engineer — UP42</a></h3>
+          <ul>
+            <li data-i18n="exp.up42sr.b1">Commanded high-priority technical escalations for enterprise developer integrations, directly elevating customer satisfaction (CSAT) and account retention.</li>
+            <li data-i18n="exp.up42sr.b2">Acted as primary Point of Contact (POC) for Data Product Managers, evaluating pre-release builds and channeling user friction points into sprint planning.</li>
+            <li data-i18n="exp.up42sr.b3">Executed comprehensive REST API testing and maintained developer documentation compliant with <strong>OpenAPI Specification 3.0</strong> standards.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-meta">Jul 2022 — Oct 2022 · Remote, Hersbruck, Germany</div>
+          <h3><a href="https://up42.com/" target="_blank" rel="noopener" data-i18n="exp.up42doc.role">Technical Documentation Engineer (Secondment) — UP42</a></h3>
+          <ul>
+            <li data-i18n="exp.up42doc.b1">Authored developer FAQs, API integration recipes, and geospatial dataset specifications utilized by international enterprise clients.</li>
+            <li data-i18n="exp.up42doc.b2">Restructured public documentation architecture, cutting navigation friction and reducing Tier 1 support ticket volume.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-meta">Oct 2021 — Dec 2025 · Remote, Hersbruck, Germany</div>
+          <h3><a href="https://up42.com/" target="_blank" rel="noopener" data-i18n="exp.up42.role">Technical Support Engineer — UP42</a></h3>
+          <ul>
+            <li data-i18n="exp.up42.b1">Resolved complex support requests regarding automated API pipelines and multi-sensor satellite catalog access.</li>
+            <li data-i18n="exp.up42.b2">Administered Zendesk; engineered automated triggers, macros, and reporting dashboards that measurably reduced average ticket resolution times.</li>
+            <li data-i18n="exp.up42.b3">Guided technical customer onboarding onto REST APIs, accelerating time-to-value for new platform users.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-meta">Nov 2018 — Sep 2019 · Santiago, Chile</div>
+          <h3><a href="https://www.aguasandinas.cl/" target="_blank" rel="noopener" data-i18n="exp.aguas.role">Senior GIS Analyst — Aguas Andinas S.A.</a></h3>
+          <ul>
+            <li data-i18n="exp.aguas.b1">Maintained enterprise GIS databases for millions of utility customers; engineered Python automation scripts in ArcGIS that accelerated data processing times by <strong>40%</strong>.</li>
+            <li data-i18n="exp.aguas.b2">Executed high-precision GNSS field resurveys to enhance spatial integrity for urban infrastructure planning.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-meta">Oct 2016 — May 2017 · Santiago, Chile</div>
+          <h3><a href="https://www.aconcaguasolutions.com/" target="_blank" rel="noopener" data-i18n="exp.aconcagua.role">Senior Project Engineer — GIS &amp; Data Automation — Aconcagua Solutions</a></h3>
+          <ul>
+            <li data-i18n="exp.aconcagua.b1">Engineered Excel VBA automation tools to eliminate manual data entry and developed Python web scrapers to harvest municipal open geodata.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-meta">Sep 2013 — Feb 2016 · Santiago, Chile</div>
+          <h3><a href="https://www.here.com/" target="_blank" rel="noopener" data-i18n="exp.here.role">Field Analyst II — GIS Project Manager — HERE Maps (Nokia / HERE Technologies)</a></h3>
+          <ul>
+            <li data-i18n="exp.here.b1">Directed national POI and mapping projects across Chile, negotiating municipal data-sharing agreements and enforcing strict corporate Quality Assurance standards.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="wrap">
+      <h2 data-i18n="education.title">Education</h2>
+      <div class="card-grid">
+        <div class="edu-card">
+          <span class="badge">M.Sc. · 2019 — 2021</span>
+          <h3 data-i18n="edu.msc.title">Master of Science (M.Sc.) in Remote Sensing</h3>
+          <p data-i18n="edu.msc.body">Completed as part of the <a class="master-link" href="https://eagle-science.org/about/" target="_blank" rel="noopener">EAGLE — Applied Earth Observation and Geoanalysis</a> master's program at <a href="https://www.uni-wuerzburg.de/" target="_blank" rel="noopener">Julius-Maximilians-Universität Würzburg</a>, Germany.</p>
+          <p class="thesis" data-i18n="edu.msc.thesis"><strong data-i18n="edu.msc.thesislabel">Thesis:</strong> "Predicting Grape Yields in Chile using Sentinel-2 Imagery and Machine Learning Models" (Python/R pipelines using Random Forest and SVM).</p>
+        </div>
+        <div class="edu-card">
+          <span class="badge">B.Sc. · 2006 — 2011</span>
+          <h3 data-i18n="edu.bsc.title">Bachelor of Science (B.Sc.) in Survey Engineering</h3>
+          <p data-i18n="edu.bsc.body">Universidad de Santiago de Chile (USACH), Santiago, Chile.</p>
+          <p class="thesis" data-i18n="edu.bsc.focus">Focus on Geodesy, topographic measurement systems, and 3D spatial modeling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="wrap">
+      <h2 data-i18n="certs.title">Certifications</h2>
+      <p class="cert-note" data-i18n="certs.subtitle">Selected certifications and credentials — from Customer Success methodology to remote sensing and language proficiency.</p>
+      <div class="card-grid cert-grid">
+
+        <div class="cert-card">
+          <span class="cert-icon">🎯</span>
+          <span class="cert-title">Certified Customer Success Manager (CCSM) Level 1</span>
+          <span class="cert-issuer">SuccessHACKER</span>
+          <span class="cert-field" data-i18n="date.d1">Issued Dec 2022 · Expired Dec 2024</span>
+          <a class="cert-link" href="https://www.credly.com/badges/bd4c5c56-14ab-4f2f-8597-06e6d1b24a37/linked_in_profile" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">🗣️</span>
+          <span class="cert-title">Habilidades Comunicativas: Mejora Tu Comunicación</span>
+          <span class="cert-issuer">Udemy</span>
+          <span class="cert-field" data-i18n="date.d2">Issued Nov 2022</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: UC-47a268f3-8803-42c6-a5e8-3fa74cca2b5d</span>
+          <a class="cert-link" href="https://www.udemy.com/certificate/UC-47a268f3-8803-42c6-a5e8-3fa74cca2b5d/" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">🐳</span>
+          <span class="cert-title">Docker Essentials for Python Developers</span>
+          <span class="cert-issuer">Udemy</span>
+          <span class="cert-field" data-i18n="date.d2">Issued Nov 2022</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: UC-4d634c10-ebde-4b53-bd41-3c698020b39b</span>
+          <a class="cert-link" href="https://www.udemy.com/certificate/UC-4d634c10-ebde-4b53-bd41-3c698020b39b/" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">🐍</span>
+          <span class="cert-title">2022 Complete Python Bootcamp: From Zero to Hero in Python</span>
+          <span class="cert-issuer">Udemy</span>
+          <span class="cert-field" data-i18n="date.d3">Issued Jul 2022</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: UC-80ae18d8-1c94-49a1-93e2-9a2fb3786c98</span>
+          <a class="cert-link" href="https://www.udemy.com/certificate/UC-80ae18d8-1c94-49a1-93e2-9a2fb3786c98/" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">🐙</span>
+          <span class="cert-title">Git+GitHub: A Whole Version Control System From Scratch</span>
+          <span class="cert-issuer">Udemy</span>
+          <span class="cert-field" data-i18n="date.d3">Issued Jul 2022</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: UC-1400fe44-9a47-459b-96f6-1416cb945ea6</span>
+          <a class="cert-link" href="https://www.udemy.com/certificate/UC-1400fe44-9a47-459b-96f6-1416cb945ea6/" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">☕</span>
+          <span class="cert-title">SCRUM con un café</span>
+          <span class="cert-issuer">LinkedIn Learning</span>
+          <span class="cert-field" data-i18n="date.d4">Issued Mar 2021</span>
+          <a class="cert-link" href="https://www.linkedin.com/learning/certificates/a04fd569a1f87691a877a108f72c6d0fdccf95296c6a12c72a5e879e113b8b7f/" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">🤖</span>
+          <span class="cert-title">Machine Learning with R</span>
+          <span class="cert-issuer">IBM Cognitive Class</span>
+          <span class="cert-field" data-i18n="date.d4">Issued Mar 2021</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: d872b072fe864c5592918e925b9b2923</span>
+          <a class="cert-link" href="https://courses.cognitiveclass.ai/certificates/d872b072fe864c5592918e925b9b2923" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">🇩🇪</span>
+          <span class="cert-title">Deutsch als Fremdsprache B1</span>
+          <span class="cert-issuer">Zentrum für Sprachen, Universität Würzburg</span>
+          <span class="cert-field" data-i18n="date.d4">Issued Mar 2021</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: khE0wj3LlmgfyaYr</span>
+          <a class="cert-link" href="https://www.projekte.zfs.uni-wuerzburg.de/verifydaf" target="_blank" rel="noopener"><span data-i18n="certs.view">View credential →</span></a>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">📝</span>
+          <span class="cert-title">TOEFL iBT B2</span>
+          <span class="cert-issuer">TOEFL Genius</span>
+          <span class="cert-field" data-i18n="date.d5">Issued Apr 2019 · Expired Apr 2021</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: 2182 2041 9017 2830</span>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">🛂</span>
+          <span class="cert-title">Working Holiday Visa Germany</span>
+          <span class="cert-issuer">Embajada de la República Federal de Alemania</span>
+          <span class="cert-field" data-i18n="date.d6">Issued May 2017 · Expired May 2018</span>
+        </div>
+
+        <div class="cert-card">
+          <span class="cert-icon">📗</span>
+          <span class="cert-title">Zertifikat Deutsch B1</span>
+          <span class="cert-issuer">telc GmbH — The European Language Certificates</span>
+          <span class="cert-field" data-i18n="date.d7">Issued Feb 2018</span>
+          <span class="cert-field"><span data-i18n="certs.credid">Credential ID</span>: 1474620</span>
+        </div>
+
+        <div class="cert-card cert-card-ghost">
+          <span class="cert-icon">➕</span>
+          <span class="cert-title" data-i18n="certs.addcard.title">Add certification</span>
+          <span class="cert-field" data-i18n="certs.addcard.body">New credentials will appear here as they're earned.</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <h2 data-i18n="projects.title">Projects &amp; Initiatives</h2>
+      <div class="card-grid">
+        <div class="proj-card">
+          <span class="badge">2019 — present</span>
+          <h3 data-i18n="proj.geodesicl.title">GeodesiCL (Author)</h3>
+          <p data-i18n="proj.geodesicl.body">Author of the official R package for geodesic calculations tailored to Chilean projections, widely adopted nationwide.</p>
+          <a class="repo-link" href="https://github.com/diegoalarc/GeodesiCL" target="_blank" rel="noopener" data-i18n="proj.geodesicl.link">View Repository →</a>
+        </div>
+        <div class="proj-card">
+          <span class="badge">2019 — 2023</span>
+          <h3 data-i18n="proj.geocodigos.title">Geocodigos Chile (Founder)</h3>
+          <p data-i18n="proj.geocodigos.body">Founded a community initiative mentoring over 100+ geoscientists in open-source programming methodologies between 2019 and 2023.</p>
+          <a class="repo-link" href="https://github.com/Geocodigos-cl" target="_blank" rel="noopener" data-i18n="proj.geocodigos.link">View Organization →</a>
+        </div>
+        <div class="proj-card">
+          <span class="badge">DLR</span>
+          <h3 data-i18n="proj.dlr.title">DLR Internship</h3>
+          <p data-i18n="proj.dlr.body">Completed a competitive research internship at the German Aerospace Center (DLR) focusing on advanced satellite time-series analysis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAY / GAME -->
+  <section id="play">
+    <div class="wrap">
+      <h2 data-i18n="play.title">Off the clock</h2>
+      <p class="game-copy" data-i18n="play.subtitle">Recruiters deserve a coffee break too. Steer the satellite, collect ground stations, and try to beat your own high score.</p>
+
+      <div class="game-wrap">
+        <div class="game-board-col">
+          <canvas id="gameCanvas" width="400" height="400" tabindex="0" aria-label="Signal Hunter game board"></canvas>
+          <div class="game-stats">
+            <span data-i18n="play.score">Score</span>: <b id="scoreVal">0</b>
+            <span data-i18n="play.best">Best</span>: <b id="bestVal">0</b>
+            <span class="cheat-tag" id="cheatTag">🎮 <span data-i18n="play.cheat">cheat mode</span></span>
+          </div>
+          <div class="game-controls-row">
+            <button class="btn primary" id="startBtn" data-i18n="play.start">Start</button>
+          </div>
+          <div class="dpad" aria-label="Touch controls">
+            <button class="up" data-dir="up" aria-label="Up">▲</button>
+            <button class="left" data-dir="left" aria-label="Left">◀</button>
+            <button class="down" data-dir="down" aria-label="Down">▼</button>
+            <button class="right" data-dir="right" aria-label="Right">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <h2 data-i18n="contact.title">Let's connect</h2>
+      <p data-i18n="contact.subtitle">Interested in collaboration, geospatial analytics, or Customer Success leadership?</p>
+      <a class="btn primary" href="mailto:diego.alarcondiaz@gmail.com" data-i18n="hero.cta1">Get in touch</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p data-i18n="footer.rights">© 2026 Diego Alarcón. All rights reserved.</p>
+  <p class="footer-easter">↑ ↑ ↓ ↓ ← → ← → B A</p>
+</footer>
+
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>
