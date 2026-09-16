@@ -251,7 +251,44 @@
   });
 
   /* ============================================================
-     2. Toast helper
+     2. Mobile nav toggle
+  ============================================================ */
+  var hamburgerBtn = document.getElementById("hamburgerBtn");
+  var primaryNav = document.getElementById("primaryNav");
+
+  function setNavOpen(open){
+    primaryNav.classList.toggle("open", open);
+    hamburgerBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  hamburgerBtn.addEventListener("click", function(){
+    setNavOpen(!primaryNav.classList.contains("open"));
+  });
+
+  // Closing on link tap keeps the panel from covering the page after navigating
+  primaryNav.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ setNavOpen(false); });
+  });
+
+  // Closing on outside tap / Escape makes the panel behave like a normal dropdown
+  document.addEventListener("click", function(e){
+    if(!primaryNav.classList.contains("open")) return;
+    if(primaryNav.contains(e.target) || hamburgerBtn.contains(e.target)) return;
+    setNavOpen(false);
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") setNavOpen(false);
+  });
+
+  // If the viewport grows back past the mobile breakpoint (e.g. rotating a
+  // tablet, or resizing a desktop window), drop the mobile-only open state
+  // so the always-visible desktop nav isn't left mid-animation.
+  window.addEventListener("resize", function(){
+    if(window.innerWidth > 720) setNavOpen(false);
+  });
+
+  /* ============================================================
+     3. Toast helper
   ============================================================ */
   var toastEl = document.getElementById("toast");
   var toastTimer = null;
@@ -263,7 +300,7 @@
   }
 
   /* ============================================================
-     3. Satellite view-mode selector (RGB / NDVI / NDWI / SWIR)
+     4. Satellite view-mode selector (RGB / NDVI / NDWI / SWIR)
   ============================================================ */
   var viewSelect = document.getElementById("viewSelect");
   var viewToast = { rgb:"toast.view_rgb", ndvi:"toast.view_ndvi", ndwi:"toast.view_ndwi", swir:"toast.view_swir" };
@@ -275,7 +312,7 @@
   });
 
   /* ============================================================
-     4. Konami code easter egg
+     5. Konami code easter egg
   ============================================================ */
   var konamiSeq = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
   var konamiPos = 0;
@@ -307,14 +344,14 @@
   });
 
   /* ============================================================
-     5. Console easter egg for curious devs / recruiters
+     6. Console easter egg for curious devs / recruiters
   ============================================================ */
   console.log("%c🛰️ orbit acquired.", "font-size:16px; font-weight:bold; color:#2F6F62;");
   console.log("%cHi! Since you're reading the source, you'll like this: try the Konami code anywhere on the page.", "color:#4E5C51;");
   console.log("Looking at the code, not just the content — thanks for the thorough review. diego.alarcondiaz@gmail.com");
 
   /* ============================================================
-     6. "Signal Hunter" — satellite-themed Snake game
+     7. "Signal Hunter" — satellite-themed Snake game
   ============================================================ */
   (function initGame(){
     var canvas = document.getElementById("gameCanvas");
@@ -514,7 +551,7 @@
   })();
 
   /* ============================================================
-     7. Init
+     8. Init
   ============================================================ */
   applyLang(detectInitialLang());
 
