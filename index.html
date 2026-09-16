@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/styles.css?v=3" />
 </head>
 <body>
 
@@ -45,9 +45,15 @@
         <button data-lang="en" aria-pressed="true">EN</button>
         <button data-lang="de" aria-pressed="false">DE</button>
       </div>
-      <button class="ndvi-toggle" id="ndviToggle" aria-label="Toggle satellite view" title="Toggle satellite (NDVI) view">
-        <span aria-hidden="true">🛰️</span><span id="ndviLabel">RGB</span>
-      </button>
+      <label class="view-select-wrap">
+        <span aria-hidden="true">🛰️</span>
+        <select id="viewSelect" class="view-select" aria-label="Satellite view mode" title="Switch satellite band view">
+          <option value="rgb">RGB</option>
+          <option value="ndvi">NDVI</option>
+          <option value="ndwi">NDWI</option>
+          <option value="swir">SWIR</option>
+        </select>
+      </label>
     </div>
   </div>
 </header>
@@ -400,6 +406,6 @@
   <p class="footer-easter">↑ ↑ ↓ ↓ ← → ← → B A</p>
 </footer>
 
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/scripts.js?v=3"></script>
 </body>
 </html>
