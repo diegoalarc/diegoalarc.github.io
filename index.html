@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="assets/css/styles.css?v=4" />
+<link rel="stylesheet" href="assets/css/styles.css?v=5" />
 </head>
 <body>
 
@@ -27,7 +27,7 @@
 <header class="site-nav">
   <div class="nav-row">
     <a href="#about" class="brand">Diego Alarcón</a>
-    <nav>
+    <nav id="primaryNav">
       <ul class="links" id="navLinks">
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
@@ -54,6 +54,9 @@
           <option value="swir">SWIR</option>
         </select>
       </label>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </div>
 </header>
@@ -406,6 +409,6 @@
   <p class="footer-easter">↑ ↑ ↓ ↓ ← → ← → B A</p>
 </footer>
 
-<script src="assets/js/scripts.js?v=4"></script>
+<script src="assets/js/scripts.js?v=5"></script>
 </body>
 </html>
