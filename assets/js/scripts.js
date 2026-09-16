@@ -71,8 +71,10 @@
       "footer.rights":"© 2026 Diego Alarcón. All rights reserved.",
       "coord.country":"Hersbruck, Germany",
       "toast.konami":"🛰️ Houston, we have a hire! Cheat mode unlocked below.",
-      "toast.ndvi_on":"Switched to false-colour NDVI view — the way a satellite sees vegetation.",
-      "toast.ndvi_off":"Back to true-colour (RGB) view."
+      "toast.view_rgb":"Back to true-colour (RGB) view.",
+      "toast.view_ndvi":"NDVI false-colour view — the way a satellite sees vegetation health.",
+      "toast.view_ndwi":"NDWI false-colour view — highlighting water bodies, the way satellites map water.",
+      "toast.view_swir":"SWIR false-colour view — short-wave infrared, used for geology and burn scars."
     },
     es: {
       "nav.about":"Sobre mí","nav.skills":"Habilidades","nav.experience":"Experiencia","nav.education":"Educación",
@@ -140,8 +142,10 @@
       "footer.rights":"© 2026 Diego Alarcón. Todos los derechos reservados.",
       "coord.country":"Hersbruck, Alemania",
       "toast.konami":"🛰️ Houston, ¡tenemos una contratación! Modo trucos desbloqueado abajo.",
-      "toast.ndvi_on":"Vista cambiada a falso color NDVI — así es como un satélite ve la vegetación.",
-      "toast.ndvi_off":"De vuelta a la vista en color real (RGB)."
+      "toast.view_rgb":"De vuelta a la vista en color real (RGB).",
+      "toast.view_ndvi":"Vista en falso color NDVI — así ve un satélite la salud de la vegetación.",
+      "toast.view_ndwi":"Vista en falso color NDWI — resalta los cuerpos de agua, tal como los satélites mapean el agua.",
+      "toast.view_swir":"Vista en falso color SWIR — infrarrojo de onda corta, usado en geología y cicatrices de incendios."
     },
     de: {
       "nav.about":"Über mich","nav.skills":"Fähigkeiten","nav.experience":"Erfahrung","nav.education":"Ausbildung",
@@ -209,8 +213,10 @@
       "footer.rights":"© 2026 Diego Alarcón. Alle Rechte vorbehalten.",
       "coord.country":"Hersbruck, Deutschland",
       "toast.konami":"🛰️ Houston, wir haben eine Einstellung! Cheat-Modus unten freigeschaltet.",
-      "toast.ndvi_on":"Zur Falschfarben-NDVI-Ansicht gewechselt — so sieht ein Satellit Vegetation.",
-      "toast.ndvi_off":"Zurück zur Echtfarben-Ansicht (RGB)."
+      "toast.view_rgb":"Zurück zur Echtfarben-Ansicht (RGB).",
+      "toast.view_ndvi":"NDVI-Falschfarbenansicht — so sieht ein Satellit die Vegetationsgesundheit.",
+      "toast.view_ndwi":"NDWI-Falschfarbenansicht — hebt Gewässer hervor, so wie Satelliten Wasser kartieren.",
+      "toast.view_swir":"SWIR-Falschfarbenansicht — kurzwelliges Infrarot, genutzt für Geologie und Brandnarben."
     }
   };
 
@@ -257,16 +263,15 @@
   }
 
   /* ============================================================
-     3. NDVI / satellite-view easter egg toggle
+     3. Satellite view-mode selector (RGB / NDVI / NDWI / SWIR)
   ============================================================ */
-  var ndviToggle = document.getElementById("ndviToggle");
-  var ndviLabel = document.getElementById("ndviLabel");
-  var ndviOn = false;
-  ndviToggle.addEventListener("click", function(){
-    ndviOn = !ndviOn;
-    document.documentElement.setAttribute("data-theme", ndviOn ? "ndvi" : "terrain");
-    ndviLabel.textContent = ndviOn ? "NDVI" : "RGB";
-    showToast(T[currentLang][ndviOn ? "toast.ndvi_on" : "toast.ndvi_off"]);
+  var viewSelect = document.getElementById("viewSelect");
+  var viewToast = { rgb:"toast.view_rgb", ndvi:"toast.view_ndvi", ndwi:"toast.view_ndwi", swir:"toast.view_swir" };
+  var viewTheme = { rgb:"terrain", ndvi:"ndvi", ndwi:"ndwi", swir:"swir" };
+  viewSelect.addEventListener("change", function(){
+    var mode = viewSelect.value;
+    document.documentElement.setAttribute("data-theme", viewTheme[mode] || "terrain");
+    showToast(T[currentLang][viewToast[mode]] || "");
   });
 
   /* ============================================================
@@ -459,17 +464,31 @@
       nextDir = {x:nx,y:ny};
     }
 
+    // Only let arrow/WASD keys drive the game (and steal the default scroll
+    // behaviour) while the game section is actually visible on screen.
+    var playSection = document.getElementById("play");
+    var playVisible = true;
+    if("IntersectionObserver" in window){
+      playVisible = false;
+      var playObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){ playVisible = entry.isIntersecting; });
+      }, { threshold: 0.25 });
+      playObserver.observe(playSection);
+    }
+
+    var keyDir = {
+      ArrowUp:[0,-1], w:[0,-1], W:[0,-1],
+      ArrowDown:[0,1], s:[0,1], S:[0,1],
+      ArrowLeft:[-1,0], a:[-1,0], A:[-1,0],
+      ArrowRight:[1,0], d:[1,0], D:[1,0]
+    };
     window.addEventListener("keydown", function(e){
-      if(!running) return;
-      var handled = true;
-      switch(e.key){
-        case "ArrowUp": case "w": case "W": setDirection(0,-1); break;
-        case "ArrowDown": case "s": case "S": setDirection(0,1); break;
-        case "ArrowLeft": case "a": case "A": setDirection(-1,0); break;
-        case "ArrowRight": case "d": case "D": setDirection(1,0); break;
-        default: handled = false;
-      }
-      if(handled) e.preventDefault();
+      if(!playVisible) return;
+      var d = keyDir[e.key];
+      if(!d) return;
+      e.preventDefault();
+      if(!running) startGame();
+      setDirection(d[0], d[1]);
     });
 
     document.querySelectorAll(".dpad button").forEach(function(btn){
